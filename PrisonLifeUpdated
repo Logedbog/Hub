@@ -1,0 +1,3085 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = {
+	ScreenGui = Instance.new("ScreenGui"),
+	Frame = Instance.new("Frame"),
+	TabFrame = Instance.new("Frame"),
+	UIListLayout = Instance.new("UIListLayout"),
+	LocalButton = Instance.new("TextButton"),
+	Frame_2 = Instance.new("Frame"),
+	UICorner = Instance.new("UICorner"),
+	PlayersButton = Instance.new("TextButton"),
+	Frame_3 = Instance.new("Frame"),
+	UICorner_2 = Instance.new("UICorner"),
+	MiscButton = Instance.new("TextButton"),
+	Frame_4 = Instance.new("Frame"),
+	UICorner_3 = Instance.new("UICorner"),
+	TeleportsButton = Instance.new("TextButton"),
+	Frame_5 = Instance.new("Frame"),
+	UICorner_4 = Instance.new("UICorner"),
+	SettingsButton = Instance.new("TextButton"),
+	Frame_6 = Instance.new("Frame"),
+	UICorner_5 = Instance.new("UICorner"),
+	AllFrame = Instance.new("Frame"),
+	LocalFrame = Instance.new("Frame"),
+	LocalSettingsFrame = Instance.new("Frame"),
+	UICorner_6 = Instance.new("UICorner"),
+	TextLabel = Instance.new("TextLabel"),
+	UICorner_7 = Instance.new("UICorner"),
+	WalkSpeedTextBox = Instance.new("TextBox"),
+	UICorner_8 = Instance.new("UICorner"),
+	TextButton = Instance.new("TextButton"),
+	UICorner_9 = Instance.new("UICorner"),
+	JumpPowerTextBox = Instance.new("TextBox"),
+	UICorner_10 = Instance.new("UICorner"),
+	TextButton_2 = Instance.new("TextButton"),
+	UICorner_11 = Instance.new("UICorner"),
+	TeamFrame = Instance.new("Frame"),
+	UICorner_12 = Instance.new("UICorner"),
+	a = Instance.new("TextLabel"),
+	UICorner_13 = Instance.new("UICorner"),
+	InmateButton = Instance.new("TextButton"),
+	UICorner_14 = Instance.new("UICorner"),
+	PoliceButton = Instance.new("TextButton"),
+	UICorner_15 = Instance.new("UICorner"),
+	CriminalButton = Instance.new("TextButton"),
+	UICorner_16 = Instance.new("UICorner"),
+	NeutralButton = Instance.new("TextButton"),
+	UICorner_17 = Instance.new("UICorner"),
+	LocalSettingsFrame_2 = Instance.new("Frame"),
+	UICorner_18 = Instance.new("UICorner"),
+	TextLabel_2 = Instance.new("TextLabel"),
+	UICorner_19 = Instance.new("UICorner"),
+	M9Button = Instance.new("TextButton"),
+	UICorner_20 = Instance.new("UICorner"),
+	RemingtonButton = Instance.new("TextButton"),
+	UICorner_21 = Instance.new("UICorner"),
+	AkButton = Instance.new("TextButton"),
+	UICorner_22 = Instance.new("UICorner"),
+	SwordButton = Instance.new("TextButton"),
+	UICorner_23 = Instance.new("UICorner"),
+	PlayersFrame = Instance.new("Frame"),
+	PlayerList = Instance.new("Frame"),
+	UICorner_24 = Instance.new("UICorner"),
+	PLS = Instance.new("TextLabel"),
+	UICorner_25 = Instance.new("UICorner"),
+	PlayerList_2 = Instance.new("Frame"),
+	UICorner_26 = Instance.new("UICorner"),
+	UIListLayout_2 = Instance.new("UIListLayout"),
+	ScrollingFrame = Instance.new("ScrollingFrame"),
+	UICorner_27 = Instance.new("UICorner"),
+	UIListLayout_3 = Instance.new("UIListLayout"),
+	Player1 = Instance.new("TextButton"),
+	UICorner_28 = Instance.new("UICorner"),
+	Player10 = Instance.new("TextButton"),
+	UICorner_29 = Instance.new("UICorner"),
+	Player11 = Instance.new("TextButton"),
+	UICorner_30 = Instance.new("UICorner"),
+	Player12 = Instance.new("TextButton"),
+	UICorner_31 = Instance.new("UICorner"),
+	Player13 = Instance.new("TextButton"),
+	UICorner_32 = Instance.new("UICorner"),
+	Player14 = Instance.new("TextButton"),
+	UICorner_33 = Instance.new("UICorner"),
+	Player15 = Instance.new("TextButton"),
+	UICorner_34 = Instance.new("UICorner"),
+	Player16 = Instance.new("TextButton"),
+	UICorner_35 = Instance.new("UICorner"),
+	Player17 = Instance.new("TextButton"),
+	UICorner_36 = Instance.new("UICorner"),
+	Player18 = Instance.new("TextButton"),
+	UICorner_37 = Instance.new("UICorner"),
+	Player19 = Instance.new("TextButton"),
+	UICorner_38 = Instance.new("UICorner"),
+	Player2 = Instance.new("TextButton"),
+	UICorner_39 = Instance.new("UICorner"),
+	Player20 = Instance.new("TextButton"),
+	UICorner_40 = Instance.new("UICorner"),
+	Player21 = Instance.new("TextButton"),
+	UICorner_41 = Instance.new("UICorner"),
+	Player22 = Instance.new("TextButton"),
+	UICorner_42 = Instance.new("UICorner"),
+	Player23 = Instance.new("TextButton"),
+	UICorner_43 = Instance.new("UICorner"),
+	Player24 = Instance.new("TextButton"),
+	UICorner_44 = Instance.new("UICorner"),
+	Player3 = Instance.new("TextButton"),
+	UICorner_45 = Instance.new("UICorner"),
+	Player4 = Instance.new("TextButton"),
+	UICorner_46 = Instance.new("UICorner"),
+	Player5 = Instance.new("TextButton"),
+	UICorner_47 = Instance.new("UICorner"),
+	Player6 = Instance.new("TextButton"),
+	UICorner_48 = Instance.new("UICorner"),
+	Player7 = Instance.new("TextButton"),
+	UICorner_49 = Instance.new("UICorner"),
+	Player8 = Instance.new("TextButton"),
+	UICorner_50 = Instance.new("UICorner"),
+	Player9 = Instance.new("TextButton"),
+	UICorner_51 = Instance.new("UICorner"),
+	PlayerFunctionsFrame = Instance.new("Frame"),
+	UICorner_52 = Instance.new("UICorner"),
+	TextLabel_3 = Instance.new("TextLabel"),
+	UICorner_53 = Instance.new("UICorner"),
+	TpButton = Instance.new("TextButton"),
+	UICorner_54 = Instance.new("UICorner"),
+	UIListLayout_4 = Instance.new("UIListLayout"),
+	BringButton = Instance.new("TextButton"),
+	UICorner_55 = Instance.new("UICorner"),
+	KillButton = Instance.new("TextButton"),
+	UICorner_56 = Instance.new("UICorner"),
+	HackerKillButton = Instance.new("TextButton"),
+	UICorner_57 = Instance.new("UICorner"),
+	AresstPlayerButton = Instance.new("TextButton"),
+	UICorner_58 = Instance.new("UICorner"),
+	TextLabel_4 = Instance.new("TextLabel"),
+	UICorner_59 = Instance.new("UICorner"),
+	SpawnGuns = Instance.new("TextButton"),
+	UICorner_60 = Instance.new("UICorner"),
+	AresstAllButton = Instance.new("TextButton"),
+	UICorner_61 = Instance.new("UICorner"),
+	CrimAll = Instance.new("TextButton"),
+	UICorner_62 = Instance.new("UICorner"),
+	PlayerInfoFrame = Instance.new("ScrollingFrame"),
+	UICorner_63 = Instance.new("UICorner"),
+	UIListLayout_5 = Instance.new("UIListLayout"),
+	PlayerInfoText = Instance.new("TextLabel"),
+	UICorner_64 = Instance.new("UICorner"),
+	ImageLabel = Instance.new("ImageLabel"),
+	UICorner_65 = Instance.new("UICorner"),
+	PlayerName = Instance.new("TextLabel"),
+	UICorner_66 = Instance.new("UICorner"),
+	PlayerAge = Instance.new("TextLabel"),
+	UICorner_67 = Instance.new("UICorner"),
+	PlayerID = Instance.new("TextLabel"),
+	UICorner_68 = Instance.new("UICorner"),
+	Team = Instance.new("TextLabel"),
+	UICorner_69 = Instance.new("UICorner"),
+	Health = Instance.new("TextLabel"),
+	UICorner_70 = Instance.new("UICorner"),
+	M9 = Instance.new("TextLabel"),
+	UICorner_71 = Instance.new("UICorner"),
+	Remington = Instance.new("TextLabel"),
+	UICorner_72 = Instance.new("UICorner"),
+	AK = Instance.new("TextLabel"),
+	UICorner_73 = Instance.new("UICorner"),
+	Keycard = Instance.new("TextLabel"),
+	UICorner_74 = Instance.new("UICorner"),
+	MiscFrame = Instance.new("Frame"),
+	TeamFrame_2 = Instance.new("Frame"),
+	UICorner_75 = Instance.new("UICorner"),
+	a_2 = Instance.new("TextLabel"),
+	UICorner_76 = Instance.new("UICorner"),
+	UIListLayout_6 = Instance.new("UIListLayout"),
+	InvisButton = Instance.new("TextButton"),
+	UICorner_77 = Instance.new("UICorner"),
+	AntiABuse = Instance.new("TextButton"),
+	UICorner_78 = Instance.new("UICorner"),
+	TeleportsFrame = Instance.new("Frame"),
+	MainTeleportsFrame = Instance.new("Frame"),
+	UICorner_79 = Instance.new("UICorner"),
+	TextLabel_5 = Instance.new("TextLabel"),
+	UICorner_80 = Instance.new("UICorner"),
+	PrisonYardButton = Instance.new("TextButton"),
+	UICorner_81 = Instance.new("UICorner"),
+	PrisonCellsButton = Instance.new("TextButton"),
+	UICorner_82 = Instance.new("UICorner"),
+	CrimBaseButton = Instance.new("TextButton"),
+	UICorner_83 = Instance.new("UICorner"),
+	PrisonTowerButton = Instance.new("TextButton"),
+	UICorner_84 = Instance.new("UICorner"),
+	GardsRoomButton = Instance.new("TextButton"),
+	UICorner_85 = Instance.new("UICorner"),
+	PrisonRoofButton = Instance.new("TextButton"),
+	UICorner_86 = Instance.new("UICorner"),
+	ExtrasFrame = Instance.new("Frame"),
+	SettingsFrame = Instance.new("Frame"),
+	LocalSettingsFrame_3 = Instance.new("Frame"),
+	UICorner_87 = Instance.new("UICorner"),
+	TextLabel_6 = Instance.new("TextLabel"),
+	UICorner_88 = Instance.new("UICorner"),
+	DestroyButton = Instance.new("TextButton"),
+	UICorner_89 = Instance.new("UICorner"),
+	Frame_7 = Instance.new("Frame"),
+	minutes = Instance.new("TextLabel"),
+	seconds = Instance.new("TextLabel"),
+}
+
+--Properties:
+
+ScreenGui.ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+ScreenGui.Frame.Parent = ScreenGui.ScreenGui
+ScreenGui.Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScreenGui.Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Frame.BorderSizePixel = 0
+ScreenGui.Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+ScreenGui.Frame.Size = UDim2.new(0, 500, 0, 300)
+ScreenGui.Frame.Active = true
+ScreenGui.Frame.Draggable = true
+
+ScreenGui.TabFrame.Name = "TabFrame"
+ScreenGui.TabFrame.Parent = ScreenGui.Frame
+ScreenGui.TabFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TabFrame.BorderSizePixel = 0
+ScreenGui.TabFrame.Position = UDim2.new(0, 0, -0.00151514693, 0)
+ScreenGui.TabFrame.Size = UDim2.new(0, 499, 0, 30)
+
+ScreenGui.UIListLayout.Parent = ScreenGui.TabFrame
+ScreenGui.UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+ScreenGui.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+ScreenGui.LocalButton.Name = "LocalButton"
+ScreenGui.LocalButton.Parent = ScreenGui.TabFrame
+ScreenGui.LocalButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.LocalButton.BorderSizePixel = 0
+ScreenGui.LocalButton.Position = UDim2.new(0.000563720707, 0, 0, 0)
+ScreenGui.LocalButton.Size = UDim2.new(0, 99, 0, 30)
+ScreenGui.LocalButton.Font = Enum.Font.SourceSans
+ScreenGui.LocalButton.Text = "Local"
+ScreenGui.LocalButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.LocalButton.TextSize = 14.000
+
+ScreenGui.Frame_2.Parent = ScreenGui.LocalButton
+ScreenGui.Frame_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ScreenGui.Frame_2.Position = UDim2.new(0.100000001, 0, 0.933333337, 0)
+ScreenGui.Frame_2.Size = UDim2.new(0, 80, 0, 2)
+
+ScreenGui.UICorner.CornerRadius = UDim.new(0, 4)
+ScreenGui.UICorner.Parent = ScreenGui.Frame_2
+
+ScreenGui.PlayersButton.Name = "PlayersButton"
+ScreenGui.PlayersButton.Parent = ScreenGui.TabFrame
+ScreenGui.PlayersButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PlayersButton.BorderSizePixel = 0
+ScreenGui.PlayersButton.Position = UDim2.new(2.98023224e-08, 0, -5.96046448e-08, 0)
+ScreenGui.PlayersButton.Size = UDim2.new(0, 100, 0, 30)
+ScreenGui.PlayersButton.Font = Enum.Font.SourceSans
+ScreenGui.PlayersButton.Text = "Players"
+ScreenGui.PlayersButton.TextColor3 = Color3.fromRGB(159, 159, 159)
+ScreenGui.PlayersButton.TextSize = 14.000
+
+ScreenGui.Frame_3.Parent = ScreenGui.PlayersButton
+ScreenGui.Frame_3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ScreenGui.Frame_3.Position = UDim2.new(0.100000001, 0, 0.933333337, 0)
+ScreenGui.Frame_3.Size = UDim2.new(0, 80, 0, 2)
+
+ScreenGui.UICorner_2.CornerRadius = UDim.new(0, 4)
+ScreenGui.UICorner_2.Parent = ScreenGui.Frame_3
+
+ScreenGui.MiscButton.Name = "MiscButton"
+ScreenGui.MiscButton.Parent = ScreenGui.TabFrame
+ScreenGui.MiscButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.MiscButton.BorderSizePixel = 0
+ScreenGui.MiscButton.Position = UDim2.new(2.98023224e-08, 0, -5.96046448e-08, 0)
+ScreenGui.MiscButton.Size = UDim2.new(0, 100, 0, 30)
+ScreenGui.MiscButton.Font = Enum.Font.SourceSans
+ScreenGui.MiscButton.Text = "Misc"
+ScreenGui.MiscButton.TextColor3 = Color3.fromRGB(159, 159, 159)
+ScreenGui.MiscButton.TextSize = 14.000
+
+ScreenGui.Frame_4.Parent = ScreenGui.MiscButton
+ScreenGui.Frame_4.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ScreenGui.Frame_4.Position = UDim2.new(0.100000001, 0, 0.933333337, 0)
+ScreenGui.Frame_4.Size = UDim2.new(0, 80, 0, 2)
+
+ScreenGui.UICorner_3.CornerRadius = UDim.new(0, 4)
+ScreenGui.UICorner_3.Parent = ScreenGui.Frame_4
+
+ScreenGui.TeleportsButton.Name = "TeleportsButton"
+ScreenGui.TeleportsButton.Parent = ScreenGui.TabFrame
+ScreenGui.TeleportsButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TeleportsButton.BorderSizePixel = 0
+ScreenGui.TeleportsButton.Position = UDim2.new(2.98023224e-08, 0, -5.96046448e-08, 0)
+ScreenGui.TeleportsButton.Size = UDim2.new(0, 100, 0, 30)
+ScreenGui.TeleportsButton.Font = Enum.Font.SourceSans
+ScreenGui.TeleportsButton.Text = "Teleports"
+ScreenGui.TeleportsButton.TextColor3 = Color3.fromRGB(159, 159, 159)
+ScreenGui.TeleportsButton.TextSize = 14.000
+
+ScreenGui.Frame_5.Parent = ScreenGui.TeleportsButton
+ScreenGui.Frame_5.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ScreenGui.Frame_5.Position = UDim2.new(0.100000001, 0, 0.933333337, 0)
+ScreenGui.Frame_5.Size = UDim2.new(0, 80, 0, 2)
+
+ScreenGui.UICorner_4.CornerRadius = UDim.new(0, 4)
+ScreenGui.UICorner_4.Parent = ScreenGui.Frame_5
+
+ScreenGui.SettingsButton.Name = "SettingsButton"
+ScreenGui.SettingsButton.Parent = ScreenGui.TabFrame
+ScreenGui.SettingsButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.SettingsButton.BorderSizePixel = 0
+ScreenGui.SettingsButton.Position = UDim2.new(2.98023224e-08, 0, -5.96046448e-08, 0)
+ScreenGui.SettingsButton.Size = UDim2.new(0, 100, 0, 30)
+ScreenGui.SettingsButton.Font = Enum.Font.SourceSans
+ScreenGui.SettingsButton.Text = "Settings"
+ScreenGui.SettingsButton.TextColor3 = Color3.fromRGB(159, 159, 159)
+ScreenGui.SettingsButton.TextSize = 14.000
+
+ScreenGui.Frame_6.Parent = ScreenGui.SettingsButton
+ScreenGui.Frame_6.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ScreenGui.Frame_6.Position = UDim2.new(0.100000001, 0, 0.933333337, 0)
+ScreenGui.Frame_6.Size = UDim2.new(0, 80, 0, 2)
+
+ScreenGui.UICorner_5.CornerRadius = UDim.new(0, 4)
+ScreenGui.UICorner_5.Parent = ScreenGui.Frame_6
+
+ScreenGui.AllFrame.Name = "AllFrame"
+ScreenGui.AllFrame.Parent = ScreenGui.Frame
+ScreenGui.AllFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.AllFrame.BackgroundTransparency = 1.000
+ScreenGui.AllFrame.BorderSizePixel = 0
+ScreenGui.AllFrame.Position = UDim2.new(0, 0, 0.0984848514, 0)
+ScreenGui.AllFrame.Size = UDim2.new(0, 599, 0, 270)
+
+ScreenGui.LocalFrame.Name = "LocalFrame"
+ScreenGui.LocalFrame.Parent = ScreenGui.AllFrame
+ScreenGui.LocalFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScreenGui.LocalFrame.BorderSizePixel = 0
+ScreenGui.LocalFrame.Size = UDim2.new(0, 500, 0, 270)
+
+ScreenGui.LocalSettingsFrame.Name = "LocalSettingsFrame"
+ScreenGui.LocalSettingsFrame.Parent = ScreenGui.LocalFrame
+ScreenGui.LocalSettingsFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.LocalSettingsFrame.Position = UDim2.new(0.019025024, 0, 0.0370370373, 0)
+ScreenGui.LocalSettingsFrame.Size = UDim2.new(0, 143, 0, 249)
+
+ScreenGui.UICorner_6.Parent = ScreenGui.LocalSettingsFrame
+
+ScreenGui.TextLabel.Parent = ScreenGui.LocalSettingsFrame
+ScreenGui.TextLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TextLabel.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.TextLabel.Font = Enum.Font.SourceSans
+ScreenGui.TextLabel.Text = "Local Settings"
+ScreenGui.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.TextLabel.TextSize = 14.000
+ScreenGui.TextLabel.TextWrapped = true
+
+ScreenGui.UICorner_7.CornerRadius = UDim.new(0, 3)
+ScreenGui.UICorner_7.Parent = ScreenGui.TextLabel
+
+ScreenGui.WalkSpeedTextBox.Name = "WalkSpeedTextBox"
+ScreenGui.WalkSpeedTextBox.Parent = ScreenGui.LocalSettingsFrame
+ScreenGui.WalkSpeedTextBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.WalkSpeedTextBox.BorderSizePixel = 0
+ScreenGui.WalkSpeedTextBox.Position = UDim2.new(0.437839955, 0, 0.0933146626, 0)
+ScreenGui.WalkSpeedTextBox.Size = UDim2.new(0, 80, 0, 15)
+ScreenGui.WalkSpeedTextBox.ClearTextOnFocus = false
+ScreenGui.WalkSpeedTextBox.Font = Enum.Font.SourceSans
+ScreenGui.WalkSpeedTextBox.PlaceholderText = "WalkSpeed Value"
+ScreenGui.WalkSpeedTextBox.Text = ""
+ScreenGui.WalkSpeedTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.WalkSpeedTextBox.TextScaled = true
+ScreenGui.WalkSpeedTextBox.TextSize = 14.000
+ScreenGui.WalkSpeedTextBox.TextWrapped = true
+
+ScreenGui.UICorner_8.Parent = ScreenGui.WalkSpeedTextBox
+
+ScreenGui.TextButton.Parent = ScreenGui.WalkSpeedTextBox
+ScreenGui.TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TextButton.Position = UDim2.new(-0.780069351, 0, 0, 0)
+ScreenGui.TextButton.Size = UDim2.new(0, 60, 0, 15)
+ScreenGui.TextButton.Font = Enum.Font.SourceSans
+ScreenGui.TextButton.Text = "Set"
+ScreenGui.TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.TextButton.TextScaled = true
+ScreenGui.TextButton.TextSize = 14.000
+ScreenGui.TextButton.TextWrapped = true
+
+ScreenGui.UICorner_9.Parent = ScreenGui.TextButton
+
+ScreenGui.JumpPowerTextBox.Name = "JumpPowerTextBox"
+ScreenGui.JumpPowerTextBox.Parent = ScreenGui.LocalSettingsFrame
+ScreenGui.JumpPowerTextBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.JumpPowerTextBox.BorderSizePixel = 0
+ScreenGui.JumpPowerTextBox.Position = UDim2.new(0.437999994, 0, 0.175983936, 0)
+ScreenGui.JumpPowerTextBox.Size = UDim2.new(0, 80, 0, 15)
+ScreenGui.JumpPowerTextBox.ClearTextOnFocus = false
+ScreenGui.JumpPowerTextBox.Font = Enum.Font.SourceSans
+ScreenGui.JumpPowerTextBox.PlaceholderText = "JumpPower Value"
+ScreenGui.JumpPowerTextBox.Text = ""
+ScreenGui.JumpPowerTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.JumpPowerTextBox.TextScaled = true
+ScreenGui.JumpPowerTextBox.TextSize = 14.000
+ScreenGui.JumpPowerTextBox.TextWrapped = true
+
+ScreenGui.UICorner_10.Parent = ScreenGui.JumpPowerTextBox
+
+ScreenGui.TextButton_2.Parent = ScreenGui.JumpPowerTextBox
+ScreenGui.TextButton_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TextButton_2.Position = UDim2.new(-0.780069351, 0, 0, 0)
+ScreenGui.TextButton_2.Size = UDim2.new(0, 60, 0, 15)
+ScreenGui.TextButton_2.Font = Enum.Font.SourceSans
+ScreenGui.TextButton_2.Text = "Set"
+ScreenGui.TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.TextButton_2.TextScaled = true
+ScreenGui.TextButton_2.TextSize = 14.000
+ScreenGui.TextButton_2.TextWrapped = true
+
+ScreenGui.UICorner_11.Parent = ScreenGui.TextButton_2
+
+ScreenGui.TeamFrame.Name = "TeamFrame"
+ScreenGui.TeamFrame.Parent = ScreenGui.LocalFrame
+ScreenGui.TeamFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.TeamFrame.Position = UDim2.new(0.355025023, 0, 0.0370370373, 0)
+ScreenGui.TeamFrame.Size = UDim2.new(0, 143, 0, 249)
+
+ScreenGui.UICorner_12.Parent = ScreenGui.TeamFrame
+
+ScreenGui.a.Name = "a"
+ScreenGui.a.Parent = ScreenGui.TeamFrame
+ScreenGui.a.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.a.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.a.Font = Enum.Font.SourceSans
+ScreenGui.a.Text = "Team"
+ScreenGui.a.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.a.TextSize = 14.000
+ScreenGui.a.TextWrapped = true
+
+ScreenGui.UICorner_13.CornerRadius = UDim.new(0, 3)
+ScreenGui.UICorner_13.Parent = ScreenGui.a
+
+ScreenGui.InmateButton.Name = "InmateButton"
+ScreenGui.InmateButton.Parent = ScreenGui.TeamFrame
+ScreenGui.InmateButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.InmateButton.Position = UDim2.new(0.00314736529, 0, 0.0763052255, 0)
+ScreenGui.InmateButton.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.InmateButton.Font = Enum.Font.SourceSans
+ScreenGui.InmateButton.Text = "Inmate"
+ScreenGui.InmateButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.InmateButton.TextScaled = true
+ScreenGui.InmateButton.TextSize = 14.000
+ScreenGui.InmateButton.TextWrapped = true
+
+ScreenGui.UICorner_14.Parent = ScreenGui.InmateButton
+
+ScreenGui.PoliceButton.Name = "PoliceButton"
+ScreenGui.PoliceButton.Parent = ScreenGui.TeamFrame
+ScreenGui.PoliceButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PoliceButton.Position = UDim2.new(0.00314736529, 0, 0.156626493, 0)
+ScreenGui.PoliceButton.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.PoliceButton.Font = Enum.Font.SourceSans
+ScreenGui.PoliceButton.Text = "Police"
+ScreenGui.PoliceButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PoliceButton.TextScaled = true
+ScreenGui.PoliceButton.TextSize = 14.000
+ScreenGui.PoliceButton.TextWrapped = true
+
+ScreenGui.UICorner_15.Parent = ScreenGui.PoliceButton
+
+ScreenGui.CriminalButton.Name = "CriminalButton"
+ScreenGui.CriminalButton.Parent = ScreenGui.TeamFrame
+ScreenGui.CriminalButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.CriminalButton.Position = UDim2.new(0.00300000003, 0, 0.237951815, 0)
+ScreenGui.CriminalButton.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.CriminalButton.Font = Enum.Font.SourceSans
+ScreenGui.CriminalButton.Text = "Criminal"
+ScreenGui.CriminalButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.CriminalButton.TextScaled = true
+ScreenGui.CriminalButton.TextSize = 14.000
+ScreenGui.CriminalButton.TextWrapped = true
+
+ScreenGui.UICorner_16.Parent = ScreenGui.CriminalButton
+
+ScreenGui.NeutralButton.Name = "NeutralButton"
+ScreenGui.NeutralButton.Parent = ScreenGui.TeamFrame
+ScreenGui.NeutralButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.NeutralButton.Position = UDim2.new(0.00300000003, 0, 0.318112403, 0)
+ScreenGui.NeutralButton.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.NeutralButton.Font = Enum.Font.SourceSans
+ScreenGui.NeutralButton.Text = "Neutral"
+ScreenGui.NeutralButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.NeutralButton.TextScaled = true
+ScreenGui.NeutralButton.TextSize = 14.000
+ScreenGui.NeutralButton.TextWrapped = true
+
+ScreenGui.UICorner_17.Parent = ScreenGui.NeutralButton
+
+ScreenGui.LocalSettingsFrame_2.Name = "LocalSettingsFrame"
+ScreenGui.LocalSettingsFrame_2.Parent = ScreenGui.LocalFrame
+ScreenGui.LocalSettingsFrame_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.LocalSettingsFrame_2.Position = UDim2.new(0.693024993, 0, 0.0370370373, 0)
+ScreenGui.LocalSettingsFrame_2.Size = UDim2.new(0, 143, 0, 249)
+
+ScreenGui.UICorner_18.Parent = ScreenGui.LocalSettingsFrame_2
+
+ScreenGui.TextLabel_2.Parent = ScreenGui.LocalSettingsFrame_2
+ScreenGui.TextLabel_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TextLabel_2.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.TextLabel_2.Font = Enum.Font.SourceSans
+ScreenGui.TextLabel_2.Text = "Gun Settings"
+ScreenGui.TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.TextLabel_2.TextSize = 14.000
+ScreenGui.TextLabel_2.TextWrapped = true
+
+ScreenGui.UICorner_19.CornerRadius = UDim.new(0, 3)
+ScreenGui.UICorner_19.Parent = ScreenGui.TextLabel_2
+
+ScreenGui.M9Button.Name = "M9Button"
+ScreenGui.M9Button.Parent = ScreenGui.LocalSettingsFrame_2
+ScreenGui.M9Button.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.M9Button.Position = UDim2.new(0, 0, 0.076305218, 0)
+ScreenGui.M9Button.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.M9Button.Font = Enum.Font.SourceSans
+ScreenGui.M9Button.Text = "Get M9"
+ScreenGui.M9Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.M9Button.TextScaled = true
+ScreenGui.M9Button.TextSize = 14.000
+ScreenGui.M9Button.TextWrapped = true
+
+ScreenGui.UICorner_20.Parent = ScreenGui.M9Button
+
+ScreenGui.RemingtonButton.Name = "RemingtonButton"
+ScreenGui.RemingtonButton.Parent = ScreenGui.LocalSettingsFrame_2
+ScreenGui.RemingtonButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.RemingtonButton.Position = UDim2.new(0, 0, 0.156626508, 0)
+ScreenGui.RemingtonButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.RemingtonButton.Font = Enum.Font.SourceSans
+ScreenGui.RemingtonButton.Text = "Get Remington"
+ScreenGui.RemingtonButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.RemingtonButton.TextScaled = true
+ScreenGui.RemingtonButton.TextSize = 14.000
+ScreenGui.RemingtonButton.TextWrapped = true
+
+ScreenGui.UICorner_21.Parent = ScreenGui.RemingtonButton
+
+ScreenGui.AkButton.Name = "AkButton"
+ScreenGui.AkButton.Parent = ScreenGui.LocalSettingsFrame_2
+ScreenGui.AkButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.AkButton.Position = UDim2.new(0, 0, 0.232931733, 0)
+ScreenGui.AkButton.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.AkButton.Font = Enum.Font.SourceSans
+ScreenGui.AkButton.Text = "Get Ak"
+ScreenGui.AkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.AkButton.TextScaled = true
+ScreenGui.AkButton.TextSize = 14.000
+ScreenGui.AkButton.TextWrapped = true
+
+ScreenGui.UICorner_22.Parent = ScreenGui.AkButton
+
+ScreenGui.SwordButton.Name = "SwordButton"
+ScreenGui.SwordButton.Parent = ScreenGui.LocalSettingsFrame_2
+ScreenGui.SwordButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.SwordButton.Position = UDim2.new(0, 0, 0.317269087, 0)
+ScreenGui.SwordButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.SwordButton.Font = Enum.Font.SourceSans
+ScreenGui.SwordButton.Text = "Get Sword"
+ScreenGui.SwordButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.SwordButton.TextScaled = true
+ScreenGui.SwordButton.TextSize = 14.000
+ScreenGui.SwordButton.TextWrapped = true
+
+ScreenGui.UICorner_23.Parent = ScreenGui.SwordButton
+
+ScreenGui.PlayersFrame.Name = "PlayersFrame"
+ScreenGui.PlayersFrame.Parent = ScreenGui.AllFrame
+ScreenGui.PlayersFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScreenGui.PlayersFrame.BorderSizePixel = 0
+ScreenGui.PlayersFrame.Size = UDim2.new(0, 500, 0, 270)
+ScreenGui.PlayersFrame.Visible = false
+
+ScreenGui.PlayerList.Name = "PlayerList"
+ScreenGui.PlayerList.Parent = ScreenGui.PlayersFrame
+ScreenGui.PlayerList.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.PlayerList.Position = UDim2.new(0.355025023, 0, 0.0370370373, 0)
+ScreenGui.PlayerList.Size = UDim2.new(0, 143, 0, 249)
+
+ScreenGui.UICorner_24.Parent = ScreenGui.PlayerList
+
+ScreenGui.PLS.Name = "PLS"
+ScreenGui.PLS.Parent = ScreenGui.PlayerList
+ScreenGui.PLS.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PLS.BorderSizePixel = 0
+ScreenGui.PLS.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.PLS.Font = Enum.Font.SourceSans
+ScreenGui.PLS.Text = "Player List"
+ScreenGui.PLS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PLS.TextSize = 14.000
+ScreenGui.PLS.TextWrapped = true
+
+ScreenGui.UICorner_25.CornerRadius = UDim.new(0, 4)
+ScreenGui.UICorner_25.Parent = ScreenGui.PLS
+
+ScreenGui.PlayerList_2.Name = "PlayerList"
+ScreenGui.PlayerList_2.Parent = ScreenGui.PLS
+ScreenGui.PlayerList_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.PlayerList_2.Position = UDim2.new(0.000555718667, 0, 1.29880977, 0)
+ScreenGui.PlayerList_2.Size = UDim2.new(0, 142, 0, 230)
+
+ScreenGui.UICorner_26.Parent = ScreenGui.PlayerList_2
+
+ScreenGui.UIListLayout_2.Parent = ScreenGui.PlayerList_2
+ScreenGui.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+ScreenGui.UIListLayout_2.Padding = UDim.new(0, 5)
+
+ScreenGui.ScrollingFrame.Parent = ScreenGui.PlayerList_2
+ScreenGui.ScrollingFrame.Active = true
+ScreenGui.ScrollingFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.ScrollingFrame.BackgroundTransparency = 1.000
+ScreenGui.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.ScrollingFrame.Size = UDim2.new(0, 142, 0, 230)
+ScreenGui.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 2.5, 0)
+ScreenGui.ScrollingFrame.ScrollBarThickness = 0
+
+ScreenGui.UICorner_27.Parent = ScreenGui.ScrollingFrame
+
+ScreenGui.UIListLayout_3.Parent = ScreenGui.ScrollingFrame
+ScreenGui.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+ScreenGui.UIListLayout_3.Padding = UDim.new(0, 5)
+
+ScreenGui.Player1.Name = "Player1"
+ScreenGui.Player1.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player1.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player1.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player1.Font = Enum.Font.SourceSans
+ScreenGui.Player1.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player1.TextScaled = true
+ScreenGui.Player1.TextSize = 14.000
+ScreenGui.Player1.TextWrapped = true
+
+ScreenGui.UICorner_28.Parent = ScreenGui.Player1
+
+ScreenGui.Player10.Name = "Player10"
+ScreenGui.Player10.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player10.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player10.Position = UDim2.new(0, 0, 0.0869565234, 0)
+ScreenGui.Player10.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player10.Font = Enum.Font.SourceSans
+ScreenGui.Player10.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player10.TextScaled = true
+ScreenGui.Player10.TextSize = 14.000
+ScreenGui.Player10.TextWrapped = true
+
+ScreenGui.UICorner_29.Parent = ScreenGui.Player10
+
+ScreenGui.Player11.Name = "Player11"
+ScreenGui.Player11.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player11.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player11.Position = UDim2.new(0.00666666683, 0, 0.372222245, 0)
+ScreenGui.Player11.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player11.Font = Enum.Font.SourceSans
+ScreenGui.Player11.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player11.TextScaled = true
+ScreenGui.Player11.TextSize = 14.000
+ScreenGui.Player11.TextWrapped = true
+
+ScreenGui.UICorner_30.Parent = ScreenGui.Player11
+
+ScreenGui.Player12.Name = "Player12"
+ScreenGui.Player12.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player12.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player12.Position = UDim2.new(0.00666666683, 0, 0.40925926, 0)
+ScreenGui.Player12.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player12.Font = Enum.Font.SourceSans
+ScreenGui.Player12.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player12.TextScaled = true
+ScreenGui.Player12.TextSize = 14.000
+ScreenGui.Player12.TextWrapped = true
+
+ScreenGui.UICorner_31.Parent = ScreenGui.Player12
+
+ScreenGui.Player13.Name = "Player13"
+ScreenGui.Player13.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player13.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player13.Position = UDim2.new(0.00666666683, 0, 0.446296275, 0)
+ScreenGui.Player13.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player13.Font = Enum.Font.SourceSans
+ScreenGui.Player13.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player13.TextScaled = true
+ScreenGui.Player13.TextSize = 14.000
+ScreenGui.Player13.TextWrapped = true
+
+ScreenGui.UICorner_32.Parent = ScreenGui.Player13
+
+ScreenGui.Player14.Name = "Player14"
+ScreenGui.Player14.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player14.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player14.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player14.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player14.Font = Enum.Font.SourceSans
+ScreenGui.Player14.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player14.TextScaled = true
+ScreenGui.Player14.TextSize = 14.000
+ScreenGui.Player14.TextWrapped = true
+
+ScreenGui.UICorner_33.Parent = ScreenGui.Player14
+
+ScreenGui.Player15.Name = "Player15"
+ScreenGui.Player15.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player15.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player15.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player15.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player15.Font = Enum.Font.SourceSans
+ScreenGui.Player15.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player15.TextScaled = true
+ScreenGui.Player15.TextSize = 14.000
+ScreenGui.Player15.TextWrapped = true
+
+ScreenGui.UICorner_34.Parent = ScreenGui.Player15
+
+ScreenGui.Player16.Name = "Player16"
+ScreenGui.Player16.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player16.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player16.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player16.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player16.Font = Enum.Font.SourceSans
+ScreenGui.Player16.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player16.TextScaled = true
+ScreenGui.Player16.TextSize = 14.000
+ScreenGui.Player16.TextWrapped = true
+
+ScreenGui.UICorner_35.Parent = ScreenGui.Player16
+
+ScreenGui.Player17.Name = "Player17"
+ScreenGui.Player17.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player17.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player17.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player17.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player17.Font = Enum.Font.SourceSans
+ScreenGui.Player17.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player17.TextScaled = true
+ScreenGui.Player17.TextSize = 14.000
+ScreenGui.Player17.TextWrapped = true
+
+ScreenGui.UICorner_36.Parent = ScreenGui.Player17
+
+ScreenGui.Player18.Name = "Player18"
+ScreenGui.Player18.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player18.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player18.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player18.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player18.Font = Enum.Font.SourceSans
+ScreenGui.Player18.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player18.TextScaled = true
+ScreenGui.Player18.TextSize = 14.000
+ScreenGui.Player18.TextWrapped = true
+
+ScreenGui.UICorner_37.Parent = ScreenGui.Player18
+
+ScreenGui.Player19.Name = "Player19"
+ScreenGui.Player19.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player19.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player19.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player19.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player19.Font = Enum.Font.SourceSans
+ScreenGui.Player19.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player19.TextScaled = true
+ScreenGui.Player19.TextSize = 14.000
+ScreenGui.Player19.TextWrapped = true
+
+ScreenGui.UICorner_38.Parent = ScreenGui.Player19
+
+ScreenGui.Player2.Name = "Player2"
+ScreenGui.Player2.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player2.Position = UDim2.new(0.00666666683, 0, 0.0370370373, 0)
+ScreenGui.Player2.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player2.Font = Enum.Font.SourceSans
+ScreenGui.Player2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player2.TextScaled = true
+ScreenGui.Player2.TextSize = 14.000
+ScreenGui.Player2.TextWrapped = true
+
+ScreenGui.UICorner_39.Parent = ScreenGui.Player2
+
+ScreenGui.Player20.Name = "Player20"
+ScreenGui.Player20.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player20.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player20.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player20.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player20.Font = Enum.Font.SourceSans
+ScreenGui.Player20.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player20.TextScaled = true
+ScreenGui.Player20.TextSize = 14.000
+ScreenGui.Player20.TextWrapped = true
+
+ScreenGui.UICorner_40.Parent = ScreenGui.Player20
+
+ScreenGui.Player21.Name = "Player21"
+ScreenGui.Player21.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player21.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player21.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player21.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player21.Font = Enum.Font.SourceSans
+ScreenGui.Player21.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player21.TextScaled = true
+ScreenGui.Player21.TextSize = 14.000
+ScreenGui.Player21.TextWrapped = true
+
+ScreenGui.UICorner_41.Parent = ScreenGui.Player21
+
+ScreenGui.Player22.Name = "Player22"
+ScreenGui.Player22.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player22.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player22.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player22.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player22.Font = Enum.Font.SourceSans
+ScreenGui.Player22.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player22.TextScaled = true
+ScreenGui.Player22.TextSize = 14.000
+ScreenGui.Player22.TextWrapped = true
+
+ScreenGui.UICorner_42.Parent = ScreenGui.Player22
+
+ScreenGui.Player23.Name = "Player23"
+ScreenGui.Player23.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player23.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player23.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player23.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player23.Font = Enum.Font.SourceSans
+ScreenGui.Player23.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player23.TextScaled = true
+ScreenGui.Player23.TextSize = 14.000
+ScreenGui.Player23.TextWrapped = true
+
+ScreenGui.UICorner_43.Parent = ScreenGui.Player23
+
+ScreenGui.Player24.Name = "Player24"
+ScreenGui.Player24.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player24.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player24.Position = UDim2.new(0.00666666776, 0, 0.48333329, 0)
+ScreenGui.Player24.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player24.Font = Enum.Font.SourceSans
+ScreenGui.Player24.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player24.TextScaled = true
+ScreenGui.Player24.TextSize = 14.000
+ScreenGui.Player24.TextWrapped = true
+
+ScreenGui.UICorner_44.Parent = ScreenGui.Player24
+
+ScreenGui.Player3.Name = "Player3"
+ScreenGui.Player3.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player3.Position = UDim2.new(0.00666666683, 0, 0.0740740746, 0)
+ScreenGui.Player3.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player3.Font = Enum.Font.SourceSans
+ScreenGui.Player3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player3.TextScaled = true
+ScreenGui.Player3.TextSize = 14.000
+ScreenGui.Player3.TextWrapped = true
+
+ScreenGui.UICorner_45.Parent = ScreenGui.Player3
+
+ScreenGui.Player4.Name = "Player4"
+ScreenGui.Player4.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player4.Position = UDim2.new(0.00666666683, 0, 0.111111104, 0)
+ScreenGui.Player4.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player4.Font = Enum.Font.SourceSans
+ScreenGui.Player4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player4.TextScaled = true
+ScreenGui.Player4.TextSize = 14.000
+ScreenGui.Player4.TextWrapped = true
+
+ScreenGui.UICorner_46.Parent = ScreenGui.Player4
+
+ScreenGui.Player5.Name = "Player5"
+ScreenGui.Player5.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player5.Position = UDim2.new(0.00666666683, 0, 0.148148149, 0)
+ScreenGui.Player5.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player5.Font = Enum.Font.SourceSans
+ScreenGui.Player5.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player5.TextScaled = true
+ScreenGui.Player5.TextSize = 14.000
+ScreenGui.Player5.TextWrapped = true
+
+ScreenGui.UICorner_47.Parent = ScreenGui.Player5
+
+ScreenGui.Player6.Name = "Player6"
+ScreenGui.Player6.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player6.Position = UDim2.new(0.00666666776, 0, 0.185185179, 0)
+ScreenGui.Player6.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player6.Font = Enum.Font.SourceSans
+ScreenGui.Player6.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player6.TextScaled = true
+ScreenGui.Player6.TextSize = 14.000
+ScreenGui.Player6.TextWrapped = true
+
+ScreenGui.UICorner_48.Parent = ScreenGui.Player6
+
+ScreenGui.Player7.Name = "Player7"
+ScreenGui.Player7.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player7.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player7.Position = UDim2.new(0.00666666683, 0, 0.222222209, 0)
+ScreenGui.Player7.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player7.Font = Enum.Font.SourceSans
+ScreenGui.Player7.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player7.TextScaled = true
+ScreenGui.Player7.TextSize = 14.000
+ScreenGui.Player7.TextWrapped = true
+
+ScreenGui.UICorner_49.Parent = ScreenGui.Player7
+
+ScreenGui.Player8.Name = "Player8"
+ScreenGui.Player8.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player8.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player8.Position = UDim2.new(0.00666666683, 0, 0.259259224, 0)
+ScreenGui.Player8.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player8.Font = Enum.Font.SourceSans
+ScreenGui.Player8.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player8.TextScaled = true
+ScreenGui.Player8.TextSize = 14.000
+ScreenGui.Player8.TextWrapped = true
+
+ScreenGui.UICorner_50.Parent = ScreenGui.Player8
+
+ScreenGui.Player9.Name = "Player9"
+ScreenGui.Player9.Parent = ScreenGui.ScrollingFrame
+ScreenGui.Player9.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Player9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Player9.Position = UDim2.new(0.00666666683, 0, 0.298148155, 0)
+ScreenGui.Player9.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.Player9.Font = Enum.Font.SourceSans
+ScreenGui.Player9.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Player9.TextScaled = true
+ScreenGui.Player9.TextSize = 14.000
+ScreenGui.Player9.TextWrapped = true
+
+ScreenGui.UICorner_51.Parent = ScreenGui.Player9
+
+ScreenGui.PlayerFunctionsFrame.Name = "PlayerFunctionsFrame"
+ScreenGui.PlayerFunctionsFrame.Parent = ScreenGui.PlayersFrame
+ScreenGui.PlayerFunctionsFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.PlayerFunctionsFrame.Position = UDim2.new(0.693024993, 0, 0.0370370373, 0)
+ScreenGui.PlayerFunctionsFrame.Size = UDim2.new(0, 143, 0, 249)
+
+ScreenGui.UICorner_52.Parent = ScreenGui.PlayerFunctionsFrame
+
+ScreenGui.TextLabel_3.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.TextLabel_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TextLabel_3.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.TextLabel_3.Font = Enum.Font.SourceSans
+ScreenGui.TextLabel_3.Text = "Player Functions"
+ScreenGui.TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.TextLabel_3.TextSize = 14.000
+ScreenGui.TextLabel_3.TextWrapped = true
+
+ScreenGui.UICorner_53.CornerRadius = UDim.new(0, 3)
+ScreenGui.UICorner_53.Parent = ScreenGui.TextLabel_3
+
+ScreenGui.TpButton.Name = "TpButton"
+ScreenGui.TpButton.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.TpButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TpButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.TpButton.Position = UDim2.new(0.144133657, 0, 0.0967603847, 0)
+ScreenGui.TpButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.TpButton.Font = Enum.Font.SourceSans
+ScreenGui.TpButton.Text = "Teleport "
+ScreenGui.TpButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.TpButton.TextScaled = true
+ScreenGui.TpButton.TextSize = 14.000
+ScreenGui.TpButton.TextWrapped = true
+
+ScreenGui.UICorner_54.Parent = ScreenGui.TpButton
+
+ScreenGui.UIListLayout_4.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+ScreenGui.UIListLayout_4.Padding = UDim.new(0, 5)
+
+ScreenGui.BringButton.Name = "BringButton"
+ScreenGui.BringButton.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.BringButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.BringButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.BringButton.Position = UDim2.new(0.144133657, 0, 0.0967603847, 0)
+ScreenGui.BringButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.BringButton.Font = Enum.Font.SourceSans
+ScreenGui.BringButton.Text = "Bring"
+ScreenGui.BringButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.BringButton.TextScaled = true
+ScreenGui.BringButton.TextSize = 14.000
+ScreenGui.BringButton.TextWrapped = true
+
+ScreenGui.UICorner_55.Parent = ScreenGui.BringButton
+
+ScreenGui.KillButton.Name = "KillButton"
+ScreenGui.KillButton.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.KillButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.KillButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.KillButton.Position = UDim2.new(0.144133657, 0, 0.0967603847, 0)
+ScreenGui.KillButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.KillButton.Font = Enum.Font.SourceSans
+ScreenGui.KillButton.Text = "Kill"
+ScreenGui.KillButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.KillButton.TextScaled = true
+ScreenGui.KillButton.TextSize = 14.000
+ScreenGui.KillButton.TextWrapped = true
+
+ScreenGui.UICorner_56.Parent = ScreenGui.KillButton
+
+ScreenGui.HackerKillButton.Name = "HackerKillButton"
+ScreenGui.HackerKillButton.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.HackerKillButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.HackerKillButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.HackerKillButton.Position = UDim2.new(0.144133657, 0, 0.0967603847, 0)
+ScreenGui.HackerKillButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.HackerKillButton.Font = Enum.Font.SourceSans
+ScreenGui.HackerKillButton.Text = "Hacker Kill"
+ScreenGui.HackerKillButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.HackerKillButton.TextScaled = true
+ScreenGui.HackerKillButton.TextSize = 14.000
+ScreenGui.HackerKillButton.TextWrapped = true
+
+ScreenGui.UICorner_57.Parent = ScreenGui.HackerKillButton
+
+ScreenGui.AresstPlayerButton.Name = "AresstPlayerButton"
+ScreenGui.AresstPlayerButton.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.AresstPlayerButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.AresstPlayerButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.AresstPlayerButton.Position = UDim2.new(0.144133657, 0, 0.0967603847, 0)
+ScreenGui.AresstPlayerButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.AresstPlayerButton.Font = Enum.Font.SourceSans
+ScreenGui.AresstPlayerButton.Text = "Aresst"
+ScreenGui.AresstPlayerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.AresstPlayerButton.TextScaled = true
+ScreenGui.AresstPlayerButton.TextSize = 14.000
+ScreenGui.AresstPlayerButton.TextWrapped = true
+
+ScreenGui.UICorner_58.Parent = ScreenGui.AresstPlayerButton
+
+ScreenGui.TextLabel_4.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.TextLabel_4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TextLabel_4.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.TextLabel_4.Font = Enum.Font.SourceSans
+ScreenGui.TextLabel_4.Text = "Server Functions"
+ScreenGui.TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.TextLabel_4.TextSize = 14.000
+ScreenGui.TextLabel_4.TextWrapped = true
+
+ScreenGui.UICorner_59.CornerRadius = UDim.new(0, 3)
+ScreenGui.UICorner_59.Parent = ScreenGui.TextLabel_4
+
+ScreenGui.SpawnGuns.Name = "SpawnGuns"
+ScreenGui.SpawnGuns.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.SpawnGuns.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.SpawnGuns.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.SpawnGuns.Position = UDim2.new(0.144133657, 0, 0.0967603847, 0)
+ScreenGui.SpawnGuns.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.SpawnGuns.Font = Enum.Font.SourceSans
+ScreenGui.SpawnGuns.Text = "Spawn Guns/Keycards"
+ScreenGui.SpawnGuns.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.SpawnGuns.TextScaled = true
+ScreenGui.SpawnGuns.TextSize = 14.000
+ScreenGui.SpawnGuns.TextWrapped = true
+
+ScreenGui.UICorner_60.Parent = ScreenGui.SpawnGuns
+
+ScreenGui.AresstAllButton.Name = "AresstAllButton"
+ScreenGui.AresstAllButton.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.AresstAllButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.AresstAllButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.AresstAllButton.Position = UDim2.new(0.144133657, 0, 0.0967603847, 0)
+ScreenGui.AresstAllButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.AresstAllButton.Font = Enum.Font.SourceSans
+ScreenGui.AresstAllButton.Text = "Aresst All"
+ScreenGui.AresstAllButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.AresstAllButton.TextScaled = true
+ScreenGui.AresstAllButton.TextSize = 14.000
+ScreenGui.AresstAllButton.TextWrapped = true
+
+ScreenGui.UICorner_61.Parent = ScreenGui.AresstAllButton
+
+ScreenGui.CrimAll.Name = "CrimAll"
+ScreenGui.CrimAll.Parent = ScreenGui.PlayerFunctionsFrame
+ScreenGui.CrimAll.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.CrimAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.CrimAll.Position = UDim2.new(0.144133657, 0, 0.0967603847, 0)
+ScreenGui.CrimAll.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.CrimAll.Font = Enum.Font.SourceSans
+ScreenGui.CrimAll.Text = "Crim All"
+ScreenGui.CrimAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.CrimAll.TextScaled = true
+ScreenGui.CrimAll.TextSize = 14.000
+ScreenGui.CrimAll.TextWrapped = true
+
+ScreenGui.UICorner_62.Parent = ScreenGui.CrimAll
+
+ScreenGui.PlayerInfoFrame.Name = "PlayerInfoFrame"
+ScreenGui.PlayerInfoFrame.Parent = ScreenGui.PlayersFrame
+ScreenGui.PlayerInfoFrame.Active = true
+ScreenGui.PlayerInfoFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.PlayerInfoFrame.BorderSizePixel = 0
+ScreenGui.PlayerInfoFrame.Position = UDim2.new(0.0189999994, 0, 0.0370000005, 0)
+ScreenGui.PlayerInfoFrame.Size = UDim2.new(0, 143, 0, 249)
+ScreenGui.PlayerInfoFrame.ScrollBarThickness = 2
+
+ScreenGui.UICorner_63.Parent = ScreenGui.PlayerInfoFrame
+
+ScreenGui.UIListLayout_5.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+ScreenGui.UIListLayout_5.Padding = UDim.new(0, 5)
+
+ScreenGui.PlayerInfoText.Name = "PlayerInfoText"
+ScreenGui.PlayerInfoText.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.PlayerInfoText.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PlayerInfoText.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.PlayerInfoText.Font = Enum.Font.SourceSans
+ScreenGui.PlayerInfoText.Text = "Player Info"
+ScreenGui.PlayerInfoText.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PlayerInfoText.TextSize = 14.000
+ScreenGui.PlayerInfoText.TextWrapped = true
+
+ScreenGui.UICorner_64.CornerRadius = UDim.new(0, 3)
+ScreenGui.UICorner_64.Parent = ScreenGui.PlayerInfoText
+
+ScreenGui.ImageLabel.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.ImageLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ScreenGui.ImageLabel.BackgroundTransparency = 1.000
+ScreenGui.ImageLabel.Position = UDim2.new(0.146450788, 0, -0.1027757, 0)
+ScreenGui.ImageLabel.Size = UDim2.new(0, 143, 0, 143)
+ScreenGui.ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+ScreenGui.UICorner_65.CornerRadius = UDim.new(0, 10)
+ScreenGui.UICorner_65.Parent = ScreenGui.ImageLabel
+
+ScreenGui.PlayerName.Name = "PlayerName"
+ScreenGui.PlayerName.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.PlayerName.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PlayerName.Position = UDim2.new(0, 0, 0.076305218, 0)
+ScreenGui.PlayerName.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.PlayerName.Font = Enum.Font.SourceSans
+ScreenGui.PlayerName.Text = "Player Name"
+ScreenGui.PlayerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PlayerName.TextSize = 14.000
+
+ScreenGui.UICorner_66.Parent = ScreenGui.PlayerName
+
+ScreenGui.PlayerAge.Name = "PlayerAge"
+ScreenGui.PlayerAge.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.PlayerAge.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PlayerAge.Position = UDim2.new(0, 0, 0.236947775, 0)
+ScreenGui.PlayerAge.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.PlayerAge.Font = Enum.Font.SourceSans
+ScreenGui.PlayerAge.Text = "Player Age"
+ScreenGui.PlayerAge.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PlayerAge.TextSize = 14.000
+
+ScreenGui.UICorner_67.Parent = ScreenGui.PlayerAge
+
+ScreenGui.PlayerID.Name = "PlayerID"
+ScreenGui.PlayerID.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.PlayerID.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PlayerID.Position = UDim2.new(0, 0, 0.236947775, 0)
+ScreenGui.PlayerID.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.PlayerID.Font = Enum.Font.SourceSans
+ScreenGui.PlayerID.Text = "Player ID"
+ScreenGui.PlayerID.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PlayerID.TextSize = 14.000
+
+ScreenGui.UICorner_68.Parent = ScreenGui.PlayerID
+
+ScreenGui.Team.Name = "Team"
+ScreenGui.Team.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.Team.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Team.Position = UDim2.new(0, 0, 0.236947775, 0)
+ScreenGui.Team.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.Team.Font = Enum.Font.SourceSans
+ScreenGui.Team.Text = "Team"
+ScreenGui.Team.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Team.TextSize = 14.000
+
+ScreenGui.UICorner_69.Parent = ScreenGui.Team
+
+ScreenGui.Health.Name = "Health"
+ScreenGui.Health.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.Health.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Health.Position = UDim2.new(0, 0, 0.236947775, 0)
+ScreenGui.Health.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.Health.Font = Enum.Font.SourceSans
+ScreenGui.Health.Text = "Health : "
+ScreenGui.Health.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Health.TextSize = 14.000
+
+ScreenGui.UICorner_70.Parent = ScreenGui.Health
+
+ScreenGui.M9.Name = "M9"
+ScreenGui.M9.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.M9.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.M9.Position = UDim2.new(0, 0, 0.236947775, 0)
+ScreenGui.M9.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.M9.Font = Enum.Font.SourceSans
+ScreenGui.M9.Text = "Has M9 :"
+ScreenGui.M9.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.M9.TextSize = 14.000
+
+ScreenGui.UICorner_71.Parent = ScreenGui.M9
+
+ScreenGui.Remington.Name = "Remington"
+ScreenGui.Remington.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.Remington.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Remington.Position = UDim2.new(0, 0, 0.236947775, 0)
+ScreenGui.Remington.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.Remington.Font = Enum.Font.SourceSans
+ScreenGui.Remington.Text = "Has Remington :"
+ScreenGui.Remington.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Remington.TextSize = 14.000
+
+ScreenGui.UICorner_72.Parent = ScreenGui.Remington
+
+ScreenGui.AK.Name = "AK"
+ScreenGui.AK.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.AK.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.AK.Position = UDim2.new(0, 0, 0.236947775, 0)
+ScreenGui.AK.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.AK.Font = Enum.Font.SourceSans
+ScreenGui.AK.Text = "Has AK47 :"
+ScreenGui.AK.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.AK.TextSize = 14.000
+
+ScreenGui.UICorner_73.Parent = ScreenGui.AK
+
+ScreenGui.Keycard.Name = "Keycard"
+ScreenGui.Keycard.Parent = ScreenGui.PlayerInfoFrame
+ScreenGui.Keycard.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.Keycard.Position = UDim2.new(0, 0, 0.236947775, 0)
+ScreenGui.Keycard.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.Keycard.Font = Enum.Font.SourceSans
+ScreenGui.Keycard.Text = "Has Keycard :"
+ScreenGui.Keycard.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.Keycard.TextSize = 14.000
+
+ScreenGui.UICorner_74.Parent = ScreenGui.Keycard
+
+ScreenGui.MiscFrame.Name = "MiscFrame"
+ScreenGui.MiscFrame.Parent = ScreenGui.AllFrame
+ScreenGui.MiscFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScreenGui.MiscFrame.BorderSizePixel = 0
+ScreenGui.MiscFrame.Size = UDim2.new(0, 500, 0, 270)
+ScreenGui.MiscFrame.Visible = false
+
+ScreenGui.TeamFrame_2.Name = "TeamFrame"
+ScreenGui.TeamFrame_2.Parent = ScreenGui.MiscFrame
+ScreenGui.TeamFrame_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.TeamFrame_2.Position = UDim2.new(0.355025023, 0, 0.0370370373, 0)
+ScreenGui.TeamFrame_2.Size = UDim2.new(0, 143, 0, 249)
+
+ScreenGui.UICorner_75.Parent = ScreenGui.TeamFrame_2
+
+ScreenGui.a_2.Name = "a"
+ScreenGui.a_2.Parent = ScreenGui.TeamFrame_2
+ScreenGui.a_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.a_2.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.a_2.Font = Enum.Font.SourceSans
+ScreenGui.a_2.Text = "No Name yet"
+ScreenGui.a_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.a_2.TextSize = 14.000
+ScreenGui.a_2.TextWrapped = true
+
+ScreenGui.UICorner_76.CornerRadius = UDim.new(0, 3)
+ScreenGui.UICorner_76.Parent = ScreenGui.a_2
+
+ScreenGui.UIListLayout_6.Parent = ScreenGui.TeamFrame_2
+ScreenGui.UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
+ScreenGui.UIListLayout_6.Padding = UDim.new(0, 5)
+
+ScreenGui.InvisButton.Name = "InvisButton"
+ScreenGui.InvisButton.Parent = ScreenGui.TeamFrame_2
+ScreenGui.InvisButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.InvisButton.Position = UDim2.new(0.00314736529, 0, 0.0763052255, 0)
+ScreenGui.InvisButton.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.InvisButton.Font = Enum.Font.SourceSans
+ScreenGui.InvisButton.Text = "Invis"
+ScreenGui.InvisButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.InvisButton.TextScaled = true
+ScreenGui.InvisButton.TextSize = 14.000
+ScreenGui.InvisButton.TextWrapped = true
+
+ScreenGui.UICorner_77.Parent = ScreenGui.InvisButton
+
+ScreenGui.AntiABuse.Name = "AntiABuse"
+ScreenGui.AntiABuse.Parent = ScreenGui.TeamFrame_2
+ScreenGui.AntiABuse.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.AntiABuse.Position = UDim2.new(0.00314736529, 0, 0.172690764, 0)
+ScreenGui.AntiABuse.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.AntiABuse.Font = Enum.Font.SourceSans
+ScreenGui.AntiABuse.Text = "Anti Abuse"
+ScreenGui.AntiABuse.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.AntiABuse.TextScaled = true
+ScreenGui.AntiABuse.TextSize = 14.000
+ScreenGui.AntiABuse.TextWrapped = true
+
+ScreenGui.UICorner_78.Parent = ScreenGui.AntiABuse
+
+ScreenGui.TeleportsFrame.Name = "TeleportsFrame"
+ScreenGui.TeleportsFrame.Parent = ScreenGui.AllFrame
+ScreenGui.TeleportsFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScreenGui.TeleportsFrame.BorderSizePixel = 0
+ScreenGui.TeleportsFrame.Size = UDim2.new(0, 500, 0, 270)
+ScreenGui.TeleportsFrame.Visible = false
+
+ScreenGui.MainTeleportsFrame.Name = "MainTeleportsFrame"
+ScreenGui.MainTeleportsFrame.Parent = ScreenGui.TeleportsFrame
+ScreenGui.MainTeleportsFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.MainTeleportsFrame.Position = UDim2.new(0.0190249681, 0, 0.0370370373, 0)
+ScreenGui.MainTeleportsFrame.Size = UDim2.new(0, 143, 0, 249)
+
+ScreenGui.UICorner_79.Parent = ScreenGui.MainTeleportsFrame
+
+ScreenGui.TextLabel_5.Parent = ScreenGui.MainTeleportsFrame
+ScreenGui.TextLabel_5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TextLabel_5.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.TextLabel_5.Font = Enum.Font.SourceSans
+ScreenGui.TextLabel_5.Text = "Main Teleports"
+ScreenGui.TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.TextLabel_5.TextSize = 14.000
+ScreenGui.TextLabel_5.TextWrapped = true
+
+ScreenGui.UICorner_80.CornerRadius = UDim.new(0, 3)
+ScreenGui.UICorner_80.Parent = ScreenGui.TextLabel_5
+
+ScreenGui.PrisonYardButton.Name = "PrisonYardButton"
+ScreenGui.PrisonYardButton.Parent = ScreenGui.MainTeleportsFrame
+ScreenGui.PrisonYardButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PrisonYardButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.PrisonYardButton.Position = UDim2.new(-0.00271949172, 0, 0.0766800642, 0)
+ScreenGui.PrisonYardButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.PrisonYardButton.Font = Enum.Font.SourceSans
+ScreenGui.PrisonYardButton.Text = "Prison Yard"
+ScreenGui.PrisonYardButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PrisonYardButton.TextScaled = true
+ScreenGui.PrisonYardButton.TextSize = 14.000
+ScreenGui.PrisonYardButton.TextWrapped = true
+
+ScreenGui.UICorner_81.Parent = ScreenGui.PrisonYardButton
+
+ScreenGui.PrisonCellsButton.Name = "PrisonCellsButton"
+ScreenGui.PrisonCellsButton.Parent = ScreenGui.MainTeleportsFrame
+ScreenGui.PrisonCellsButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PrisonCellsButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.PrisonCellsButton.Position = UDim2.new(0.00427351892, 0, 0.157001376, 0)
+ScreenGui.PrisonCellsButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.PrisonCellsButton.Font = Enum.Font.SourceSans
+ScreenGui.PrisonCellsButton.Text = "Prison Cells"
+ScreenGui.PrisonCellsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PrisonCellsButton.TextScaled = true
+ScreenGui.PrisonCellsButton.TextSize = 14.000
+ScreenGui.PrisonCellsButton.TextWrapped = true
+
+ScreenGui.UICorner_82.Parent = ScreenGui.PrisonCellsButton
+
+ScreenGui.CrimBaseButton.Name = "CrimBaseButton"
+ScreenGui.CrimBaseButton.Parent = ScreenGui.MainTeleportsFrame
+ScreenGui.CrimBaseButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.CrimBaseButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.CrimBaseButton.Position = UDim2.new(0.00427351519, 0, 0.397965193, 0)
+ScreenGui.CrimBaseButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.CrimBaseButton.Font = Enum.Font.SourceSans
+ScreenGui.CrimBaseButton.Text = "Crim Base"
+ScreenGui.CrimBaseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.CrimBaseButton.TextScaled = true
+ScreenGui.CrimBaseButton.TextSize = 14.000
+ScreenGui.CrimBaseButton.TextWrapped = true
+
+ScreenGui.UICorner_83.Parent = ScreenGui.CrimBaseButton
+
+ScreenGui.PrisonTowerButton.Name = "PrisonTowerButton"
+ScreenGui.PrisonTowerButton.Parent = ScreenGui.MainTeleportsFrame
+ScreenGui.PrisonTowerButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PrisonTowerButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.PrisonTowerButton.Position = UDim2.new(0.00427351892, 0, 0.317643881, 0)
+ScreenGui.PrisonTowerButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.PrisonTowerButton.Font = Enum.Font.SourceSans
+ScreenGui.PrisonTowerButton.Text = "Prison Tower"
+ScreenGui.PrisonTowerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PrisonTowerButton.TextScaled = true
+ScreenGui.PrisonTowerButton.TextSize = 14.000
+ScreenGui.PrisonTowerButton.TextWrapped = true
+
+ScreenGui.UICorner_84.Parent = ScreenGui.PrisonTowerButton
+
+ScreenGui.GardsRoomButton.Name = "GardsRoomButton"
+ScreenGui.GardsRoomButton.Parent = ScreenGui.MainTeleportsFrame
+ScreenGui.GardsRoomButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.GardsRoomButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.GardsRoomButton.Position = UDim2.new(-0.00271948799, 0, 0.237322599, 0)
+ScreenGui.GardsRoomButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.GardsRoomButton.Font = Enum.Font.SourceSans
+ScreenGui.GardsRoomButton.Text = "Gards Room"
+ScreenGui.GardsRoomButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.GardsRoomButton.TextScaled = true
+ScreenGui.GardsRoomButton.TextSize = 14.000
+ScreenGui.GardsRoomButton.TextWrapped = true
+
+ScreenGui.UICorner_85.Parent = ScreenGui.GardsRoomButton
+
+ScreenGui.PrisonRoofButton.Name = "PrisonRoofButton"
+ScreenGui.PrisonRoofButton.Parent = ScreenGui.MainTeleportsFrame
+ScreenGui.PrisonRoofButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.PrisonRoofButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.PrisonRoofButton.Position = UDim2.new(0.00427352637, 0, 0.478286505, 0)
+ScreenGui.PrisonRoofButton.Size = UDim2.new(0, 142, 0, 15)
+ScreenGui.PrisonRoofButton.Font = Enum.Font.SourceSans
+ScreenGui.PrisonRoofButton.Text = "Prison Roof"
+ScreenGui.PrisonRoofButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.PrisonRoofButton.TextScaled = true
+ScreenGui.PrisonRoofButton.TextSize = 14.000
+ScreenGui.PrisonRoofButton.TextWrapped = true
+
+ScreenGui.UICorner_86.Parent = ScreenGui.PrisonRoofButton
+
+ScreenGui.ExtrasFrame.Name = "ExtrasFrame"
+ScreenGui.ExtrasFrame.Parent = ScreenGui.AllFrame
+ScreenGui.ExtrasFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScreenGui.ExtrasFrame.BorderSizePixel = 0
+ScreenGui.ExtrasFrame.Size = UDim2.new(0, 500, 0, 270)
+ScreenGui.ExtrasFrame.Visible = false
+
+ScreenGui.SettingsFrame.Name = "SettingsFrame"
+ScreenGui.SettingsFrame.Parent = ScreenGui.AllFrame
+ScreenGui.SettingsFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScreenGui.SettingsFrame.BorderSizePixel = 0
+ScreenGui.SettingsFrame.Size = UDim2.new(0, 500, 0, 270)
+ScreenGui.SettingsFrame.Visible = false
+
+ScreenGui.LocalSettingsFrame_3.Name = "LocalSettingsFrame"
+ScreenGui.LocalSettingsFrame_3.Parent = ScreenGui.SettingsFrame
+ScreenGui.LocalSettingsFrame_3.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScreenGui.LocalSettingsFrame_3.Position = UDim2.new(0.693024993, 0, 0.0370370373, 0)
+ScreenGui.LocalSettingsFrame_3.Size = UDim2.new(0, 143, 0, 249)
+
+ScreenGui.UICorner_87.Parent = ScreenGui.LocalSettingsFrame_3
+
+ScreenGui.TextLabel_6.Parent = ScreenGui.LocalSettingsFrame_3
+ScreenGui.TextLabel_6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScreenGui.TextLabel_6.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.TextLabel_6.Font = Enum.Font.SourceSans
+ScreenGui.TextLabel_6.Text = "Settings"
+ScreenGui.TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.TextLabel_6.TextSize = 14.000
+ScreenGui.TextLabel_6.TextWrapped = true
+
+ScreenGui.UICorner_88.CornerRadius = UDim.new(0, 3)
+ScreenGui.UICorner_88.Parent = ScreenGui.TextLabel_6
+
+ScreenGui.DestroyButton.Name = "DestroyButton"
+ScreenGui.DestroyButton.Parent = ScreenGui.LocalSettingsFrame_3
+ScreenGui.DestroyButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ScreenGui.DestroyButton.Position = UDim2.new(0, 0, 0.0923694745, 0)
+ScreenGui.DestroyButton.Size = UDim2.new(0, 143, 0, 15)
+ScreenGui.DestroyButton.Font = Enum.Font.SourceSans
+ScreenGui.DestroyButton.Text = "Destroy UI"
+ScreenGui.DestroyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.DestroyButton.TextScaled = true
+ScreenGui.DestroyButton.TextSize = 14.000
+ScreenGui.DestroyButton.TextWrapped = true
+
+ScreenGui.UICorner_89.Parent = ScreenGui.DestroyButton
+
+ScreenGui.Frame_7.Parent = ScreenGui.Frame
+ScreenGui.Frame_7.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScreenGui.Frame_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenGui.Frame_7.BorderSizePixel = 0
+ScreenGui.Frame_7.Position = UDim2.new(0, 0, -0.0552794896, 0)
+ScreenGui.Frame_7.Size = UDim2.new(0, 500, 0, 16)
+
+ScreenGui.minutes.Name = "minutes"
+ScreenGui.minutes.Parent = ScreenGui.Frame_7
+ScreenGui.minutes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.minutes.BackgroundTransparency = 1.000
+ScreenGui.minutes.BorderSizePixel = 0
+ScreenGui.minutes.Size = UDim2.new(0, 100, 0, 15)
+ScreenGui.minutes.Font = Enum.Font.SourceSans
+ScreenGui.minutes.Text = "Minutes : 0"
+ScreenGui.minutes.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.minutes.TextSize = 14.000
+ScreenGui.minutes.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+ScreenGui.seconds.Name = "seconds"
+ScreenGui.seconds.Parent = ScreenGui.Frame_7
+ScreenGui.seconds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.seconds.BackgroundTransparency = 1.000
+ScreenGui.seconds.BorderSizePixel = 0
+ScreenGui.seconds.Position = UDim2.new(0.199398801, 0, 0, 0)
+ScreenGui.seconds.Size = UDim2.new(0, 100, 0, 15)
+ScreenGui.seconds.Font = Enum.Font.SourceSans
+ScreenGui.seconds.Text = "Seconds : 0"
+ScreenGui.seconds.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScreenGui.seconds.TextSize = 14.000
+ScreenGui.seconds.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+-- Scripts:
+
+function RVPQ_fake_script() -- ScreenGui.LocalButton.Script 
+	local script = Instance.new('Script', ScreenGui.LocalButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent.Parent.AllFrame:GetChildren()) do
+			if v.Name ~= "LocalFrame" then
+				v.Visible = false
+			else
+				v.Visible = true		
+			end
+		end
+	end)
+end
+coroutine.wrap(RVPQ_fake_script)()
+function ZYGHK_fake_script() -- ScreenGui.LocalButton.ColorScript 
+	local script = Instance.new('Script', ScreenGui.LocalButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v.Name ~= "UIListLayout" then
+				if v.Name ~= script.Parent.Name then
+					v.TextColor3 = Color3.fromRGB(200, 200, 200)
+				else
+					v.TextColor3 = Color3.fromRGB(255, 255, 255)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(ZYGHK_fake_script)()
+function CUWQA_fake_script() -- ScreenGui.LocalButton.Rainbow 
+	local script = Instance.new('Script', ScreenGui.LocalButton)
+
+	while wait() do
+		if script.Parent.TextColor3 == Color3.fromRGB(255,255,255) then
+		script.Parent.Frame.BackgroundColor3 = Color3.new(1,0,0)
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g+(17/255),script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r-(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b+(17/255))
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g-(17/255),script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r+(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b-(17/255))
+			end
+		end
+	end
+end
+coroutine.wrap(CUWQA_fake_script)()
+function MDPSLEF_fake_script() -- ScreenGui.PlayersButton.Script 
+	local script = Instance.new('Script', ScreenGui.PlayersButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent.Parent.AllFrame:GetChildren()) do
+			if v.Name ~= "PlayersFrame" then
+				v.Visible = false
+			else
+				v.Visible = true		
+			end
+		end
+	end)
+end
+coroutine.wrap(MDPSLEF_fake_script)()
+function XVREV_fake_script() -- ScreenGui.PlayersButton.ColorScript 
+	local script = Instance.new('Script', ScreenGui.PlayersButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v.Name ~= "UIListLayout" then
+				if v.Name ~= script.Parent.Name then
+					v.TextColor3 = Color3.fromRGB(200, 200, 200)
+				else
+					v.TextColor3 = Color3.fromRGB(255, 255, 255)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(XVREV_fake_script)()
+function FBWE_fake_script() -- ScreenGui.PlayersButton.Rainbow 
+	local script = Instance.new('Script', ScreenGui.PlayersButton)
+
+	while wait() do
+		if script.Parent.TextColor3 == Color3.fromRGB(255,255,255) then
+			script.Parent.Frame.BackgroundColor3 = Color3.new(1,0,0)
+			for i=1,15 do
+				game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g+(17/255),script.Parent.Frame.BackgroundColor3.b)
+			end
+			for i=1,15 do
+				game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r-(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+			end
+			for i=1,15 do
+				game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b+(17/255))
+			end
+			for i=1,15 do
+				game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g-(17/255),script.Parent.Frame.BackgroundColor3.b)
+			end
+			for i=1,15 do
+				game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r+(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+			end
+			for i=1,15 do
+				game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b-(17/255))
+			end
+		end
+	end
+end
+coroutine.wrap(FBWE_fake_script)()
+function HRQGS_fake_script() -- ScreenGui.MiscButton.Script 
+	local script = Instance.new('Script', ScreenGui.MiscButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent.Parent.AllFrame:GetChildren()) do
+			if v.Name ~= "MiscFrame" then
+				v.Visible = false
+			else
+				v.Visible = true		
+			end
+		end
+	end)
+end
+coroutine.wrap(HRQGS_fake_script)()
+function UUFAHQ_fake_script() -- ScreenGui.MiscButton.ColorScript 
+	local script = Instance.new('Script', ScreenGui.MiscButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v.Name ~= "UIListLayout" then
+				if v.Name ~= script.Parent.Name then
+					v.TextColor3 = Color3.fromRGB(200, 200, 200)
+				else
+					v.TextColor3 = Color3.fromRGB(255, 255, 255)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(UUFAHQ_fake_script)()
+function RBTFD_fake_script() -- ScreenGui.MiscButton.Rainbow 
+	local script = Instance.new('Script', ScreenGui.MiscButton)
+
+	while wait() do
+		if script.Parent.TextColor3 == Color3.fromRGB(255,255,255) then
+		script.Parent.Frame.BackgroundColor3 = Color3.new(1,0,0)
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g+(17/255),script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r-(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b+(17/255))
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g-(17/255),script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r+(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b-(17/255))
+			end
+		end
+	end
+end
+coroutine.wrap(RBTFD_fake_script)()
+function TOSP_fake_script() -- ScreenGui.TeleportsButton.Script 
+	local script = Instance.new('Script', ScreenGui.TeleportsButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent.Parent.AllFrame:GetChildren()) do
+			if v.Name ~= "TeleportsFrame" then
+				v.Visible = false
+			else
+				v.Visible = true		
+			end
+		end
+	end)
+end
+coroutine.wrap(TOSP_fake_script)()
+function WKUPRWB_fake_script() -- ScreenGui.TeleportsButton.ColorScript 
+	local script = Instance.new('Script', ScreenGui.TeleportsButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v.Name ~= "UIListLayout" then
+				if v.Name ~= script.Parent.Name then
+					v.TextColor3 = Color3.fromRGB(200, 200, 200)
+				else
+					v.TextColor3 = Color3.fromRGB(255, 255, 255)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(WKUPRWB_fake_script)()
+function ITDNI_fake_script() -- ScreenGui.TeleportsButton.Rainbow 
+	local script = Instance.new('Script', ScreenGui.TeleportsButton)
+
+	while wait() do
+		if script.Parent.TextColor3 == Color3.fromRGB(255,255,255) then
+		script.Parent.Frame.BackgroundColor3 = Color3.new(1,0,0)
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g+(17/255),script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r-(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b+(17/255))
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g-(17/255),script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r+(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b-(17/255))
+			end
+		end
+	end
+end
+coroutine.wrap(ITDNI_fake_script)()
+function SKESEF_fake_script() -- ScreenGui.SettingsButton.Script 
+	local script = Instance.new('Script', ScreenGui.SettingsButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent.Parent.AllFrame:GetChildren()) do
+			if v.Name ~= "SettingsFrame" then
+				v.Visible = false
+			else
+				v.Visible = true		
+			end
+		end
+	end)
+end
+coroutine.wrap(SKESEF_fake_script)()
+function RNTF_fake_script() -- ScreenGui.SettingsButton.ColorScript 
+	local script = Instance.new('Script', ScreenGui.SettingsButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v.Name ~= "UIListLayout" then
+				if v.Name ~= script.Parent.Name then
+					v.TextColor3 = Color3.fromRGB(200, 200, 200)
+				else
+					v.TextColor3 = Color3.fromRGB(255, 255, 255)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(RNTF_fake_script)()
+function RLIAFVE_fake_script() -- ScreenGui.SettingsButton.Rainbow 
+	local script = Instance.new('Script', ScreenGui.SettingsButton)
+
+	while wait() do
+		if script.Parent.TextColor3 == Color3.fromRGB(255,255,255) then
+		script.Parent.Frame.BackgroundColor3 = Color3.new(1,0,0)
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+				script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g+(17/255),script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r-(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b+(17/255))
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g-(17/255),script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r+(17/255),script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.Frame.BackgroundColor3 = Color3.new(script.Parent.Frame.BackgroundColor3.r,script.Parent.Frame.BackgroundColor3.g,script.Parent.Frame.BackgroundColor3.b-(17/255))
+			end
+		end
+	end
+end
+coroutine.wrap(RLIAFVE_fake_script)()
+function NYFQZFW_fake_script() -- ScreenGui.TextButton.Script 
+	local script = Instance.new('Script', ScreenGui.TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local humanoid = player.Character:FindFirstChild("Humanoid")
+			if humanoid then
+				humanoid.WalkSpeed = script.Parent.Parent.Text
+				end
+	end)
+end
+coroutine.wrap(NYFQZFW_fake_script)()
+function VOZA_fake_script() -- ScreenGui.TextButton_2.Script 
+	local script = Instance.new('Script', ScreenGui.TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local humanoid = player.Character:FindFirstChild("Humanoid")
+			if humanoid then
+				humanoid.JumpPower = script.Parent.Parent.Text
+				end
+	end)
+end
+coroutine.wrap(VOZA_fake_script)()
+function ODQE_fake_script() -- ScreenGui.InmateButton.Script 
+	local script = Instance.new('Script', ScreenGui.InmateButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local string_1 = "Bright orange";
+		local Target = game:GetService("Workspace").Remote.TeamEvent;
+		Target:FireServer(string_1);
+	end)
+end
+coroutine.wrap(ODQE_fake_script)()
+function KKQZWFU_fake_script() -- ScreenGui.PoliceButton.Script 
+	local script = Instance.new('Script', ScreenGui.PoliceButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local string_1 = "Bright blue";
+		local Target = game:GetService("Workspace").Remote.TeamEvent;
+		Target:FireServer(string_1);
+	end)
+end
+coroutine.wrap(KKQZWFU_fake_script)()
+function AKLUF_fake_script() -- ScreenGui.CriminalButton.Script 
+	local script = Instance.new('Script', ScreenGui.CriminalButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr = game.Players.LocalPlayer.Name
+		game:GetService("Workspace")["Criminals Spawn"].SpawnLocation.CanCollide = false
+		game:GetService("Workspace")["Criminals Spawn"].SpawnLocation.Transparency = 1
+		game:GetService("Workspace")["Criminals Spawn"].SpawnLocation.CFrame = game.Workspace[plr].Torso.CFrame
+	end)
+end
+coroutine.wrap(AKLUF_fake_script)()
+function QBDNTO_fake_script() -- ScreenGui.NeutralButton.Script 
+	local script = Instance.new('Script', ScreenGui.NeutralButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local string_1 = "Medium stone grey";
+		local Target = game:GetService("Workspace").Remote.TeamEvent;
+		Target:FireServer(string_1);
+	end)
+end
+coroutine.wrap(QBDNTO_fake_script)()
+function TMGFIB_fake_script() -- ScreenGui.M9Button.Script 
+	local script = Instance.new('Script', ScreenGui.M9Button)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local userdata_1 = game:GetService("Workspace")["Prison_ITEMS"].giver.M9.ITEMPICKUP;
+		local Target = game:GetService("Workspace").Remote.ItemHandler;
+		Target:InvokeServer(userdata_1);
+	end)
+end
+coroutine.wrap(TMGFIB_fake_script)()
+function XSBRNA_fake_script() -- ScreenGui.RemingtonButton.Script 
+	local script = Instance.new('Script', ScreenGui.RemingtonButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local userdata_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"].ITEMPICKUP;
+		local Target = game:GetService("Workspace").Remote.ItemHandler;
+		Target:InvokeServer(userdata_1);
+	end)
+end
+coroutine.wrap(XSBRNA_fake_script)()
+function MOFONJX_fake_script() -- ScreenGui.AkButton.Script 
+	local script = Instance.new('Script', ScreenGui.AkButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local v1 = game:GetService("Workspace")["Prison_ITEMS"].giver["AK-47"].ITEMPICKUP
+		local event = game:GetService("Workspace").Remote.ItemHandler
+		event:InvokeServer(v1)
+	end)
+end
+coroutine.wrap(MOFONJX_fake_script)()
+function AXKZ_fake_script() -- ScreenGui.SwordButton.Script 
+	local script = Instance.new('Script', ScreenGui.SwordButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr=game.Players.LocalPlayer;local tool=Instance.new("Tool",plr.Backpack)tool.GripPos=Vector3.new(0.1,-1,0)tool.Name="Sword"local k=Instance.new("Part",tool)k.Name="Handle"k.Size=Vector3.new(0.4,4,0.4)local l=Instance.new("Animation",tool)l.AnimationId="rbxassetid://218504594"local m=plr.Character.Humanoid:LoadAnimation(l)db=true;da=false;tool.Equipped:connect(function()tool.Activated:connect(function()if db==true then db=false;m:Play()wait()da=true;db=true;wait(0.1)da=false end end)end)k.Touched:connect(function(n)if da==true then local o=n.Parent.Humanoid;if o~=nil then local p=game.Players:FindFirstChild(n.Parent.Name)for j=1,10 do if p.Name~="FunnyVideo15"then game.ReplicatedStorage.meleeEvent:FireServer(p)end end end end end)
+	end)
+end
+coroutine.wrap(AXKZ_fake_script)()
+function RFKQZF_fake_script() -- ScreenGui.PlayerList.LocalGuiScript 
+	local script = Instance.new('LocalScript', ScreenGui.PlayerList)
+
+	
+	--Setup the locals
+	local StarterGui = game:GetService("StarterGui")
+	local gui = script.Parent
+	local NameOfPlayer = gui:WaitForChild("PLS")
+	local PlayerList = NameOfPlayer:WaitForChild("PlayerList")
+	local ScrollingFrame = PlayerList:WaitForChild("ScrollingFrame")
+	local PlayerService = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	--Starting game
+	StarterGui:SetCoreGuiEnabled("PlayerList", false)
+	NameOfPlayer.Text = "Players"
+	
+	--Label the players / Updating label
+	RunService.RenderStepped:connect(function()
+		local playerlabel = ScrollingFrame:GetChildren()
+		local players = PlayerService:GetPlayers()
+		for i,v in next, playerlabel do
+			if players[tonumber(v.Name:sub(7))] then
+				v.Text = players[tonumber(v.Name:sub(7))].Name
+				v.Visible = true
+			else
+				
+				
+			end
+		end
+	end)
+	
+	
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player1.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player1.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player2.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player2.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player3.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player3.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player4.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player4.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player5.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player5.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player6.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player6.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player7.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player7.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player8.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player8.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player9.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player9.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player10.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player10.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player11.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player11.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player12.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player12.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player13.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player13.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player14.MouseButton1Click:Connect(function()
+	local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player14.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player15.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player15.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player16.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player16.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player17.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player17.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player18.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player18.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player19.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player19.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player20.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player20.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player21.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player21.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player22.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player22.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player23.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player23.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+	script.Parent.PLS.PlayerList.ScrollingFrame.Player24.MouseButton1Click:Connect(function()
+		local Name = script.Parent.PLS.PlayerList.ScrollingFrame.Player24.Text
+		script.Parent.Parent.PlayerInfoFrame.PlayerName.Text = Name
+	end)
+end
+coroutine.wrap(RFKQZF_fake_script)()
+function CQTTRUB_fake_script() -- ScreenGui.TpButton.Script 
+	local script = Instance.new('Script', ScreenGui.TpButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr = script.Parent.Parent.Parent.PlayerInfoFrame.PlayerName.Text
+		tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(0.1, Enum.EasingStyle.Linear)
+		tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace[plr].HumanoidRootPart.CFrame})
+		tween:Play()
+	end)
+end
+coroutine.wrap(CQTTRUB_fake_script)()
+function BWON_fake_script() -- ScreenGui.BringButton.Script 
+	local script = Instance.new('Script', ScreenGui.BringButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr = script.Parent.Parent.Parent.PlayerInfoFrame.PlayerName.Text
+		local userdata_1 = game:GetService("Workspace")["Prison_ITEMS"].giver.M9.ITEMPICKUP;
+		local Target = game:GetService("Workspace").Remote.ItemHandler;
+		Target:InvokeServer(userdata_1);
+		NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		game.Players.LocalPlayer.Character.Humanoid.Name = 1
+		local l = game.Players.LocalPlayer.Character["1"]:Clone()
+		l.Parent = game.Players.LocalPlayer.Character
+		l.Name = "Humanoid"
+		wait(0.1)
+		game.Players.LocalPlayer.Character["1"]:Destroy()
+		game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+		game.Players.LocalPlayer.Character.Animate.Disabled = true
+		wait(0.1)
+		game.Players.LocalPlayer.Character.Animate.Disabled = false
+		game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+		for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+			game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+		end
+		function tp(player,player2)
+			local char1,char2=player.Character,player2.Character
+			if char1 and char2 then
+				char1.HumanoidRootPart.CFrame = char2.HumanoidRootPart.CFrame
+			end
+		end
+		function getout(player,player2)
+			local char1,char2=player.Character,player2.Character
+			if char1 and char2 then
+				char1:MoveTo(char2.Head.Position)
+			end
+		end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		wait(0.3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		wait(0.3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		wait(0.3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		wait(2)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+		wait(0.5)
+		local lastPos = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").position
+		local plr = game.Players.LocalPlayer.Name
+		local gayevent = game:GetService("Workspace").Remote.loadchar
+		gayevent:InvokeServer(plr)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastPos)
+	end)
+end
+coroutine.wrap(BWON_fake_script)()
+function PGVE_fake_script() -- ScreenGui.KillButton.Script 
+	local script = Instance.new('Script', ScreenGui.KillButton)
+
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr = script.Parent.Parent.Parent.PlayerInfoFrame.PlayerName.Text
+		local userdata_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"].ITEMPICKUP;
+		local Target = game:GetService("Workspace").Remote.ItemHandler;
+		Target:InvokeServer(userdata_1);
+		local string_1 = "Medium stone grey";
+		local Target = game:GetService("Workspace").Remote.TeamEvent;
+		Target:FireServer(string_1);
+	
+		local ohTable1 = {
+			[1] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-67.3213272, -17.7576218, 393.894012)),
+				["Cframe"] = CFrame.new(836.604492, 101.047256, 2323.76172, 0.974557042, -0.00545880292, -0.224073067, -4.65661287e-10, 0.999703348, -0.0243544839, 0.224139556, 0.023734834, 0.97426796),
+				["Distance"] = 8.2626638412476,
+				["Hit"] = workspace[plr].HumanoidRootPart
+			},
+			[2] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-51.9847679, -4.94238615, 396.576782)),
+				["Cframe"] = CFrame.new(836.835815, 101.24292, 2323.82715, 0.985895336, 0.00383297075, -0.167319402, 0, 0.999737799, 0.0229020976, 0.167363301, -0.022579072, 0.985636711),
+				["Distance"] = 8.3006210327148,
+				["Hit"] = workspace[plr].Head
+			},
+			[3] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-62.5298805, -18.2399025, 394.661041)),
+				["Cframe"] = CFrame.new(836.676514, 101.039505, 2323.78149, 0.97844404, -0.00541157229, -0.206441417, 0, 0.999656677, -0.0262045935, 0.206512347, 0.0256397277, 0.978108048),
+				["Distance"] = 8.2709102630615,
+				["Hit"] = workspace[plr].HumanoidRootPart
+			},
+			[4] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-51.9847679, -4.94238615, 396.576782)),
+				["Cframe"] = CFrame.new(836.835815, 101.24292, 2323.82715, 0.985895336, 0.00383297075, -0.167319402, 0, 0.999737799, 0.0229020976, 0.167363301, -0.022579072, 0.985636711),
+				["Distance"] = 8.3006210327148,
+				["Hit"] = workspace[plr].Head
+			},
+			[5] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-58.3991814, -1.66785085, 395.710449)),
+				["Cframe"] = CFrame.new(836.776001, 101.294312, 2323.55176, 0.981014729, 0.00729708467, -0.193796217, 0, 0.999291897, 0.0376267247, 0.193933561, -0.0369123705, 0.980319977),
+				["Distance"] = 7.7835516929626,
+				["Hit"] = workspace[plr].Head
+			}
+		}
+		local ohInstance2 = game:GetService("Players").LocalPlayer.Backpack["Remington 870"]
+	
+		game:GetService("ReplicatedStorage").ShootEvent:FireServer(ohTable1, ohInstance2)
+	
+		local wtf = "Bright orange";
+		local lol = game:GetService("Workspace").Remote.TeamEvent;
+		lol:FireServer(wtf);
+		wait(0.1)
+		local plr = script.Parent.Parent.Parent.PlayerInfoFrame.PlayerName.Text
+		local userdata_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"].ITEMPICKUP;
+		local Target = game:GetService("Workspace").Remote.ItemHandler;
+		Target:InvokeServer(userdata_1);
+		local string_1 = "Medium stone grey";
+		local Target = game:GetService("Workspace").Remote.TeamEvent;
+		Target:FireServer(string_1);
+	
+		local ohTable1 = {
+			[1] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-67.3213272, -17.7576218, 393.894012)),
+				["Cframe"] = CFrame.new(836.604492, 101.047256, 2323.76172, 0.974557042, -0.00545880292, -0.224073067, -4.65661287e-10, 0.999703348, -0.0243544839, 0.224139556, 0.023734834, 0.97426796),
+				["Distance"] = 8.2626638412476,
+				["Hit"] = workspace[plr].HumanoidRootPart
+			},
+			[2] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-51.9847679, -4.94238615, 396.576782)),
+				["Cframe"] = CFrame.new(836.835815, 101.24292, 2323.82715, 0.985895336, 0.00383297075, -0.167319402, 0, 0.999737799, 0.0229020976, 0.167363301, -0.022579072, 0.985636711),
+				["Distance"] = 8.3006210327148,
+				["Hit"] = workspace[plr].Head
+			},
+			[3] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-62.5298805, -18.2399025, 394.661041)),
+				["Cframe"] = CFrame.new(836.676514, 101.039505, 2323.78149, 0.97844404, -0.00541157229, -0.206441417, 0, 0.999656677, -0.0262045935, 0.206512347, 0.0256397277, 0.978108048),
+				["Distance"] = 8.2709102630615,
+				["Hit"] = workspace[plr].HumanoidRootPart
+			},
+			[4] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-51.9847679, -4.94238615, 396.576782)),
+				["Cframe"] = CFrame.new(836.835815, 101.24292, 2323.82715, 0.985895336, 0.00383297075, -0.167319402, 0, 0.999737799, 0.0229020976, 0.167363301, -0.022579072, 0.985636711),
+				["Distance"] = 8.3006210327148,
+				["Hit"] = workspace[plr].Head
+			},
+			[5] = {
+				["RayObject"] = Ray.new(Vector3.new(837.737793, 101.489754, 2315.7395), Vector3.new(-58.3991814, -1.66785085, 395.710449)),
+				["Cframe"] = CFrame.new(836.776001, 101.294312, 2323.55176, 0.981014729, 0.00729708467, -0.193796217, 0, 0.999291897, 0.0376267247, 0.193933561, -0.0369123705, 0.980319977),
+				["Distance"] = 7.7835516929626,
+				["Hit"] = workspace[plr].Head
+			}
+		}
+		local ohInstance2 = game:GetService("Players").LocalPlayer.Backpack["Remington 870"]
+	
+		game:GetService("ReplicatedStorage").ShootEvent:FireServer(ohTable1, ohInstance2)
+	
+		local wtf = "Bright orange";
+		local lol = game:GetService("Workspace").Remote.TeamEvent;
+		lol:FireServer(wtf);
+	end)
+end
+coroutine.wrap(PGVE_fake_script)()
+function MNWCNW_fake_script() -- ScreenGui.HackerKillButton.Script 
+	local script = Instance.new('Script', ScreenGui.HackerKillButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr = script.Parent.Parent.Parent.PlayerInfoFrame.PlayerName.Text
+		local userdata_1 = game:GetService("Workspace")["Prison_ITEMS"].giver.M9.ITEMPICKUP;
+		local Target = game:GetService("Workspace").Remote.ItemHandler;
+		Target:InvokeServer(userdata_1);
+		game.Players.LocalPlayer.Character.Humanoid.Name = 1
+		local l = game.Players.LocalPlayer.Character["1"]:Clone()
+		l.Parent = game.Players.LocalPlayer.Character
+		l.Name = "Humanoid"
+		wait(0.1)
+		game.Players.LocalPlayer.Character["1"]:Destroy()
+		game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+		game.Players.LocalPlayer.Character.Animate.Disabled = true
+		wait(0.1)
+		game.Players.LocalPlayer.Character.Animate.Disabled = false
+		game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+		for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+			game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+		end
+		function tp(player,player2)
+			local char1,char2=player.Character,player2.Character
+			if char1 and char2 then
+				char1.HumanoidRootPart.CFrame = char2.HumanoidRootPart.CFrame
+			end
+		end
+		function getout(player,player2)
+			local char1,char2=player.Character,player2.Character
+			if char1 and char2 then
+				char1:MoveTo(char2.Head.Position)
+			end
+		end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		wait(0.3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		wait(0.3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		wait(0.3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame
+		wait(2)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10000,-200,10000)
+		wait(0.5)
+		local lastPos = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").position
+		local plr = game.Players.LocalPlayer.Name
+		local gayevent = game:GetService("Workspace").Remote.loadchar
+		gayevent:InvokeServer(plr)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastPos)
+	end)
+end
+coroutine.wrap(MNWCNW_fake_script)()
+function HZBZBQ_fake_script() -- ScreenGui.AresstPlayerButton.Script 
+	local script = Instance.new('Script', ScreenGui.AresstPlayerButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		wait(0.1)
+		local plr = script.Parent.Parent.Parent.PlayerInfoFrame.PlayerName.Text
+		local Player = game.Players.LocalPlayer
+		local Pcf = Player.Character.HumanoidRootPart.CFrame
+		Player.Character.HumanoidRootPart.CFrame = game.Workspace[plr].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 1)
+		game.Workspace.Remote.arrest:InvokeServer(plr.Character.HumanoidRootPart)
+	
+	end)
+end
+coroutine.wrap(HZBZBQ_fake_script)()
+function GZAAK_fake_script() -- ScreenGui.SpawnGuns.Script 
+	local script = Instance.new('Script', ScreenGui.SpawnGuns)
+
+	script.Parent.MouseButton1Click:Connect(function()		
+		local timeRemaining = 10
+		while timeRemaining > 0 do
+			local string_1 = "Bright blue";
+			local Target = game:GetService("Workspace").Remote.TeamEvent;
+			Target:FireServer(string_1);
+			game.Players.LocalPlayer.Character.Humanoid.Health = 0
+			wait(1)
+			timeRemaining = timeRemaining - 1	
+		end
+		if timeRemaining == 0 then	
+			local string_1 = "Bright orange";
+			local Target = game:GetService("Workspace").Remote.TeamEvent;
+			Target:FireServer(string_1);
+		end
+	end)
+end
+coroutine.wrap(GZAAK_fake_script)()
+function BWHGIYT_fake_script() -- ScreenGui.AresstAllButton.Script 
+	local script = Instance.new('Script', ScreenGui.AresstAllButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		wait(0.1)
+		Player = game.Players.LocalPlayer
+		Pcf = Player.Character.HumanoidRootPart.CFrame
+		for i,v in pairs(game.Teams.Criminals:GetPlayers()) do
+			if v.Name ~= Player.Name then
+				local i = 10
+				repeat
+					wait()
+					i = i-1
+					game.Workspace.Remote.arrest:InvokeServer(v.Character.HumanoidRootPart)
+					Player.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 1)
+				until i == 0
+			end
+		end
+	end)
+end
+coroutine.wrap(BWHGIYT_fake_script)()
+function RVFSQO_fake_script() -- ScreenGui.CrimAll.Script 
+	local script = Instance.new('Script', ScreenGui.CrimAll)
+
+	
+	local Crim = Instance.new("Part")
+	Crim.Name = "plr"
+	Crim.Parent = workspace
+	Crim.Anchored = true
+	Crim.Archivable = true
+	Crim.CFrame = CFrame.new(9e99, 9e99, 9e99)
+	Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	function RemoveSpaces(String)
+		return String:gsub("%s+", "") or String
+	end
+	function FindPlayer(String)
+		String = RemoveSpaces(String)
+		for _, _Player in pairs(Players:GetPlayers()) do
+			if _Player.Name:lower():match('^'.. String:lower()) then
+				return _Player
+			end
+		end
+		return nil
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		_G.Crimall = true
+		local Player = game.Players.LocalPlayer
+		local cpos = Player.Character.HumanoidRootPart.CFrame
+		for i,v in pairs(game.Teams.Guards:GetPlayers()) do
+			if v and v.Character then
+				if v.Name ~= Player.Name then
+					if v.Name ~= "jake11price" then
+						repeat
+							i = i-1
+							repeat
+								if v.Character.Humanoid.Sit == true then 
+									game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP) 
+									local A_1 = 
+										{
+											[1] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(277.738678, 6.89340925, 287.773712)), 
+												["Distance"] = 4.7204174995422, 
+												["Cframe"] = CFrame.new(832.049377, 101.392006, 2300.97168, 0.843892097, -0.0554918349, 0.533635378, 0, 0.994636595, 0.103430569, -0.536512911, -0.0872842371, 0.839366019), 
+												["Hit"] = v.Character.Head
+											}, 
+											[2] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(303.047546, 21.3568707, 260.203888)), 
+												["Distance"] = 4.8114862442017, 
+												["Cframe"] = CFrame.new(832.390259, 101.550629, 2300.74097, 0.738044441, -0.112958886, 0.665229917, 7.45057971e-09, 0.985887885, 0.16740793, -0.674752235, -0.123554483, 0.727628946), 
+												["Hit"] = v.Character.Head
+											}, 
+											[3] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(296.800507, 7.00420141, 268.067932)), 
+												["Distance"] = 4.444625377655, 
+												["Cframe"] = CFrame.new(832.185486, 101.391617, 2300.70264, 0.775115669, -0.0692948848, 0.628007889, 7.45057971e-09, 0.993967533, 0.109675139, -0.631819367, -0.0850109085, 0.770439863), 
+												["Hit"] = v.Character.Head
+											}, 
+											[4] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(284.930573, 11.9850616, 280.483368)), 
+												["Distance"] = 4.6211166381836, 
+												["Cframe"] = CFrame.new(832.10083, 101.445007, 2300.86963, 0.820150614, -0.0735745132, 0.567397356, 0, 0.991697431, 0.128593579, -0.572147667, -0.105466105, 0.81334126), 
+												["Hit"] = v.Character.Head
+											}, 
+											[5] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(294.625824, 2.15741801, 270.538269)), 
+												["Distance"] = 4.4639973640442, 
+												["Cframe"] = CFrame.new(832.169434, 101.341301, 2300.73438, 0.784266233, -0.0537625961, 0.618090749, -3.7252903e-09, 0.99623847, 0.086654529, -0.620424569, -0.0679602176, 0.781316102), 
+												["Hit"] = v.Character.Head
+											}
+										}
+									local A_2 = game.Players.LocalPlayer.Backpack["Remington 870"]
+									local Event = game:GetService("ReplicatedStorage").ShootEvent
+									Event:FireServer(A_1, A_2)
+									Event:FireServer(A_1, A_2)
+									Event:FireServer(A_1, A_2)
+									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+									wait(0.3)
+									local Crim = Instance.new("Part")
+									Crim.Name = "plr"
+									Crim.Parent = workspace
+									Crim.Anchored = true
+									Crim.Archivable = true
+									Crim.CFrame = CFrame.new(9e99, 9e99, 9e99)
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Crim.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Crim.Transparency = 1
+									Crim.Anchored = true
+									Crim.CanCollide = false
+									lol = true				
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Bruh.CanCollide = false
+									Bruh.Size = Vector3.new(51.05, 24.12, 54.76)
+									Bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Bruh.Transparency = 1
+									game.Players.LocalPlayer.Character.Humanoid.Sit = false
+									wait(0.3)
+									local Crim = Instance.new("Part")
+									Crim.Name = "plr"
+									Crim.Parent = workspace
+									Crim.Anchored = true
+									Crim.Archivable = true
+									Crim.CFrame = CFrame.new(9e99, 9e99, 9e99)
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Crim.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Crim.Transparency = 1
+									Crim.Anchored = true
+									Crim.CanCollide = false
+									lol = true				
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Bruh.CanCollide = false
+									Bruh.Size = Vector3.new(51.05, 24.12, 54.76)
+									Bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Bruh.Transparency = 1
+									game.Players.LocalPlayer.Character.Humanoid.Sit = false
+									wait(0.3)
+									local Crim = Instance.new("Part")
+									Crim.Name = "plr"
+									Crim.Parent = workspace
+									Crim.Anchored = true
+									Crim.Archivable = true
+									Crim.CFrame = CFrame.new(9e99, 9e99, 9e99)
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Crim.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Crim.Transparency = 1
+									Crim.Anchored = true
+									Crim.CanCollide = false
+									lol = true				
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Bruh.CanCollide = false
+									Bruh.Size = Vector3.new(51.05, 24.12, 54.76)
+									Bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Bruh.Transparency = 1
+									game.Players.LocalPlayer.Character.Humanoid.Sit = false
+								end
+								for i,v in pairs(Workspace.Prison_ITEMS.giver:GetChildren()) do
+									if v.Name == "M9" then
+										lol = Workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
+									end
+								end
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+								game.Players.LocalPlayer.Character.Humanoid.Name = 1
+								local l = game.Players.LocalPlayer.Character["1"]:Clone()
+								if game.Players.LocalPlayer.Character["1"] then
+									l.Parent = game.Players.LocalPlayer.Character
+									l.Name = "Humanoid"
+									wait()
+									game.Players.LocalPlayer.Character["1"]:Destroy()
+									game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+									game.Players.LocalPlayer.Character.Animate.Disabled = true
+								end
+								wait()
+								game.Players.LocalPlayer.Character.Animate.Disabled = false
+								game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+								for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+									if v.Name == "M9" then
+										game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+									end
+								end
+								v.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+								wait()
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+							until v.TeamColor.Name == "Really red"
+							wait(0.1)
+							HERE = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+							local A_1 = "\66\114\111\121\111\117\98\97\100\100"
+							local Event = game:GetService("Workspace").Remote.loadchar
+							Event:InvokeServer(A_1)
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = HERE
+						until i == 0
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+						_G.Crimall = false
+					end
+				end
+			end
+		end
+	
+	
+		local Crim = Instance.new("Part")
+		Crim.Name = "plr"
+		Crim.Parent = workspace
+		Crim.Anchored = true
+		Crim.Archivable = true
+		Crim.CFrame = CFrame.new(9e99, 9e99, 9e99)
+		Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+	
+		_G.Crimalll = true
+		local Player = game.Players.LocalPlayer
+		local cpos = Player.Character.HumanoidRootPart.CFrame
+		for i,v in pairs(game.Teams.Inmates:GetPlayers()) do
+			if v and v.Character then
+				if v.Name ~= Player.Name then
+					if v.Name ~= "jake11price" then
+						repeat
+							i = i-1
+							repeat
+								if v.Character.Humanoid.Sit == true then 
+									game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP) 
+									local A_1 = 
+										{
+											[1] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(277.738678, 6.89340925, 287.773712)), 
+												["Distance"] = 4.7204174995422, 
+												["Cframe"] = CFrame.new(832.049377, 101.392006, 2300.97168, 0.843892097, -0.0554918349, 0.533635378, 0, 0.994636595, 0.103430569, -0.536512911, -0.0872842371, 0.839366019), 
+												["Hit"] = v.Character.Head
+											}, 
+											[2] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(303.047546, 21.3568707, 260.203888)), 
+												["Distance"] = 4.8114862442017, 
+												["Cframe"] = CFrame.new(832.390259, 101.550629, 2300.74097, 0.738044441, -0.112958886, 0.665229917, 7.45057971e-09, 0.985887885, 0.16740793, -0.674752235, -0.123554483, 0.727628946), 
+												["Hit"] = v.Character.Head
+											}, 
+											[3] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(296.800507, 7.00420141, 268.067932)), 
+												["Distance"] = 4.444625377655, 
+												["Cframe"] = CFrame.new(832.185486, 101.391617, 2300.70264, 0.775115669, -0.0692948848, 0.628007889, 7.45057971e-09, 0.993967533, 0.109675139, -0.631819367, -0.0850109085, 0.770439863), 
+												["Hit"] = v.Character.Head
+											}, 
+											[4] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(284.930573, 11.9850616, 280.483368)), 
+												["Distance"] = 4.6211166381836, 
+												["Cframe"] = CFrame.new(832.10083, 101.445007, 2300.86963, 0.820150614, -0.0735745132, 0.567397356, 0, 0.991697431, 0.128593579, -0.572147667, -0.105466105, 0.81334126), 
+												["Hit"] = v.Character.Head
+											}, 
+											[5] = 
+											{
+												["RayObject"] = Ray.new(Vector3.new(827.412415, 101.489777, 2296.84326), Vector3.new(294.625824, 2.15741801, 270.538269)), 
+												["Distance"] = 4.4639973640442, 
+												["Cframe"] = CFrame.new(832.169434, 101.341301, 2300.73438, 0.784266233, -0.0537625961, 0.618090749, -3.7252903e-09, 0.99623847, 0.086654529, -0.620424569, -0.0679602176, 0.781316102), 
+												["Hit"] = v.Character.Head
+											}
+										}
+									local A_2 = game.Players.LocalPlayer.Backpack["Remington 870"]
+									local Event = game:GetService("ReplicatedStorage").ShootEvent
+									Event:FireServer(A_1, A_2)
+									Event:FireServer(A_1, A_2)
+									Event:FireServer(A_1, A_2)
+									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+									wait(0.3)
+									local Crim = Instance.new("Part")
+									Crim.Name = "plr"
+									Crim.Parent = workspace
+									Crim.Anchored = true
+									Crim.Archivable = true
+									Crim.CFrame = CFrame.new(9e99, 9e99, 9e99)
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Crim.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Crim.Transparency = 1
+									Crim.Anchored = true
+									Crim.CanCollide = false
+									lol = true				
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Bruh.CanCollide = false
+									Bruh.Size = Vector3.new(51.05, 24.12, 54.76)
+									Bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Bruh.Transparency = 1
+									game.Players.LocalPlayer.Character.Humanoid.Sit = false
+									wait(0.3)
+									local Crim = Instance.new("Part")
+									Crim.Name = "plr"
+									Crim.Parent = workspace
+									Crim.Anchored = true
+									Crim.Archivable = true
+									Crim.CFrame = CFrame.new(9e99, 9e99, 9e99)
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Crim.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Crim.Transparency = 1
+									Crim.Anchored = true
+									Crim.CanCollide = false
+									lol = true				
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Bruh.CanCollide = false
+									Bruh.Size = Vector3.new(51.05, 24.12, 54.76)
+									Bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Bruh.Transparency = 1
+									game.Players.LocalPlayer.Character.Humanoid.Sit = false
+									wait(0.3)
+									local Crim = Instance.new("Part")
+									Crim.Name = "plr"
+									Crim.Parent = workspace
+									Crim.Anchored = true
+									Crim.Archivable = true
+									Crim.CFrame = CFrame.new(9e99, 9e99, 9e99)
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Crim.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Crim.Transparency = 1
+									Crim.Anchored = true
+									Crim.CanCollide = false
+									lol = true				
+									Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+									Bruh.CanCollide = false
+									Bruh.Size = Vector3.new(51.05, 24.12, 54.76)
+									Bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+									Bruh.Transparency = 1
+									game.Players.LocalPlayer.Character.Humanoid.Sit = false
+								end
+								for i,v in pairs(Workspace.Prison_ITEMS.giver:GetChildren()) do
+									if v.Name == "M9" then
+										lol = Workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
+									end
+								end
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+								game.Players.LocalPlayer.Character.Humanoid.Name = 1
+								local l = game.Players.LocalPlayer.Character["1"]:Clone()
+								l.Parent = game.Players.LocalPlayer.Character
+								l.Name = "Humanoid"
+								wait()
+								game.Players.LocalPlayer.Character["1"]:Destroy()
+								game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+								game.Players.LocalPlayer.Character.Animate.Disabled = true
+								wait()
+								game.Players.LocalPlayer.Character.Animate.Disabled = false
+								game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+								for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+									if v.Name == "M9" then
+										game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+									end
+								end
+								v.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+								wait()
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+							until v.TeamColor.Name == "Really red"
+							wait(0.1)
+							HERE = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+							local A_1 = "\66\114\111\121\111\117\98\97\100\100"
+							local Event = game:GetService("Workspace").Remote.loadchar
+							Event:InvokeServer(A_1)
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = HERE
+						until i == 0
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+						_G.Crimalll = false
+					end
+				end
+			end
+		end
+	end)
+	
+	game:GetService('RunService').Stepped:connect(function()
+		if _G.Crimall == true then wait()
+			Crim.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			Crim.Transparency = 1
+			Crim.Anchored = true
+			Crim.CanCollide = false
+			lol = true				
+			Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+			Bruh.CanCollide = false
+			Bruh.Size = Vector3.new(51.05, 24.12, 54.76)
+			Bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			Bruh.Transparency = 1
+			wait(0.1)
+		end
+	end)
+	game:GetService('RunService').Stepped:connect(function()
+		if _G.Crimalll == true then wait()
+			Crim.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			Crim.Transparency = 1
+			Crim.Anchored = true
+			Crim.CanCollide = false
+			lol = true				
+			Bruh = game.Workspace["Criminals Spawn"].SpawnLocation
+			Bruh.CanCollide = false
+			Bruh.Size = Vector3.new(51.05, 24.12, 54.76)
+			Bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			Bruh.Transparency = 1
+			wait(0.1)
+		end
+	end)
+end
+coroutine.wrap(RVFSQO_fake_script)()
+function VLUHA_fake_script() -- ScreenGui.ImageLabel.Script 
+	local script = Instance.new('Script', ScreenGui.ImageLabel)
+
+	
+	while true do
+	plr = script.Parent.Parent.PlayerName.Text
+		script.Parent.Image = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..plr
+		wait(0.5)
+		end
+end
+coroutine.wrap(VLUHA_fake_script)()
+function XKUSZSH_fake_script() -- ScreenGui.PlayerAge.Script 
+	local script = Instance.new('Script', ScreenGui.PlayerAge)
+
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		local user = script.Parent.Parent.PlayerName.Text
+		script.Parent.Text = "Account is "..game.Players[user].AccountAge.." days old"
+		wait(1)
+	end)
+end
+coroutine.wrap(XKUSZSH_fake_script)()
+function HOUCKSE_fake_script() -- ScreenGui.PlayerID.Script 
+	local script = Instance.new('Script', ScreenGui.PlayerID)
+
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		local user = script.Parent.Parent.PlayerName.Text
+		script.Parent.Text = "UserId is "..game.Players[user].UserId..""
+		wait(1)
+	end)
+end
+coroutine.wrap(HOUCKSE_fake_script)()
+function AJXRJFY_fake_script() -- ScreenGui.Team.Script 
+	local script = Instance.new('Script', ScreenGui.Team)
+
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		local user = script.Parent.Parent.PlayerName.Text
+		script.Parent.Text = "Team : "..game.Players[user].Team.Name..""
+		wait(1)
+	end)
+end
+coroutine.wrap(AJXRJFY_fake_script)()
+function JDPM_fake_script() -- ScreenGui.Health.Script 
+	local script = Instance.new('Script', ScreenGui.Health)
+
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		local user = script.Parent.Parent.PlayerName.Text
+		script.Parent.Text = "Health : "..game.Workspace[user].Humanoid.Health..""
+		wait(1)
+	end)
+end
+coroutine.wrap(JDPM_fake_script)()
+function VVNYHJ_fake_script() -- ScreenGui.M9.Script 
+	local script = Instance.new('Script', ScreenGui.M9)
+
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		wait(1)
+		script.Parent.Text = "Has M9 : False"
+	end)
+end
+coroutine.wrap(VVNYHJ_fake_script)()
+function HPPC_fake_script() -- ScreenGui.M9.Script 
+	local script = Instance.new('Script', ScreenGui.M9)
+
+	
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		local user = script.Parent.Parent.PlayerName.Text
+		if game:GetService("Players")[user].Backpack.M9 then
+			script.Parent.Text = "Has M9 : True"
+			wait(1)
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(HPPC_fake_script)()
+function CMWZEP_fake_script() -- ScreenGui.Remington.Script 
+	local script = Instance.new('Script', ScreenGui.Remington)
+
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		wait(1)
+		script.Parent.Text = "Has Remington 870 : False"
+	end)
+end
+coroutine.wrap(CMWZEP_fake_script)()
+function HVAVE_fake_script() -- ScreenGui.Remington.Script 
+	local script = Instance.new('Script', ScreenGui.Remington)
+
+	
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		local user = script.Parent.Parent.PlayerName.Text
+		if game:GetService("Players")[user].Backpack["Remington 870"] then
+			script.Parent.Text = "Has Remington 870 : True"
+	
+			wait(1)
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(HVAVE_fake_script)()
+function HKJJP_fake_script() -- ScreenGui.AK.Script 
+	local script = Instance.new('Script', ScreenGui.AK)
+
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		wait(1)
+		script.Parent.Text = "Has AK-47 : False"
+	end)
+end
+coroutine.wrap(HKJJP_fake_script)()
+function NUGVJ_fake_script() -- ScreenGui.AK.Script 
+	local script = Instance.new('Script', ScreenGui.AK)
+
+	
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		local user = script.Parent.Parent.PlayerName.Text
+		if game:GetService("Players")[user].Backpack["AK-47"] then
+			script.Parent.Text = "Has AK-47 : True"
+			wait(1)
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(NUGVJ_fake_script)()
+function FCGI_fake_script() -- ScreenGui.Keycard.Script 
+	local script = Instance.new('Script', ScreenGui.Keycard)
+
+	
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		local user = script.Parent.Parent.PlayerName.Text
+		if game:GetService("Players")[user].Backpack["Key card"] then
+			script.Parent.Text = "Has Keycard : True"
+			wait(1)
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(FCGI_fake_script)()
+function NIGFX_fake_script() -- ScreenGui.Keycard.Script 
+	local script = Instance.new('Script', ScreenGui.Keycard)
+
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:connect(function()
+		wait(1)
+		script.Parent.Text = "Has Keycard : False"
+	end)
+end
+coroutine.wrap(NIGFX_fake_script)()
+function NEJOBR_fake_script() -- ScreenGui.InvisButton.Script 
+	local script = Instance.new('Script', ScreenGui.InvisButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		position     = player.Character.HumanoidRootPart.Position
+		wait(0.1)
+		player.Character:MoveTo(position + Vector3.new(0, 1000000, 0))
+		wait(0.1)
+		humanoidrootpart = player.Character.HumanoidRootPart:clone()
+		wait(0.1)
+		player.Character.HumanoidRootPart:Destroy()
+		humanoidrootpart.Parent = player.Character
+		player.Character:MoveTo(position)
+		wait()
+		game.Players.LocalPlayer.Character.Torso.Material = "ForceField"
+		game.Players.LocalPlayer.Character.Head.Material = "ForceField"
+		game.Players.LocalPlayer.Character["Left Arm"].Material = "ForceField"
+		game.Players.LocalPlayer.Character["Right Arm"].Material = "ForceField"
+		game.Players.LocalPlayer.Character["Left Leg"].Material = "ForceField"
+		game.Players.LocalPlayer.Character["Right Leg"].Material = "ForceField"
+		game.Players.LocalPlayer.Character.Humanoid:RemoveAccessories()
+		game.Players.LocalPlayer.Character.Head.face:Remove()
+	end)
+end
+coroutine.wrap(NEJOBR_fake_script)()
+function ZPVYEG_fake_script() -- ScreenGui.AntiABuse.Script 
+	local script = Instance.new('Script', ScreenGui.AntiABuse)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr = game:service("Players").LocalPlayer
+		plr.Character.Torso.Anchored = true
+		plr.Character.HumanoidRootPart:Destroy()
+		plr.Character.Torso.Anchored = false
+	end)
+end
+coroutine.wrap(ZPVYEG_fake_script)()
+function TRQZOWE_fake_script() -- ScreenGui.DestroyButton.Script 
+	local script = Instance.new('Script', ScreenGui.DestroyButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(TRQZOWE_fake_script)()
+function JXBQTJ_fake_script() -- ScreenGui.Frame.Script 
+	local script = Instance.new('Script', ScreenGui.Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(JXBQTJ_fake_script)()
+function MIPRSN_fake_script() -- ScreenGui.Frame.Position 
+	local script = Instance.new('Script', ScreenGui.Frame)
+
+	local object = script.Parent
+	object.AnchorPoint = Vector2.new(0.5, 0.5)
+	object.Position = UDim2.new(0.5, 0, 0.5, 0)
+	wait(3)
+	script.Parent.Visible = true
+	
+end
+coroutine.wrap(MIPRSN_fake_script)()
+function OCTI_fake_script() -- ScreenGui.Frame.Notification 
+	local script = Instance.new('Script', ScreenGui.Frame)
+
+	function callback(text)
+		if text == "Copy Discord Invite" then
+			print("Copied")
+			setclipboard("") 
+		end
+	end
+	local bindableFunction = Instance.new("BindableFunction")
+	bindableFunction.OnInvoke = callback
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Script Loaded"; -- Required. Has to be a string!
+		Text = ""; -- Required. Has to be a string!
+		Icon = "http://www.roblox.com/asset/?id=6023426945"; -- Optional, defaults to "" (no icon)
+		Duration = 10; -- Optional, defaults to 5 seconds
+		Callback = bindableFunction; -- Optional, gets invoked with the text of the button the user pressed
+		Button1 = "Copy Discord Invite"; -- Optional, makes a button appear with the given text that, when clicked, fires the Callback if it's given
+		--Button2 = "Just Load"; -- Optional, makes another button appear with the given text that, when clicked, fires the Callback if it's given
+	})
+end
+coroutine.wrap(OCTI_fake_script)()
+function IVUOFSX_fake_script() -- ScreenGui.minutes.Script 
+	local script = Instance.new('Script', ScreenGui.minutes)
+
+	for i=1,math.huge do
+		wait(60)
+		script.Parent.Text = "Minutes : "..i
+	end
+end
+coroutine.wrap(IVUOFSX_fake_script)()
+function PQVPCIM_fake_script() -- ScreenGui.seconds.Script 
+	local script = Instance.new('Script', ScreenGui.seconds)
+
+	while true do
+	if script.Parent.Text == "Seconds : 0" then
+	for i=1,math.huge do
+		wait(1)
+			script.Parent.Text = "Seconds : "..i
+			if script.Parent.Text == "Seconds : 60" then
+					script.Parent.Text = "Seconds : 0" 
+				break
+	end
+		end
+		end
+		wait()
+		end
+end
+coroutine.wrap(PQVPCIM_fake_script)()
+function TDIKM_fake_script() -- ScreenGui.Frame_7.Script 
+	local script = Instance.new('Script', ScreenGui.Frame_7)
+
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent.BackgroundTransparency = 0
+	end)
+end
+coroutine.wrap(TDIKM_fake_script)()
+function BWQIH_fake_script() -- ScreenGui.Frame_7.Script 
+	local script = Instance.new('Script', ScreenGui.Frame_7)
+
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.BackgroundTransparency = 0.7
+	end)
+end
+coroutine.wrap(BWQIH_fake_script)()
