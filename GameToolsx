@@ -360,21 +360,21 @@ minutes.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 
 -- Scripts:
 
-local function URNDO_fake_script() -- PlaceId.Script 
+local function GKXBP_fake_script() -- PlaceId.Script 
 	local script = Instance.new('Script', PlaceId)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		setclipboard(script.Parent.Text)
 	end)
 end
-coroutine.wrap(URNDO_fake_script)()
-local function LWDX_fake_script() -- PlaceId.Script 
+coroutine.wrap(GKXBP_fake_script)()
+local function SQGFCI_fake_script() -- PlaceId.Script 
 	local script = Instance.new('Script', PlaceId)
 
 	script.Parent.Text = game.PlaceId
 end
-coroutine.wrap(LWDX_fake_script)()
-local function HCPK_fake_script() -- Players.Script 
+coroutine.wrap(SQGFCI_fake_script)()
+local function CZGOMU_fake_script() -- Players.Script 
 	local script = Instance.new('Script', Players)
 
 	while true do
@@ -383,8 +383,8 @@ local function HCPK_fake_script() -- Players.Script
 		wait()
 	end
 end
-coroutine.wrap(HCPK_fake_script)()
-local function ATGUWZH_fake_script() -- FilteringEnabled.Script 
+coroutine.wrap(CZGOMU_fake_script)()
+local function CQFKB_fake_script() -- FilteringEnabled.Script 
 	local script = Instance.new('Script', FilteringEnabled)
 
 	while true do
@@ -397,8 +397,8 @@ local function ATGUWZH_fake_script() -- FilteringEnabled.Script
 		wait()
 	end
 end
-coroutine.wrap(ATGUWZH_fake_script)()
-local function SPLXLZS_fake_script() -- JoinGame_2.Script 
+coroutine.wrap(CQFKB_fake_script)()
+local function WUFFLH_fake_script() -- JoinGame_2.Script 
 	local script = Instance.new('Script', JoinGame_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -410,8 +410,8 @@ local function SPLXLZS_fake_script() -- JoinGame_2.Script
 			end
 	end)
 end
-coroutine.wrap(SPLXLZS_fake_script)()
-local function HQHWBGW_fake_script() -- ReJoin.Script 
+coroutine.wrap(WUFFLH_fake_script)()
+local function LMCQOR_fake_script() -- ReJoin.Script 
 	local script = Instance.new('Script', ReJoin)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -419,8 +419,8 @@ local function HQHWBGW_fake_script() -- ReJoin.Script
 		game:GetService("TeleportService"):Teleport(game.PlaceId,Player)
 	end)
 end
-coroutine.wrap(HQHWBGW_fake_script)()
-local function JDCRTZ_fake_script() -- PlayButton.Script 
+coroutine.wrap(LMCQOR_fake_script)()
+local function XASHVF_fake_script() -- PlayButton.Script 
 	local script = Instance.new('Script', PlayButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -452,24 +452,24 @@ local function JDCRTZ_fake_script() -- PlayButton.Script
 			end)
 	end)
 end
-coroutine.wrap(JDCRTZ_fake_script)()
-local function ZPRZSVE_fake_script() -- StopButton.Script 
+coroutine.wrap(XASHVF_fake_script)()
+local function SPVMXZS_fake_script() -- StopButton.Script 
 	local script = Instance.new('Script', StopButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService("Workspace").YoutubeSong:Destroy()
 	end)
 end
-coroutine.wrap(ZPRZSVE_fake_script)()
-local function SZJMZNZ_fake_script() -- TextLabel_4.Script 
+coroutine.wrap(SPVMXZS_fake_script)()
+local function RUUFY_fake_script() -- TextLabel_4.Script 
 	local script = Instance.new('Script', TextLabel_4)
 
 	local plr = game.Players.LocalPlayer
 	
 	script.Parent.Text = "Welcome "..plr.Name.."!"
 end
-coroutine.wrap(SZJMZNZ_fake_script)()
-local function JUAJYT_fake_script() -- RealTime.Script 
+coroutine.wrap(RUUFY_fake_script)()
+local function WLHKA_fake_script() -- RealTime.Script 
 	local script = Instance.new('Script', RealTime)
 
 	_G.Time = true
@@ -481,8 +481,8 @@ local function JUAJYT_fake_script() -- RealTime.Script
 		wait(1)
 	end
 end
-coroutine.wrap(JUAJYT_fake_script)()
-local function TNOFDQ_fake_script() -- seconds.Script 
+coroutine.wrap(WLHKA_fake_script)()
+local function TKRN_fake_script() -- seconds.Script 
 	local script = Instance.new('Script', seconds)
 
 	while true do
@@ -499,8 +499,8 @@ local function TNOFDQ_fake_script() -- seconds.Script
 		wait()
 		end
 end
-coroutine.wrap(TNOFDQ_fake_script)()
-local function OVBO_fake_script() -- minutes.Script 
+coroutine.wrap(TKRN_fake_script)()
+local function UHOCQ_fake_script() -- minutes.Script 
 	local script = Instance.new('Script', minutes)
 
 	for i=1,math.huge do
@@ -508,8 +508,8 @@ local function OVBO_fake_script() -- minutes.Script
 		script.Parent.Text = "Minutes : "..i
 	end
 end
-coroutine.wrap(OVBO_fake_script)()
-local function QPVTPWJ_fake_script() -- HNJUSBDF.Script 
+coroutine.wrap(UHOCQ_fake_script)()
+local function IMEHMM_fake_script() -- HNJUSBDF.Script 
 	local script = Instance.new('Script', HNJUSBDF)
 
 	function Notify(titletxt, text, time)
@@ -560,4 +560,20 @@ local function QPVTPWJ_fake_script() -- HNJUSBDF.Script
 	Notify("Notification", "Script Loaded", 2)
 	Notify("Welcome",game.Players.LocalPlayer.Name, 4)
 end
-coroutine.wrap(QPVTPWJ_fake_script)()
+coroutine.wrap(IMEHMM_fake_script)()
+local function CETQY_fake_script() -- HNJUSBDF.Script 
+	local script = Instance.new('Script', HNJUSBDF)
+
+	local UrGui = script.Parent.Parent.HNJUSBDF   --Put in ur Gui
+	
+		game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+		if key == "t" then
+			if UrGui.Enabled == true then
+				UrGui.Enabled= false
+			else
+				UrGui.Enabled= true
+			end
+		end
+	end)
+end
+coroutine.wrap(CETQY_fake_script)()
