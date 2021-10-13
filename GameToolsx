@@ -1,1 +1,724 @@
-local a=Instance.new("ScreenGui")local b=Instance.new("Frame")local c=Instance.new("Frame")local d=Instance.new("TextLabel")local e=Instance.new("UICorner")local f=Instance.new("UICorner")local g=Instance.new("TextButton")local h=Instance.new("UICorner")local i=Instance.new("TextLabel")local j=Instance.new("UICorner")local k=Instance.new("TextLabel")local l=Instance.new("UICorner")local m=Instance.new("Frame")local n=Instance.new("Frame")local o=Instance.new("TextLabel")local p=Instance.new("UICorner")local q=Instance.new("UICorner")local r=Instance.new("TextBox")local s=Instance.new("UICorner")local t=Instance.new("TextButton")local u=Instance.new("UICorner")local v=Instance.new("TextButton")local w=Instance.new("UICorner")local x=Instance.new("Frame")local y=Instance.new("Frame")local z=Instance.new("TextLabel")local A=Instance.new("UICorner")local B=Instance.new("UICorner")local C=Instance.new("TextBox")local D=Instance.new("UICorner")local E=Instance.new("TextButton")local F=Instance.new("UICorner")local G=Instance.new("TextButton")local H=Instance.new("UICorner")local I=Instance.new("Frame")local J=Instance.new("TextLabel")local K=Instance.new("UICorner")local L=Instance.new("UICorner")local M=Instance.new("Frame")local N=Instance.new("Frame")local O=Instance.new("TextLabel")local P=Instance.new("UICorner")local Q=Instance.new("UICorner")local R=Instance.new("TextLabel")local S=Instance.new("UICorner")local T=Instance.new("TextLabel")local U=Instance.new("TextLabel")local V=Instance.new("Frame")local W=Instance.new("Frame")local X=Instance.new("TextLabel")local Y=Instance.new("UICorner")local Z=Instance.new("Frame")local _=Instance.new("UICorner")local a0=Instance.new("Frame")local a1=Instance.new("UICorner")local a2=Instance.new("UICorner")local a3=Instance.new("ImageLabel")local a4=Instance.new("UICorner")local a5=Instance.new("Frame")a.Name="HNJUSBDF"a.Parent=game.Players.LocalPlayer:WaitForChild("PlayerGui")b.Name="ServerInfo"b.Parent=a;b.BackgroundColor3=Color3.fromRGB(30,30,30)b.Position=UDim2.new(0.76700002,0,0.200000003,50)b.Size=UDim2.new(0,200,0,150)b.Visible=false;c.Parent=b;c.BackgroundColor3=Color3.fromRGB(35,35,35)c.BorderColor3=Color3.fromRGB(0,0,0)c.BorderSizePixel=0;c.Size=UDim2.new(0,200,0,15)d.Parent=c;d.BackgroundColor3=Color3.fromRGB(35,35,35)d.BackgroundTransparency=1.000;d.BorderSizePixel=0;d.Size=UDim2.new(0,200,0,15)d.Font=Enum.Font.SourceSans;d.Text="Server Info"d.TextColor3=Color3.fromRGB(255,255,255)d.TextSize=14.000;e.CornerRadius=UDim.new(0,4)e.Parent=c;f.CornerRadius=UDim.new(0,4)f.Parent=b;g.Name="PlaceId"g.Parent=b;g.BackgroundColor3=Color3.fromRGB(35,35,35)g.Position=UDim2.new(0,0,0.296797901,0)g.Size=UDim2.new(0,200,0,15)g.Font=Enum.Font.SourceSans;g.Text="Place Id"g.TextColor3=Color3.fromRGB(255,255,255)g.TextSize=14.000;h.CornerRadius=UDim.new(0,6)h.Parent=g;i.Name="Players"i.Parent=b;i.BackgroundColor3=Color3.fromRGB(35,35,35)i.Position=UDim2.new(0,0,0.146666661,0)i.Size=UDim2.new(0,200,0,15)i.Font=Enum.Font.SourceSans;i.Text="Players"i.TextColor3=Color3.fromRGB(255,255,255)i.TextSize=14.000;j.CornerRadius=UDim.new(0,6)j.Parent=i;k.Name="FilteringEnabled "k.Parent=b;k.BackgroundColor3=Color3.fromRGB(35,35,35)k.Position=UDim2.new(0,0,0.446666658,0)k.Size=UDim2.new(0,200,0,15)k.Font=Enum.Font.SourceSans;k.Text="FilteringEnabled : False"k.TextColor3=Color3.fromRGB(255,255,255)k.TextSize=14.000;l.CornerRadius=UDim.new(0,6)l.Parent=k;m.Name="JoinGame"m.Parent=a;m.BackgroundColor3=Color3.fromRGB(30,30,30)m.BorderColor3=Color3.fromRGB(0,0,0)m.Position=UDim2.new(0.639999986,0,0.200000003,50)m.Size=UDim2.new(0,200,0,75)m.Visible=false;n.Parent=m;n.BackgroundColor3=Color3.fromRGB(35,35,35)n.BorderColor3=Color3.fromRGB(0,0,0)n.BorderSizePixel=0;n.Size=UDim2.new(0,200,0,15)o.Parent=n;o.BackgroundColor3=Color3.fromRGB(35,35,35)o.BackgroundTransparency=1.000;o.BorderSizePixel=0;o.Size=UDim2.new(0,200,0,15)o.Font=Enum.Font.SourceSans;o.Text="Join Game"o.TextColor3=Color3.fromRGB(255,255,255)o.TextSize=14.000;p.CornerRadius=UDim.new(0,4)p.Parent=n;q.CornerRadius=UDim.new(0,4)q.Parent=m;r.Name="GameId"r.Parent=m;r.BackgroundColor3=Color3.fromRGB(35,35,35)r.BorderSizePixel=0;r.Position=UDim2.new(0,0,0.39202109,0)r.Size=UDim2.new(0,200,0,15)r.Font=Enum.Font.SourceSans;r.PlaceholderText="Game Id"r.Text=""r.TextColor3=Color3.fromRGB(255,255,255)r.TextScaled=true;r.TextSize=14.000;r.TextWrapped=true;s.CornerRadius=UDim.new(0,6)s.Parent=r;t.Name="JoinGame"t.Parent=m;t.BackgroundColor3=Color3.fromRGB(35,35,35)t.Position=UDim2.new(0.560791254,0,0.683464527,0)t.Size=UDim2.new(0,75,0,15)t.Font=Enum.Font.SourceSans;t.Text="Join"t.TextColor3=Color3.fromRGB(255,255,255)t.TextSize=14.000;u.CornerRadius=UDim.new(0,6)u.Parent=t;v.Name="ReJoin"v.Parent=m;v.BackgroundColor3=Color3.fromRGB(35,35,35)v.Position=UDim2.new(0.060791254,0,0.683464527,0)v.Size=UDim2.new(0,75,0,15)v.Font=Enum.Font.SourceSans;v.Text="Rejoin"v.TextColor3=Color3.fromRGB(255,255,255)v.TextSize=14.000;w.CornerRadius=UDim.new(0,6)w.Parent=v;x.Name="Music"x.Parent=a;x.BackgroundColor3=Color3.fromRGB(30,30,30)x.BorderColor3=Color3.fromRGB(0,0,0)x.Position=UDim2.new(0.513000011,0,0.200000003,50)x.Size=UDim2.new(0,200,0,75)x.Visible=false;y.Parent=x;y.BackgroundColor3=Color3.fromRGB(35,35,35)y.BorderColor3=Color3.fromRGB(0,0,0)y.BorderSizePixel=0;y.Size=UDim2.new(0,200,0,15)z.Parent=y;z.BackgroundColor3=Color3.fromRGB(35,35,35)z.BackgroundTransparency=1.000;z.BorderSizePixel=0;z.Size=UDim2.new(0,200,0,15)z.Font=Enum.Font.SourceSans;z.Text="Music"z.TextColor3=Color3.fromRGB(255,255,255)z.TextSize=14.000;A.CornerRadius=UDim.new(0,4)A.Parent=y;B.CornerRadius=UDim.new(0,4)B.Parent=x;C.Name="SongUrl"C.Parent=x;C.BackgroundColor3=Color3.fromRGB(35,35,35)C.BorderSizePixel=0;C.Position=UDim2.new(0,0,0.39202109,0)C.Size=UDim2.new(0,200,0,15)C.Font=Enum.Font.SourceSans;C.PlaceholderText="YouTube Url"C.Text=""C.TextColor3=Color3.fromRGB(255,255,255)C.TextScaled=true;C.TextSize=14.000;C.TextWrapped=true;D.CornerRadius=UDim.new(0,6)D.Parent=C;E.Name="PlayButton"E.Parent=x;E.BackgroundColor3=Color3.fromRGB(35,35,35)E.Position=UDim2.new(0.570791245,0,0.683464527,0)E.Size=UDim2.new(0,75,0,15)E.Font=Enum.Font.SourceSans;E.Text="Play"E.TextColor3=Color3.fromRGB(255,255,255)E.TextSize=14.000;F.CornerRadius=UDim.new(0,6)F.Parent=E;G.Name="StopButton"G.Parent=x;G.BackgroundColor3=Color3.fromRGB(35,35,35)G.Position=UDim2.new(0.049999997,0,0.680419683,0)G.Size=UDim2.new(0,75,0,15)G.Font=Enum.Font.SourceSans;G.Text="Stop"G.TextColor3=Color3.fromRGB(255,255,255)G.TextSize=14.000;H.CornerRadius=UDim.new(0,6)H.Parent=G;I.Name="NameUi"I.Parent=a;I.BackgroundColor3=Color3.fromRGB(30,30,30)I.Position=UDim2.new(0.389999986,0,0,0)I.Size=UDim2.new(0,350,0,25)I.Visible=false;J.Parent=I;J.BackgroundColor3=Color3.fromRGB(255,255,255)J.BackgroundTransparency=1.000;J.Position=UDim2.new(-0.00257142796,0,0,0)J.Size=UDim2.new(0,350,0,25)J.Font=Enum.Font.SourceSans;J.TextColor3=Color3.fromRGB(255,255,255)J.TextScaled=true;J.TextSize=14.000;J.TextWrapped=true;K.Parent=J;L.Parent=I;M.Name="Time"M.Parent=a;M.BackgroundColor3=Color3.fromRGB(30,30,30)M.BorderColor3=Color3.fromRGB(0,0,0)M.Position=UDim2.new(0.435000002,0,0.0399999991,0)M.Size=UDim2.new(0,200,0,45)M.Visible=false;N.Parent=M;N.BackgroundColor3=Color3.fromRGB(35,35,35)N.BorderColor3=Color3.fromRGB(0,0,0)N.BorderSizePixel=0;N.Size=UDim2.new(0,200,0,15)O.Parent=N;O.BackgroundColor3=Color3.fromRGB(35,35,35)O.BackgroundTransparency=1.000;O.BorderSizePixel=0;O.Position=UDim2.new(-2.23517418e-08,0,-2.38418579e-07,0)O.Size=UDim2.new(0,200,0,15)O.Font=Enum.Font.SourceSans;O.Text="Time"O.TextColor3=Color3.fromRGB(255,255,255)O.TextSize=14.000;P.CornerRadius=UDim.new(0,4)P.Parent=N;Q.CornerRadius=UDim.new(0,4)Q.Parent=M;R.Name="RealTime"R.Parent=M;R.BackgroundColor3=Color3.fromRGB(30,30,30)R.Position=UDim2.new(0,0,0.322444648,0)R.Size=UDim2.new(0,200,0,15)R.Font=Enum.Font.SourceSans;R.Text="0:0:0"R.TextColor3=Color3.fromRGB(255,255,255)R.TextSize=14.000;R.TextWrapped=true;S.CornerRadius=UDim.new(0,6)S.Parent=R;T.Name="seconds"T.Parent=M;T.BackgroundColor3=Color3.fromRGB(255,255,255)T.BackgroundTransparency=1.000;T.BorderSizePixel=0;T.Position=UDim2.new(0.499398828,0,0.622222185,0)T.Size=UDim2.new(0,100,0,15)T.Font=Enum.Font.SourceSans;T.Text="Seconds : 0"T.TextColor3=Color3.fromRGB(255,255,255)T.TextSize=14.000;T.TextStrokeColor3=Color3.fromRGB(255,255,255)U.Name="minutes"U.Parent=M;U.BackgroundColor3=Color3.fromRGB(255,255,255)U.BackgroundTransparency=1.000;U.BorderSizePixel=0;U.Position=UDim2.new(0,0,0.622222245,0)U.Size=UDim2.new(0,100,0,15)U.Font=Enum.Font.SourceSans;U.Text="Minutes : 0"U.TextColor3=Color3.fromRGB(255,255,255)U.TextSize=14.000;U.TextStrokeColor3=Color3.fromRGB(255,255,255)V.Name="Loading"V.Parent=a;V.BackgroundColor3=Color3.fromRGB(30,30,30)V.Position=UDim2.new(0.419999987,0,0.449999988,0)V.Size=UDim2.new(0,250,0,75)W.Parent=V;W.BackgroundColor3=Color3.fromRGB(35,35,35)W.BorderColor3=Color3.fromRGB(0,0,0)W.BorderSizePixel=0;W.Size=UDim2.new(0,250,0,15)X.Parent=W;X.BackgroundColor3=Color3.fromRGB(35,35,35)X.BackgroundTransparency=1.000;X.BorderSizePixel=0;X.Size=UDim2.new(0,250,0,15)X.Font=Enum.Font.SourceSans;X.Text="Checking key"X.TextColor3=Color3.fromRGB(255,255,255)X.TextSize=14.000;X.TextWrapped=true;Y.CornerRadius=UDim.new(0,4)Y.Parent=W;Z.Parent=V;Z.BackgroundColor3=Color3.fromRGB(35,35,35)Z.BorderColor3=Color3.fromRGB(0,0,0)Z.BorderSizePixel=0;Z.Position=UDim2.new(0,0,0.479999989,0)Z.Size=UDim2.new(0,250,0,15)Z.ZIndex=2;_.CornerRadius=UDim.new(0,4)_.Parent=Z;a0.Parent=Z;a0.BackgroundColor3=Color3.fromRGB(83,83,83)a0.BorderColor3=Color3.fromRGB(0,0,0)a0.BorderSizePixel=0;a0.Size=UDim2.new(0,0,0,15)a0.ZIndex=2;a1.CornerRadius=UDim.new(0,4)a1.Parent=a0;a2.CornerRadius=UDim.new(0,4)a2.Parent=V;a3.Name="BackGroundImage"a3.Parent=V;a3.BackgroundColor3=Color3.fromRGB(30,30,30)a3.BorderSizePixel=0;a3.Position=UDim2.new(0,0,0.197900385,0)a3.Size=UDim2.new(0,249,0,60)a4.CornerRadius=UDim.new(0,4)a4.Parent=a3;a5.Name="Stupid"a5.Parent=a;a5.BackgroundColor3=Color3.fromRGB(255,255,255)a5.Position=UDim2.new(100,0,0.528999984,0)local function a6()local a7=Instance.new('Script',g)a7.Parent.MouseButton1Click:Connect(function()setclipboard(a7.Parent.Text)end)end;coroutine.wrap(a6)()local function a8()local a7=Instance.new('Script',g)a7.Parent.Text=game.PlaceId end;coroutine.wrap(a8)()local function a9()local a7=Instance.new('Script',i)while true do a7.Parent.Text="MaxPlayers "..game.Players.MaxPlayers.." : Current Players "..#game.Players:GetChildren()wait()end end;coroutine.wrap(a9)()local function aa()local a7=Instance.new('Script',k)while true do if game:GetService("Workspace").FilteringEnabled==true then a7.Parent.Text="FilteringEnabled : True"else a7.Parent.Text="FilteringEnabled : False"end;wait()end end;coroutine.wrap(aa)()local function ab()local a7=Instance.new('Script',t)a7.Parent.MouseButton1Click:Connect(function()local ac=game:GetService("TeleportService")local ad=a7.Parent.Parent.GameId.Text;local ae=game:GetService("Players").LocalPlayer;if ae then ac:Teleport(ad,ae)end end)end;coroutine.wrap(ab)()local function af()local a7=Instance.new('Script',v)a7.Parent.MouseButton1Click:Connect(function()local ag=game.Players.LocalPlayer;game:GetService("TeleportService"):Teleport(game.PlaceId,ag)end)end;coroutine.wrap(af)()local function ah()local a7=Instance.new('Script',E)a7.Parent.MouseButton1Click:Connect(function()local x=a7.Parent.Parent.SongUrl.Text;_G.URL=x;local ai=_G.URL;loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/findurl.lua"))()repeat wait()until ai~=_G.URL;local aj=loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/randomstring.lua"))()printconsole("\\ Making Song File")writefile(aj..".mp3",game:HttpGet(_G.URL))if workspace:FindFirstChild("YoutubeSong")then printconsole("\\ Deleting Previous File")delfile(workspace.YoutubeSong.Value.Value..".mp3")workspace.YoutubeSong:Destroy()end;local ak=Instance.new("Sound",workspace)ak.Name="YoutubeSong"Instance.new("StringValue",ak).Value=aj;repeat wait()until readfile(aj..".mp3")printconsole("\\ Downloaded Song")ak.SoundId=getsynasset(aj..".mp3")ak.Volume=2;ak:Play()ak.Ended:Connect(function()ak:Destroy()printconsole("\\ Deleting Previous File")delfile(aj..".mp3")end)end)end;coroutine.wrap(ah)()local function al()local a7=Instance.new('Script',G)a7.Parent.MouseButton1Click:Connect(function()game:GetService("Workspace").YoutubeSong:Destroy()end)end;coroutine.wrap(al)()local function am()local a7=Instance.new('Script',J)local an=game.Players.LocalPlayer;a7.Parent.Text="Welcome "..an.Name.."!"end;coroutine.wrap(am)()local function ao()local a7=Instance.new('Script',R)_G.Time=true;while _G.Time do local ap=os.time()local aq="%I:%M:%S"local ar=os.date(aq,ap)a7.Parent.Text=ar;wait(1)end end;coroutine.wrap(ao)()local function as()local a7=Instance.new('Script',T)while true do if a7.Parent.Text=="Seconds : 0"then for at=1,math.huge do wait(1)a7.Parent.Text="Seconds : "..at;if a7.Parent.Text=="Seconds : 60"then a7.Parent.Text="Seconds : 0"break end end end;wait()end end;coroutine.wrap(as)()local function au()local a7=Instance.new('Script',U)for at=1,math.huge do wait(60)a7.Parent.Text="Minutes : "..at end end;coroutine.wrap(au)()local function av()local a7=Instance.new('Script',a)function Notify(aw,ax,ay)local az=Instance.new("ScreenGui")local aA=Instance.new("Frame",az)local aB=Instance.new("TextLabel",aA)local aC=Instance.new("TextLabel",aA)local f=Instance.new("UICorner")f.CornerRadius=UDim.new(0,4)f.Parent=aA;aA.BorderSizePixel=0;aC.BorderSizePixel=0;aB.BorderSizePixel=0;az.Name="NotificationsSystem"az.Parent=game.CoreGui;aA.Name="MainFrame"aA.BackgroundColor3=Color3.new(0.1,0.1,0.1)aA.BorderSizePixel=0;aA.Position=UDim2.new(1,5,0.838,500)aA.Size=UDim2.new(0,250,0,75)aB.BackgroundColor3=Color3.new(35,35,35)aB.BackgroundTransparency=0.89999997615814;aB.Size=UDim2.new(1,0,0,30)aB.Font=Enum.Font.SourceSansSemibold;aB.Text=aw;aB.TextColor3=Color3.new(1,1,1)aB.TextSize=17;aC.BackgroundColor3=Color3.new(30,30,30)aC.BackgroundTransparency=1;aC.Position=UDim2.new(0,0,0,30)aC.Size=UDim2.new(1,0,1,-30)aC.Font=Enum.Font.SourceSans;aC.Text=ax;aC.TextColor3=Color3.new(1,1,1)aC.TextSize=16;wait(0.1)aA:TweenPosition(UDim2.new(0.84,5,0.838,50),"Out","Sine",0.5)wait(ay)aA:TweenPosition(UDim2.new(1,5,0.838,500),"Out","Sine",0.5)wait(0.6)az:Destroy()end;Notify("Notification","Script Loaded",2)Notify("Welcome",game.Players.LocalPlayer.Name,4)end;coroutine.wrap(av)()local function aD()local a7=Instance.new('Script',a)game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(aE)if aE==G_OpenCloseKey then if a7.Parent.Stupid.Visible==true then a7.Parent.Stupid.Visible=false;a7.Parent.JoinGame.Visible=false;a7.Parent.Music.Visible=false;a7.Parent.NameUi.Visible=false;a7.Parent.ServerInfo.Visible=false;a7.Parent.Time.Visible=false;game.Lighting.Blur:Destroy()game.Lighting.Blur:Destroy()game.Lighting.Blur:Destroy()game.Lighting.Blur:Destroy()game.Lighting.Blur:Destroy()game.Lighting.Blur:Destroy()else a7.Parent.Stupid.Visible=true;a7.Parent.JoinGame.Visible=true;a7.Parent.Music.Visible=true;a7.Parent.NameUi.Visible=true;a7.Parent.ServerInfo.Visible=true;a7.Parent.Time.Visible=true;local aF=Instance.new('BlurEffect',game.Lighting)aF.Size=100 end end end)end;coroutine.wrap(aD)()local function aG()local a7=Instance.new('Script',a0)local aH=a7.Parent;local i=game:GetService("Players")local an=i.LocalPlayer;aH:TweenSize(UDim2.new(0,75,0,15))wait(1)a7.Parent.Parent.Parent.Frame.TextLabel.Text="Checking key"wait(1)aH:TweenSize(UDim2.new(0,125,0,15))wait(1)a7.Parent.Parent.Parent.Frame.TextLabel.Text="Loading."wait(1)aH:TweenSize(UDim2.new(0,175,0,15))wait(1)a7.Parent.Parent.Parent.Frame.TextLabel.Text="Loading.."wait(1)aH:TweenSize(UDim2.new(0,250,0,15))wait(1)a7.Parent.Parent.Parent.Frame.TextLabel.Text="Finished"wait(2)a7.Parent.Parent.Parent.Parent.Loading.Visible=false;wait(1)a7.Parent.Parent.Parent.Parent.JoinGame.Visible=true;a7.Parent.Parent.Parent.Parent.Music.Visible=true;a7.Parent.Parent.Parent.Parent.NameUi.Visible=true;a7.Parent.Parent.Parent.Parent.ServerInfo.Visible=true;a7.Parent.Parent.Parent.Parent.Time.Visible=true;local aF=Instance.new('BlurEffect',game.Lighting)aF.Size=100 end;coroutine.wrap(aG)()local function aI()local a7=Instance.new('Script',a3)a7.Parent.Image=G_BackGroundImage end;coroutine.wrap(aI)()
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local HNJUSBDF = Instance.new("ScreenGui")
+local ServerInfo = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local PlaceId = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Players = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local FilteringEnabled = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local JoinGame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
+local GameId = Instance.new("TextBox")
+local UICorner_8 = Instance.new("UICorner")
+local JoinGame_2 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local ReJoin = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Music = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local UICorner_11 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
+local SongUrl = Instance.new("TextBox")
+local UICorner_13 = Instance.new("UICorner")
+local PlayButton = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local StopButton = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local NameUi = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local UICorner_16 = Instance.new("UICorner")
+local UICorner_17 = Instance.new("UICorner")
+local Time = Instance.new("Frame")
+local Frame_4 = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local UICorner_18 = Instance.new("UICorner")
+local UICorner_19 = Instance.new("UICorner")
+local RealTime = Instance.new("TextLabel")
+local UICorner_20 = Instance.new("UICorner")
+local seconds = Instance.new("TextLabel")
+local minutes = Instance.new("TextLabel")
+local Loading = Instance.new("Frame")
+local Frame_5 = Instance.new("Frame")
+local TextLabel_6 = Instance.new("TextLabel")
+local UICorner_21 = Instance.new("UICorner")
+local Frame_6 = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local Frame_7 = Instance.new("Frame")
+local UICorner_23 = Instance.new("UICorner")
+local UICorner_24 = Instance.new("UICorner")
+local BackGroundImage = Instance.new("ImageLabel")
+local UICorner_25 = Instance.new("UICorner")
+local Stupid = Instance.new("Frame")
+
+--Properties:
+
+HNJUSBDF.Name = "HNJUSBDF"
+HNJUSBDF.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+ServerInfo.Name = "ServerInfo"
+ServerInfo.Parent = HNJUSBDF
+ServerInfo.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ServerInfo.Position = UDim2.new(0.76700002, 0, 0.200000003, 50)
+ServerInfo.Size = UDim2.new(0, 200, 0, 150)
+ServerInfo.Visible = false
+
+Frame.Parent = ServerInfo
+Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 200, 0, 15)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 200, 0, 15)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Server Info"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = Frame
+
+UICorner_2.CornerRadius = UDim.new(0, 4)
+UICorner_2.Parent = ServerInfo
+
+PlaceId.Name = "PlaceId"
+PlaceId.Parent = ServerInfo
+PlaceId.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+PlaceId.Position = UDim2.new(0, 0, 0.296797901, 0)
+PlaceId.Size = UDim2.new(0, 200, 0, 15)
+PlaceId.Font = Enum.Font.SourceSans
+PlaceId.Text = "Place Id"
+PlaceId.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlaceId.TextSize = 14.000
+
+UICorner_3.CornerRadius = UDim.new(0, 6)
+UICorner_3.Parent = PlaceId
+
+Players.Name = "Players"
+Players.Parent = ServerInfo
+Players.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Players.Position = UDim2.new(0, 0, 0.146666661, 0)
+Players.Size = UDim2.new(0, 200, 0, 15)
+Players.Font = Enum.Font.SourceSans
+Players.Text = "Players"
+Players.TextColor3 = Color3.fromRGB(255, 255, 255)
+Players.TextSize = 14.000
+
+UICorner_4.CornerRadius = UDim.new(0, 6)
+UICorner_4.Parent = Players
+
+FilteringEnabled.Name = "FilteringEnabled "
+FilteringEnabled.Parent = ServerInfo
+FilteringEnabled.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+FilteringEnabled.Position = UDim2.new(0, 0, 0.446666658, 0)
+FilteringEnabled.Size = UDim2.new(0, 200, 0, 15)
+FilteringEnabled.Font = Enum.Font.SourceSans
+FilteringEnabled.Text = "FilteringEnabled : False"
+FilteringEnabled.TextColor3 = Color3.fromRGB(255, 255, 255)
+FilteringEnabled.TextSize = 14.000
+
+UICorner_5.CornerRadius = UDim.new(0, 6)
+UICorner_5.Parent = FilteringEnabled
+
+JoinGame.Name = "JoinGame"
+JoinGame.Parent = HNJUSBDF
+JoinGame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+JoinGame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JoinGame.Position = UDim2.new(0.639999986, 0, 0.200000003, 50)
+JoinGame.Size = UDim2.new(0, 200, 0, 75)
+JoinGame.Visible = false
+
+Frame_2.Parent = JoinGame
+Frame_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Size = UDim2.new(0, 200, 0, 15)
+
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Size = UDim2.new(0, 200, 0, 15)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Join Game"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(0, 4)
+UICorner_6.Parent = Frame_2
+
+UICorner_7.CornerRadius = UDim.new(0, 4)
+UICorner_7.Parent = JoinGame
+
+GameId.Name = "GameId"
+GameId.Parent = JoinGame
+GameId.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+GameId.BorderSizePixel = 0
+GameId.Position = UDim2.new(0, 0, 0.39202109, 0)
+GameId.Size = UDim2.new(0, 200, 0, 15)
+GameId.Font = Enum.Font.SourceSans
+GameId.PlaceholderText = "Game Id"
+GameId.Text = ""
+GameId.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameId.TextScaled = true
+GameId.TextSize = 14.000
+GameId.TextWrapped = true
+
+UICorner_8.CornerRadius = UDim.new(0, 6)
+UICorner_8.Parent = GameId
+
+JoinGame_2.Name = "JoinGame"
+JoinGame_2.Parent = JoinGame
+JoinGame_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+JoinGame_2.Position = UDim2.new(0.560791254, 0, 0.683464527, 0)
+JoinGame_2.Size = UDim2.new(0, 75, 0, 15)
+JoinGame_2.Font = Enum.Font.SourceSans
+JoinGame_2.Text = "Join"
+JoinGame_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+JoinGame_2.TextSize = 14.000
+
+UICorner_9.CornerRadius = UDim.new(0, 6)
+UICorner_9.Parent = JoinGame_2
+
+ReJoin.Name = "ReJoin"
+ReJoin.Parent = JoinGame
+ReJoin.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ReJoin.Position = UDim2.new(0.060791254, 0, 0.683464527, 0)
+ReJoin.Size = UDim2.new(0, 75, 0, 15)
+ReJoin.Font = Enum.Font.SourceSans
+ReJoin.Text = "Rejoin"
+ReJoin.TextColor3 = Color3.fromRGB(255, 255, 255)
+ReJoin.TextSize = 14.000
+
+UICorner_10.CornerRadius = UDim.new(0, 6)
+UICorner_10.Parent = ReJoin
+
+Music.Name = "Music"
+Music.Parent = HNJUSBDF
+Music.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Music.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Music.Position = UDim2.new(0.513000011, 0, 0.200000003, 50)
+Music.Size = UDim2.new(0, 200, 0, 75)
+Music.Visible = false
+
+Frame_3.Parent = Music
+Frame_3.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Size = UDim2.new(0, 200, 0, 15)
+
+TextLabel_3.Parent = Frame_3
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Size = UDim2.new(0, 200, 0, 15)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Music"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 14.000
+
+UICorner_11.CornerRadius = UDim.new(0, 4)
+UICorner_11.Parent = Frame_3
+
+UICorner_12.CornerRadius = UDim.new(0, 4)
+UICorner_12.Parent = Music
+
+SongUrl.Name = "SongUrl"
+SongUrl.Parent = Music
+SongUrl.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+SongUrl.BorderSizePixel = 0
+SongUrl.Position = UDim2.new(0, 0, 0.39202109, 0)
+SongUrl.Size = UDim2.new(0, 200, 0, 15)
+SongUrl.Font = Enum.Font.SourceSans
+SongUrl.PlaceholderText = "YouTube Url"
+SongUrl.Text = ""
+SongUrl.TextColor3 = Color3.fromRGB(255, 255, 255)
+SongUrl.TextScaled = true
+SongUrl.TextSize = 14.000
+SongUrl.TextWrapped = true
+
+UICorner_13.CornerRadius = UDim.new(0, 6)
+UICorner_13.Parent = SongUrl
+
+PlayButton.Name = "PlayButton"
+PlayButton.Parent = Music
+PlayButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+PlayButton.Position = UDim2.new(0.570791245, 0, 0.683464527, 0)
+PlayButton.Size = UDim2.new(0, 75, 0, 15)
+PlayButton.Font = Enum.Font.SourceSans
+PlayButton.Text = "Play"
+PlayButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayButton.TextSize = 14.000
+
+UICorner_14.CornerRadius = UDim.new(0, 6)
+UICorner_14.Parent = PlayButton
+
+StopButton.Name = "StopButton"
+StopButton.Parent = Music
+StopButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+StopButton.Position = UDim2.new(0.049999997, 0, 0.680419683, 0)
+StopButton.Size = UDim2.new(0, 75, 0, 15)
+StopButton.Font = Enum.Font.SourceSans
+StopButton.Text = "Stop"
+StopButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+StopButton.TextSize = 14.000
+
+UICorner_15.CornerRadius = UDim.new(0, 6)
+UICorner_15.Parent = StopButton
+
+NameUi.Name = "NameUi"
+NameUi.Parent = HNJUSBDF
+NameUi.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+NameUi.Position = UDim2.new(0.389999986, 0, 0, 0)
+NameUi.Size = UDim2.new(0, 350, 0, 25)
+NameUi.Visible = false
+
+TextLabel_4.Parent = NameUi
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(-0.00257142796, 0, 0, 0)
+TextLabel_4.Size = UDim2.new(0, 350, 0, 25)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+UICorner_16.Parent = TextLabel_4
+
+UICorner_17.Parent = NameUi
+
+Time.Name = "Time"
+Time.Parent = HNJUSBDF
+Time.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Time.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Time.Position = UDim2.new(0.435000002, 0, 0.0399999991, 0)
+Time.Size = UDim2.new(0, 200, 0, 45)
+Time.Visible = false
+
+Frame_4.Parent = Time
+Frame_4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Size = UDim2.new(0, 200, 0, 15)
+
+TextLabel_5.Parent = Frame_4
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(-2.23517418e-08, 0, -2.38418579e-07, 0)
+TextLabel_5.Size = UDim2.new(0, 200, 0, 15)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Time"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 14.000
+
+UICorner_18.CornerRadius = UDim.new(0, 4)
+UICorner_18.Parent = Frame_4
+
+UICorner_19.CornerRadius = UDim.new(0, 4)
+UICorner_19.Parent = Time
+
+RealTime.Name = "RealTime"
+RealTime.Parent = Time
+RealTime.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+RealTime.Position = UDim2.new(0, 0, 0.322444648, 0)
+RealTime.Size = UDim2.new(0, 200, 0, 15)
+RealTime.Font = Enum.Font.SourceSans
+RealTime.Text = "0:0:0"
+RealTime.TextColor3 = Color3.fromRGB(255, 255, 255)
+RealTime.TextSize = 14.000
+RealTime.TextWrapped = true
+
+UICorner_20.CornerRadius = UDim.new(0, 6)
+UICorner_20.Parent = RealTime
+
+seconds.Name = "seconds"
+seconds.Parent = Time
+seconds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+seconds.BackgroundTransparency = 1.000
+seconds.BorderSizePixel = 0
+seconds.Position = UDim2.new(0.499398828, 0, 0.622222185, 0)
+seconds.Size = UDim2.new(0, 100, 0, 15)
+seconds.Font = Enum.Font.SourceSans
+seconds.Text = "Seconds : 0"
+seconds.TextColor3 = Color3.fromRGB(255, 255, 255)
+seconds.TextSize = 14.000
+seconds.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+minutes.Name = "minutes"
+minutes.Parent = Time
+minutes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+minutes.BackgroundTransparency = 1.000
+minutes.BorderSizePixel = 0
+minutes.Position = UDim2.new(0, 0, 0.622222245, 0)
+minutes.Size = UDim2.new(0, 100, 0, 15)
+minutes.Font = Enum.Font.SourceSans
+minutes.Text = "Minutes : 0"
+minutes.TextColor3 = Color3.fromRGB(255, 255, 255)
+minutes.TextSize = 14.000
+minutes.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+Loading.Name = "Loading"
+Loading.Parent = HNJUSBDF
+Loading.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Loading.Position = UDim2.new(0.419999987, 0, 0.449999988, 0)
+Loading.Size = UDim2.new(0, 250, 0, 75)
+
+Frame_5.Parent = Loading
+Frame_5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Size = UDim2.new(0, 250, 0, 15)
+
+TextLabel_6.Parent = Frame_5
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Size = UDim2.new(0, 250, 0, 15)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Checking key"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
+
+UICorner_21.CornerRadius = UDim.new(0, 4)
+UICorner_21.Parent = Frame_5
+
+Frame_6.Parent = Loading
+Frame_6.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_6.BorderSizePixel = 0
+Frame_6.Position = UDim2.new(0, 0, 0.479999989, 0)
+Frame_6.Size = UDim2.new(0, 250, 0, 15)
+Frame_6.ZIndex = 2
+
+UICorner_22.CornerRadius = UDim.new(0, 4)
+UICorner_22.Parent = Frame_6
+
+Frame_7.Parent = Frame_6
+Frame_7.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+Frame_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_7.BorderSizePixel = 0
+Frame_7.Size = UDim2.new(0, 0, 0, 15)
+Frame_7.ZIndex = 2
+
+UICorner_23.CornerRadius = UDim.new(0, 4)
+UICorner_23.Parent = Frame_7
+
+UICorner_24.CornerRadius = UDim.new(0, 4)
+UICorner_24.Parent = Loading
+
+BackGroundImage.Name = "BackGroundImage"
+BackGroundImage.Parent = Loading
+BackGroundImage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+BackGroundImage.BorderSizePixel = 0
+BackGroundImage.Position = UDim2.new(0, 0, 0.197900385, 0)
+BackGroundImage.Size = UDim2.new(0, 249, 0, 60)
+
+UICorner_25.CornerRadius = UDim.new(0, 4)
+UICorner_25.Parent = BackGroundImage
+
+Stupid.Name = "Stupid"
+Stupid.Parent = HNJUSBDF
+Stupid.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Stupid.Position = UDim2.new(100, 0, 0.528999984, 0)
+
+-- Scripts:
+
+local function FXKFEPR_fake_script() -- PlaceId.Script 
+	local script = Instance.new('Script', PlaceId)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		setclipboard(script.Parent.Text)
+	end)
+end
+coroutine.wrap(FXKFEPR_fake_script)()
+local function HZTZ_fake_script() -- PlaceId.Script 
+	local script = Instance.new('Script', PlaceId)
+
+	script.Parent.Text = game.PlaceId
+end
+coroutine.wrap(HZTZ_fake_script)()
+local function NHEONBP_fake_script() -- Players.Script 
+	local script = Instance.new('Script', Players)
+
+	while true do
+		script.Parent.Text = ("MaxPlayers "..game.Players.MaxPlayers.." : Current Players "..#game.Players:GetChildren())
+		
+		wait()
+	end
+end
+coroutine.wrap(NHEONBP_fake_script)()
+local function IJMPLV_fake_script() -- FilteringEnabled.Script 
+	local script = Instance.new('Script', FilteringEnabled)
+
+	while true do
+		if game:GetService("Workspace").FilteringEnabled == true then
+			script.Parent.Text = "FilteringEnabled : True"
+		else
+			script.Parent.Text = "FilteringEnabled : False"
+		end
+		
+		wait()
+	end
+end
+coroutine.wrap(IJMPLV_fake_script)()
+local function TQDMTDK_fake_script() -- JoinGame_2.Script 
+	local script = Instance.new('Script', JoinGame_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local TeleportService = game:GetService("TeleportService")
+		local placeID = script.Parent.Parent.GameId.Text
+			local player = game:GetService("Players").LocalPlayer
+			if player then
+				TeleportService:Teleport(placeID, player)
+			end
+	end)
+end
+coroutine.wrap(TQDMTDK_fake_script)()
+local function JMXY_fake_script() -- ReJoin.Script 
+	local script = Instance.new('Script', ReJoin)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Player = game.Players.LocalPlayer
+		game:GetService("TeleportService"):Teleport(game.PlaceId,Player)
+	end)
+end
+coroutine.wrap(JMXY_fake_script)()
+local function GPCMKB_fake_script() -- PlayButton.Script 
+	local script = Instance.new('Script', PlayButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Music = script.Parent.Parent.SongUrl.Text
+	_G.URL = Music; local fdhs = _G.URL
+	
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/findurl.lua"))()
+	repeat wait() until fdhs ~= _G.URL
+	local randomstri = loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/randomstring.lua"))()
+	printconsole("\\ Making Song File")
+	writefile(randomstri..".mp3",game:HttpGet(_G.URL))
+	if workspace:FindFirstChild("YoutubeSong") then
+		printconsole("\\ Deleting Previous File")
+		delfile(workspace.YoutubeSong.Value.Value.. ".mp3")
+		workspace.YoutubeSong:Destroy()
+	end
+	local sound = Instance.new("Sound",workspace)
+	sound.Name = "YoutubeSong"
+	Instance.new("StringValue",sound).Value = randomstri
+	repeat wait() until readfile(randomstri.. ".mp3")
+	printconsole("\\ Downloaded Song")
+	sound.SoundId = getsynasset(randomstri.. ".mp3")
+	sound.Volume = 2
+	sound:Play()
+	sound.Ended:Connect(function()
+		sound:Destroy()
+		printconsole("\\ Deleting Previous File")
+			delfile(randomstri.. ".mp3")
+			end)
+	end)
+end
+coroutine.wrap(GPCMKB_fake_script)()
+local function UWDMEDE_fake_script() -- StopButton.Script 
+	local script = Instance.new('Script', StopButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("Workspace").YoutubeSong:Destroy()
+	end)
+end
+coroutine.wrap(UWDMEDE_fake_script)()
+local function DCJNI_fake_script() -- TextLabel_4.Script 
+	local script = Instance.new('Script', TextLabel_4)
+
+	local plr = game.Players.LocalPlayer
+	
+	script.Parent.Text = "Welcome "..plr.Name.."!"
+end
+coroutine.wrap(DCJNI_fake_script)()
+local function BENFQ_fake_script() -- RealTime.Script 
+	local script = Instance.new('Script', RealTime)
+
+	_G.Time = true
+	while _G.Time do
+		local TimeInUnix = os.time()
+		local stringToFormat = "%I:%M:%S"
+		local result = os.date(stringToFormat, TimeInUnix)
+		script.Parent.Text = result
+		wait(1)
+	end
+end
+coroutine.wrap(BENFQ_fake_script)()
+local function NSLTP_fake_script() -- seconds.Script 
+	local script = Instance.new('Script', seconds)
+
+	while true do
+	if script.Parent.Text == "Seconds : 0" then
+	for i=1,math.huge do
+		wait(1)
+			script.Parent.Text = "Seconds : "..i
+			if script.Parent.Text == "Seconds : 60" then
+					script.Parent.Text = "Seconds : 0" 
+				break
+	end
+		end
+		end
+		wait()
+		end
+end
+coroutine.wrap(NSLTP_fake_script)()
+local function VDELL_fake_script() -- minutes.Script 
+	local script = Instance.new('Script', minutes)
+
+	for i=1,math.huge do
+		wait(60)
+		script.Parent.Text = "Minutes : "..i
+	end
+end
+coroutine.wrap(VDELL_fake_script)()
+local function METIUD_fake_script() -- HNJUSBDF.Script 
+	local script = Instance.new('Script', HNJUSBDF)
+
+	function Notify(titletxt, text, time)
+		local GUI = Instance.new("ScreenGui")
+		local Main = Instance.new("Frame", GUI)
+		local title = Instance.new("TextLabel", Main)
+		local message = Instance.new("TextLabel", Main)
+		local UICorner_2 = Instance.new("UICorner")
+		UICorner_2.CornerRadius = UDim.new(0, 4)
+		UICorner_2.Parent = Main
+	
+		Main.BorderSizePixel = 0
+		message.BorderSizePixel = 0
+		title.BorderSizePixel = 0
+	
+		GUI.Name = "NotificationsSystem"
+		GUI.Parent = game.CoreGui
+		Main.Name = "MainFrame"
+		Main.BackgroundColor3 = Color3.new(0.1,0.1,0.1)
+		Main.BorderSizePixel = 0
+		Main.Position = UDim2.new(1, 5, 0.838, 500)
+		Main.Size = UDim2.new(0, 250, 0, 75)
+	
+		title.BackgroundColor3 = Color3.new(35, 35, 35)
+		title.BackgroundTransparency = 0.89999997615814
+		title.Size = UDim2.new(1, 0, 0, 30)
+		title.Font = Enum.Font.SourceSansSemibold
+		title.Text = titletxt
+		title.TextColor3 = Color3.new(1, 1, 1)
+		title.TextSize = 17
+	
+		message.BackgroundColor3 = Color3.new(30, 30, 30)
+		message.BackgroundTransparency = 1
+		message.Position = UDim2.new(0, 0, 0, 30)
+		message.Size = UDim2.new(1, 0, 1, -30)
+		message.Font = Enum.Font.SourceSans
+		message.Text = text
+		message.TextColor3 = Color3.new(1, 1, 1)
+		message.TextSize = 16
+	
+		wait(0.1)
+		Main:TweenPosition(UDim2.new(0.84, 5, 0.838, 50), "Out", "Sine", 0.5)
+		wait(time)
+		Main:TweenPosition(UDim2.new(1, 5, 0.838, 500), "Out", "Sine", 0.5)
+		wait(0.6)
+		GUI:Destroy();
+	end
+	Notify("Notification", "Script Loaded", 2)
+	Notify("Welcome",game.Players.LocalPlayer.Name, 4)
+	if G_Key == "CF5CC1664B1DFC29226EF18E687B6" then
+		Notify("Beta Tester",game.Players.LocalPlayer.Name, 4)
+	end
+end
+coroutine.wrap(METIUD_fake_script)()
+local function DEOGMWI_fake_script() -- HNJUSBDF.Script 
+	local script = Instance.new('Script', HNJUSBDF)
+
+	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+		if key == G_OpenCloseKey then
+			if script.Parent.Stupid.Visible == true then
+				script.Parent.Stupid.Visible = false
+				script.Parent.JoinGame.Visible = false
+				script.Parent.Music.Visible = false
+				script.Parent.NameUi.Visible = false
+				script.Parent.ServerInfo.Visible = false
+				script.Parent.Time.Visible = false
+				game.Lighting.Blur:Destroy()
+				game.Lighting.Blur:Destroy()
+				game.Lighting.Blur:Destroy()
+				game.Lighting.Blur:Destroy()
+				game.Lighting.Blur:Destroy()
+				game.Lighting.Blur:Destroy()
+			else
+				script.Parent.Stupid.Visible = true
+				script.Parent.JoinGame.Visible = true
+				script.Parent.Music.Visible = true
+				script.Parent.NameUi.Visible = true
+				script.Parent.ServerInfo.Visible = true
+				script.Parent.Time.Visible = true
+				local blur = Instance.new('BlurEffect', game.Lighting)
+				blur.Size = 100
+	
+			end
+		end
+	end)
+end
+coroutine.wrap(DEOGMWI_fake_script)()
+local function OYEK_fake_script() -- Frame_7.Script 
+	local script = Instance.new('Script', Frame_7)
+
+	local frame = script.Parent
+	local Players = game:GetService("Players")
+	local plr = Players.LocalPlayer
+	
+		frame:TweenSize(UDim2.new(0,75,0,15))
+	wait(1)
+	
+		script.Parent.Parent.Parent.Frame.TextLabel.Text = "Checking key"
+		wait(1)
+		frame:TweenSize(UDim2.new(0,125,0,15))
+		wait(1)
+		script.Parent.Parent.Parent.Frame.TextLabel.Text = "Loading."
+		wait(1)
+		frame:TweenSize(UDim2.new(0,175,0,15))
+		wait(1)
+		script.Parent.Parent.Parent.Frame.TextLabel.Text = "Loading.."
+		wait(1)
+		frame:TweenSize(UDim2.new(0,250,0,15))
+		wait(1)
+		script.Parent.Parent.Parent.Frame.TextLabel.Text = "Finished"
+			wait(2)
+		script.Parent.Parent.Parent.Parent.Loading.Visible = false
+		wait(1)
+		script.Parent.Parent.Parent.Parent.JoinGame.Visible = true
+		script.Parent.Parent.Parent.Parent.Music.Visible = true
+		script.Parent.Parent.Parent.Parent.NameUi.Visible = true
+		script.Parent.Parent.Parent.Parent.ServerInfo.Visible = true
+		script.Parent.Parent.Parent.Parent.Time.Visible = true
+		local blur = Instance.new('BlurEffect', game.Lighting)
+		blur.Size = 100
+	
+	
+end
+coroutine.wrap(OYEK_fake_script)()
+local function KALUELO_fake_script() -- BackGroundImage.Script 
+	local script = Instance.new('Script', BackGroundImage)
+
+	script.Parent.Image = G_BackGroundImage
+end
+coroutine.wrap(KALUELO_fake_script)()
