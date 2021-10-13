@@ -442,21 +442,21 @@ Stupid.Position = UDim2.new(100, 0, 0.528999984, 0)
 
 -- Scripts:
 
-local function FXKFEPR_fake_script() -- PlaceId.Script 
+local function ISSL_fake_script() -- PlaceId.Script 
 	local script = Instance.new('Script', PlaceId)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		setclipboard(script.Parent.Text)
 	end)
 end
-coroutine.wrap(FXKFEPR_fake_script)()
-local function HZTZ_fake_script() -- PlaceId.Script 
+coroutine.wrap(ISSL_fake_script)()
+local function WQFTB_fake_script() -- PlaceId.Script 
 	local script = Instance.new('Script', PlaceId)
 
 	script.Parent.Text = game.PlaceId
 end
-coroutine.wrap(HZTZ_fake_script)()
-local function NHEONBP_fake_script() -- Players.Script 
+coroutine.wrap(WQFTB_fake_script)()
+local function ZBZYPV_fake_script() -- Players.Script 
 	local script = Instance.new('Script', Players)
 
 	while true do
@@ -465,8 +465,8 @@ local function NHEONBP_fake_script() -- Players.Script
 		wait()
 	end
 end
-coroutine.wrap(NHEONBP_fake_script)()
-local function IJMPLV_fake_script() -- FilteringEnabled.Script 
+coroutine.wrap(ZBZYPV_fake_script)()
+local function ORAOIIF_fake_script() -- FilteringEnabled.Script 
 	local script = Instance.new('Script', FilteringEnabled)
 
 	while true do
@@ -479,8 +479,8 @@ local function IJMPLV_fake_script() -- FilteringEnabled.Script
 		wait()
 	end
 end
-coroutine.wrap(IJMPLV_fake_script)()
-local function TQDMTDK_fake_script() -- JoinGame_2.Script 
+coroutine.wrap(ORAOIIF_fake_script)()
+local function VPOVCV_fake_script() -- JoinGame_2.Script 
 	local script = Instance.new('Script', JoinGame_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -492,8 +492,8 @@ local function TQDMTDK_fake_script() -- JoinGame_2.Script
 			end
 	end)
 end
-coroutine.wrap(TQDMTDK_fake_script)()
-local function JMXY_fake_script() -- ReJoin.Script 
+coroutine.wrap(VPOVCV_fake_script)()
+local function KZNMS_fake_script() -- ReJoin.Script 
 	local script = Instance.new('Script', ReJoin)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -501,8 +501,8 @@ local function JMXY_fake_script() -- ReJoin.Script
 		game:GetService("TeleportService"):Teleport(game.PlaceId,Player)
 	end)
 end
-coroutine.wrap(JMXY_fake_script)()
-local function GPCMKB_fake_script() -- PlayButton.Script 
+coroutine.wrap(KZNMS_fake_script)()
+local function OFMS_fake_script() -- PlayButton.Script 
 	local script = Instance.new('Script', PlayButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -534,24 +534,24 @@ local function GPCMKB_fake_script() -- PlayButton.Script
 			end)
 	end)
 end
-coroutine.wrap(GPCMKB_fake_script)()
-local function UWDMEDE_fake_script() -- StopButton.Script 
+coroutine.wrap(OFMS_fake_script)()
+local function OCPX_fake_script() -- StopButton.Script 
 	local script = Instance.new('Script', StopButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService("Workspace").YoutubeSong:Destroy()
 	end)
 end
-coroutine.wrap(UWDMEDE_fake_script)()
-local function DCJNI_fake_script() -- TextLabel_4.Script 
+coroutine.wrap(OCPX_fake_script)()
+local function UPHNHBY_fake_script() -- TextLabel_4.Script 
 	local script = Instance.new('Script', TextLabel_4)
 
 	local plr = game.Players.LocalPlayer
 	
 	script.Parent.Text = "Welcome "..plr.Name.."!"
 end
-coroutine.wrap(DCJNI_fake_script)()
-local function BENFQ_fake_script() -- RealTime.Script 
+coroutine.wrap(UPHNHBY_fake_script)()
+local function PEDID_fake_script() -- RealTime.Script 
 	local script = Instance.new('Script', RealTime)
 
 	_G.Time = true
@@ -563,8 +563,8 @@ local function BENFQ_fake_script() -- RealTime.Script
 		wait(1)
 	end
 end
-coroutine.wrap(BENFQ_fake_script)()
-local function NSLTP_fake_script() -- seconds.Script 
+coroutine.wrap(PEDID_fake_script)()
+local function GOQL_fake_script() -- seconds.Script 
 	local script = Instance.new('Script', seconds)
 
 	while true do
@@ -581,8 +581,8 @@ local function NSLTP_fake_script() -- seconds.Script
 		wait()
 		end
 end
-coroutine.wrap(NSLTP_fake_script)()
-local function VDELL_fake_script() -- minutes.Script 
+coroutine.wrap(GOQL_fake_script)()
+local function NIEFDLV_fake_script() -- minutes.Script 
 	local script = Instance.new('Script', minutes)
 
 	for i=1,math.huge do
@@ -590,8 +590,8 @@ local function VDELL_fake_script() -- minutes.Script
 		script.Parent.Text = "Minutes : "..i
 	end
 end
-coroutine.wrap(VDELL_fake_script)()
-local function METIUD_fake_script() -- HNJUSBDF.Script 
+coroutine.wrap(NIEFDLV_fake_script)()
+local function OREM_fake_script() -- HNJUSBDF.Script 
 	local script = Instance.new('Script', HNJUSBDF)
 
 	function Notify(titletxt, text, time)
@@ -641,12 +641,15 @@ local function METIUD_fake_script() -- HNJUSBDF.Script
 	end
 	Notify("Notification", "Script Loaded", 2)
 	Notify("Welcome",game.Players.LocalPlayer.Name, 4)
-	if G_Key == "CF5CC1664B1DFC29226EF18E687B6" then
-		Notify("Beta Tester",game.Players.LocalPlayer.Name, 4)
+	local contents = readfile("test.txt")
+	if contents == "553F575EEDC87E78BFF36F17DDA4A" then
+		Notify("Owner",game.Players.LocalPlayer.Name, 4)
 	end
+	
+	
 end
-coroutine.wrap(METIUD_fake_script)()
-local function DEOGMWI_fake_script() -- HNJUSBDF.Script 
+coroutine.wrap(OREM_fake_script)()
+local function NOQZSMB_fake_script() -- HNJUSBDF.Script 
 	local script = Instance.new('Script', HNJUSBDF)
 
 	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
@@ -678,8 +681,8 @@ local function DEOGMWI_fake_script() -- HNJUSBDF.Script
 		end
 	end)
 end
-coroutine.wrap(DEOGMWI_fake_script)()
-local function OYEK_fake_script() -- Frame_7.Script 
+coroutine.wrap(NOQZSMB_fake_script)()
+local function WGPYZA_fake_script() -- Frame_7.Script 
 	local script = Instance.new('Script', Frame_7)
 
 	local frame = script.Parent
@@ -715,10 +718,10 @@ local function OYEK_fake_script() -- Frame_7.Script
 	
 	
 end
-coroutine.wrap(OYEK_fake_script)()
-local function KALUELO_fake_script() -- BackGroundImage.Script 
+coroutine.wrap(WGPYZA_fake_script)()
+local function GFPXC_fake_script() -- BackGroundImage.Script 
 	local script = Instance.new('Script', BackGroundImage)
 
 	script.Parent.Image = G_BackGroundImage
 end
-coroutine.wrap(KALUELO_fake_script)()
+coroutine.wrap(GFPXC_fake_script)()
