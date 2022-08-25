@@ -50,7 +50,7 @@ local esp = {
     objects = {},
     chams = {}, 
     enabled = false,
-    teamcheck = true,
+    teamcheck = false,
     fontsize = 13,
     font = 2,
     settings = {
@@ -140,7 +140,7 @@ esp.WallCheck = function(player)
 end
 
 esp.TeamCheck = function(v)
-    if plr.TeamColor == v.TeamColor then
+    if plr.TeamColor ~= v.TeamColor then
         return true
     end
 
