@@ -50,7 +50,7 @@ local esp = {
     objects = {},
     chams = {}, 
     enabled = false,
-    teamcheck = false,
+    teamcheck = true,
     fontsize = 13,
     font = 2,
     settings = {
@@ -317,19 +317,8 @@ local mainLoop = rs.RenderStepped:Connect(function()
 
                 if esp.teamcheck then
                     if esp.TeamCheck(i) then
+						
 							
-				 v.name.Visible = false
-                        v.boxOutline.Visible = false
-                        v.box.Visible = false
-                        v.image.Visible = false
-                        v.healthBarOutline.Visible = false
-                        v.healthBar.Visible = false
-                        v.healthText.Visible = false
-                        v.distance.Visible = false
-                        v.viewAngle.Visible = false			
-							
-							
-			--[[				
                         v.name.Visible = esp.settings.name.enabled
                         v.box.Visible = esp.settings.box.enabled
                         v.image.Visible = esp.settings.imagebox.enabled
@@ -338,18 +327,11 @@ local mainLoop = rs.RenderStepped:Connect(function()
                         v.distance.Visible = esp.settings.distance.enabled
                         v.viewAngle.Visible = esp.settings.viewangle.enabled
 							
-							]]
+							
                     else
-				v.name.Visible = esp.settings.name.enabled
-                        v.box.Visible = esp.settings.box.enabled
-                        v.image.Visible = esp.settings.imagebox.enabled
-                        v.healthBar.Visible = esp.settings.healthbar.enabled
-                        v.healthText.Visible = esp.settings.healthtext.enabled
-                        v.distance.Visible = esp.settings.distance.enabled
-                        v.viewAngle.Visible = esp.settings.viewangle.enabled			
+						
 							
 							
-			--[[				
                         v.name.Visible = false
                         v.boxOutline.Visible = false
                         v.box.Visible = false
@@ -360,7 +342,7 @@ local mainLoop = rs.RenderStepped:Connect(function()
                         v.distance.Visible = false
                         v.viewAngle.Visible = false
 							
-							]]
+							
                     end
                 end
             else
