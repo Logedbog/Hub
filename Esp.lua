@@ -111,7 +111,7 @@ esp.NewCham = function(properties)
     for i,v in next, properties or {} do
         newCham[i] = v
     end
-    print("new")
+    
 
     return newCham
 end
