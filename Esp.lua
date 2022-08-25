@@ -140,11 +140,11 @@ esp.WallCheck = function(player)
 end
 
 esp.TeamCheck = function(v)
-    if plr.TeamColor ~= v.TeamColor then
-        return true
+    if plr.TeamColor == v.TeamColor then
+        return false
     end
 
-    return false
+    return true
 end
 
 function esp.GetHealth(Player)
