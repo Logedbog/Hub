@@ -1,0 +1,675 @@
+-- New example script written by wally
+-- You can suggest changes with a pull request or something
+repeat wait() until game:IsLoaded()
+local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
+local espLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Logedbog/Hub/main/RushPointEsp')))()
+local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
+local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
+espLib:Load()
+
+
+local playerFolder = workspace.MapFolder.Players
+
+for _,player in next, game:GetService('Players'):GetPlayers() do
+  local playerMt = getrawmetatable(player)
+  local playerIndex = playerMt.__index
+  setreadonly(playerMt, false)
+ 
+  playerMt.__index = function(self, key)
+    if key == 'Character' and checkcaller() then
+        return playerFolder:FindFirstChild(self.Name)
+    end
+   
+    return playerIndex(self, key)
+  end
+end
+
+-- Services
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UserInputService = game:GetService("UserInputService")
+local Lighting = game:GetService("Lighting")
+local Teams = game:GetService("Teams")
+local RunService = game:GetService("RunService")
+local TeleportService = game:GetService("TeleportService")
+
+local LocalPlayer = Players.LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+local CurrentCamera = workspace.CurrentCamera
+
+
+local GhostWareStafflist = {
+    [154032592] = true,
+    [2398434119] = true
+}
+
+game.Players.PlayerAdded:Connect(function(player)
+if player:IsFriendsWith(game.Players.LocalPlayer.UserId) then
+    Library:Notify("GhostWare | Friend | "..player.Name.." Joined", 3)
+        else
+    Library:Notify("GhostWare | Player | "..player.Name.." Joined", 3) 
+end
+end)
+
+game.Players.PlayerRemoving:Connect(function(player)
+if player:IsFriendsWith(game.Players.LocalPlayer.UserId) then
+    Library:Notify("GhostWare | Friend | "..player.Name.." Left", 3) 
+        else
+    Library:Notify("GhostWare | Player | "..player.Name.." Left", 3) 
+end
+end)
+
+
+local function IsAlive(plr)
+	if plr and plr.Character and plr.Character.FindFirstChild(plr.Character, "Humanoid") and plr.Character.Humanoid.Health > 0 then
+		return true
+	end
+	return false
+end
+
+
+local Window = Library:CreateWindow({
+    Title = 'Rush Point',
+    Center = true, 
+    AutoShow = true,
+})
+
+
+local Tabs = {
+    Main = Window:AddTab('Main'), 
+    Visuals = Window:AddTab('Visuals'),
+    Misc = Window:AddTab('Misc'),
+    ['UI Settings'] = Window:AddTab('UI Settings'),
+}
+
+
+local LeftGroupBox = Tabs.Main:AddLeftGroupbox('Aimbot')
+
+LeftGroupBox:AddSlider('FovSlider', {
+    Text = 'Aimbot Fov',
+    Default = 150,
+    Min = 50,
+    Max = 1000,
+    Rounding = 0,
+    Compact = false, 
+})
+
+LeftGroupBox:AddSlider('SmoothingSlider', {
+    Text = 'Smoothing',
+    Default = 0.5,
+    Min = 0,
+    Max = 1,
+    Rounding = 2,
+    Compact = false, 
+})
+
+LeftGroupBox:AddDropdown('AimPartDropdown', {
+    Values = {'Head', 'UpperTorso', 'LowerTorso' },
+    Default = 1,   
+    Multi = false,   
+
+    Text = "Aimbot Part",
+    Tooltip = 'This is a tooltip',   
+})
+
+LeftGroupBox:AddLabel('Fov Color'):AddColorPicker('FovColorPicker', {
+    Default = Color3.new(1, 1, 1),  
+    Title = '', 
+})
+
+
+
+local MyButton = LeftGroupBox:AddButton('Aimbot', function()
+local teamCheck = true
+local fov = Options.FovSlider.Value
+local smoothing = Options.SmoothingSlider.Value
+
+local RunService = game:GetService("RunService")
+local FOVring = Drawing.new("Circle")
+FOVring.Visible = true
+FOVring.Thickness = 2
+FOVring.Radius = fov
+FOVring.NumSides = 120
+FOVring.Transparency = 1
+FOVring.Color = Options.FovColorPicker.Value
+FOVring.Position = workspace.CurrentCamera.ViewportSize/2
+
+local function getClosest(cframe)
+   local ray = Ray.new(cframe.Position, cframe.LookVector).Unit
+   
+   local target = nil
+   local mag = math.huge
+   
+   for i,v in pairs(game.Players:GetPlayers()) do
+       if v.Character and v.Character:FindFirstChild("Head") and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v ~= game.Players.LocalPlayer and (v.PermanentTeam.Value ~= game.Players.LocalPlayer.PermanentTeam.Value or (not teamCheck)) then
+           local magBuf = (v.Character.Head.Position - ray:ClosestPoint(v.Character.Head.Position)).Magnitude
+           
+           if magBuf < mag then
+               mag = magBuf
+               target = v
+           end
+       end
+   end
+   
+   return target
+end
+
+loop = RunService.RenderStepped:Connect(function()
+   local UserInputService = game:GetService("UserInputService")
+   local pressed = UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
+   local localPlay = game.Players.localPlayer.Character
+   local cam = workspace.CurrentCamera
+   local zz = workspace.CurrentCamera.ViewportSize/2
+   
+   if pressed then
+       local Line = Drawing.new("Line")
+       local curTar = getClosest(cam.CFrame)
+       local ssHeadPoint = cam:WorldToScreenPoint(curTar.Character.Head.Position)
+       ssHeadPoint = Vector2.new(ssHeadPoint.X, ssHeadPoint.Y)
+       if (ssHeadPoint - zz).Magnitude < fov then
+           workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame:Lerp(CFrame.new(cam.CFrame.Position, curTar.Character[Options.AimPartDropdown.Value].Position), smoothing)
+       end
+   end
+   
+   if UserInputService:IsKeyDown(Enum.KeyCode.P) then
+       loop:Disconnect()
+       FOVring:Remove()
+   end
+end)
+end)
+
+
+local LeftGroupBox = Tabs.Main:AddLeftGroupbox('Silent Aim')
+
+LeftGroupBox:AddToggle('SilentAimToggle', {
+    Text = 'Enable',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('TeamCheckSilentAimToggle', {
+    Text = 'Team Check',
+    Default = true, 
+    Tooltip = '', 
+})
+
+local RightGroupBox = Tabs.Main:AddRightGroupbox('Movement')
+
+RightGroupBox:AddToggle('SpeedToggle', {
+    Text = 'Speed Toggle',
+    Default = false, 
+    Tooltip = '', 
+})
+
+RightGroupBox:AddSlider('SpeedSlider', {
+    Text = 'Speed',
+    Default = 20,
+    Min = 15,
+    Max = 30,
+    Rounding = 0,
+    Compact = false, -- If set to true, then it will hide the label
+})
+
+
+
+
+
+
+
+spawn(function()
+   
+end)
+
+
+
+local LeftGroupBox = Tabs.Visuals:AddLeftGroupbox('Player ESP')
+
+LeftGroupBox:AddToggle('EnableESPToggle', {
+    Text = 'Enable',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('TeamCheckESPToggle', {
+    Text = 'Team Check ',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('BoxESPToggle', {
+    Text = 'Box',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('NamesESPToggle', {
+    Text = 'Names',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('HealthBarESPToggle', {
+    Text = 'HealthBars ',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('HealthTextESPToggle', {
+    Text = 'Health Text',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('DistanceTextESPToggle', {
+    Text = 'Distance Text',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('TracersESPToggle', {
+    Text = 'Tracers',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('ChamsESPToggle', {
+    Text = 'Chams',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddToggle('OffScreenESPToggle', {
+    Text = 'Off Screen Arrows',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddSlider('ArrowRadiusDistance', {
+    Text = 'Arrow Radius',
+    Default = 100,
+    Min = 0,
+    Max = 1000,
+    Rounding = 0,
+    Compact = false, 
+})
+
+LeftGroupBox:AddSlider('ArrowSize', {
+    Text = 'Arrow Size',
+    Default = 5,
+    Min = 0,
+    Max = 20,
+    Rounding = 0,
+    Compact = false, 
+})
+
+LeftGroupBox:AddToggle('LimitDistanceESPToggle', {
+    Text = 'Limit Distance',
+    Default = false, 
+    Tooltip = '', 
+})
+
+LeftGroupBox:AddSlider('ESPDistance', {
+    Text = 'Max Distance',
+    Default = 10000,
+    Min = 0,
+    Max = 20000,
+    Rounding = 0,
+    Compact = false, 
+})
+
+LeftGroupBox:AddLabel('Box Color'):AddColorPicker('BoxColorPicker', {
+    Default = Color3.new(1, 1, 1), 
+    Title = '', 
+})
+
+LeftGroupBox:AddLabel('Name Color'):AddColorPicker('NameColorPicker', {
+    Default = Color3.new(1, 1, 1), 
+    Title = '', 
+})
+
+LeftGroupBox:AddLabel('HealthBar Color'):AddColorPicker('HealthBarColorPicker', {
+    Default = Color3.new(1, 1, 1), 
+    Title = '', 
+})
+
+LeftGroupBox:AddLabel('Health Text Color'):AddColorPicker('HealthTextColorPicker', {
+    Default = Color3.new(1, 1, 1), 
+    Title = '', 
+})
+
+
+LeftGroupBox:AddLabel('Tracer Color'):AddColorPicker('TracerColorPicker', {
+    Default = Color3.new(1, 1, 1), 
+    Title = '', 
+})
+
+LeftGroupBox:AddLabel('Cham Color'):AddColorPicker('ChamColorPicker', {
+    Default = Color3.new(1, 1, 1), 
+    Title = '', 
+})
+
+LeftGroupBox:AddLabel('Arrow Color'):AddColorPicker('ArrowColorPicker', {
+    Default = Color3.new(1, 1, 1), 
+    Title = '', 
+})
+
+spawn(function()
+    while wait() do
+     espLib.options.enabled  = Toggles.EnableESPToggle.Value
+     espLib.options.teamCheck = Toggles.TeamCheckESPToggle.Value
+     espLib.options.boxes = Toggles.BoxESPToggle.Value
+     espLib.options.names  = Toggles.NamesESPToggle.Value
+     espLib.options.healthBars = Toggles.HealthBarESPToggle.Value
+     espLib.options.healthText = Toggles.HealthTextESPToggle.Value
+     espLib.options.distance = Toggles.DistanceTextESPToggle.Value
+     espLib.options.tracers = Toggles.TracersESPToggle.Value
+     espLib.options.chams = Toggles.ChamsESPToggle.Value
+     espLib.options.outOfViewArrows = Toggles.OffScreenESPToggle.Value
+     espLib.options.outOfViewArrowsOutline = Toggles.OffScreenESPToggle.Value
+     espLib.options.outOfViewArrowsRadius = Options.ArrowRadiusDistance.Value
+     espLib.options.outOfViewArrowsSize = Options.ArrowSize.Value
+     espLib.options.limitDistance =Toggles.LimitDistanceESPToggle.Value
+     espLib.options.maxDistance = Options.ESPDistance.Value
+---------------------------------------------------------------------------------------
+
+     espLib.options.boxesColor = Options.BoxColorPicker.Value
+     espLib.options.nameColor = Options.NameColorPicker.Value
+     espLib.options.healthBarsColor = Options.HealthBarColorPicker.Value
+     espLib.options.healthTextColor = Options.HealthTextColorPicker.Value
+     espLib.options.tracerColor = Options.TracerColorPicker.Value
+     espLib.options.chamsFillColor = Options.ChamColorPicker.Value
+     espLib.options.outOfViewArrowsColor = Options.ArrowColorPicker.Value
+
+-------------------------------------------------------------------------------------
+    end
+end)
+
+
+local RightGroupBox = Tabs.Visuals:AddRightGroupbox('World')
+
+RightGroupBox:AddToggle('VisualsToggle', {
+    Text = 'Enable',
+    Default = false, -- Default value (true / false)
+    Tooltip = '', -- Information shown when you hover over the toggle
+})
+
+
+
+RightGroupBox:AddLabel('Ambient'):AddColorPicker('AmbientColorPicker', {
+    Default = Color3.new(1, 1, 1), -- Bright green
+    Title = 'Some color', -- Optional. Allows you to have a custom color picker title (when you open it)
+})
+
+
+spawn(function()
+    while wait() do
+    if Toggles.VisualsToggle.Value == true then
+        Lighting.Ambient = Options.AmbientColorPicker.Value
+      end
+    end
+end)
+
+local RightGroupBox = Tabs.Visuals:AddRightGroupbox('Items')
+
+
+
+
+local RightGroupBox = Tabs.Visuals:AddRightGroupbox('Weapon')
+
+RightGroupBox:AddToggle('TracersESPToggle', {
+    Text = 'Tracers',
+    Default = false, 
+    Tooltip = '', 
+})
+
+RightGroupBox:AddDropdown('GunMaterialDropdown', {
+    Values = { 'ForceField', 'Glass', 'Neon', 'SmoothPlastic' },
+    Default = 1,  
+    Multi = false,  
+
+    Text = 'Weapon Material',
+    Tooltip = 'This is a tooltip',  
+})
+
+RightGroupBox:AddSlider('WeaponTransparencySlider', {
+    Text = 'Weapon Transparency',
+    Default = 0,
+    Min = 0,
+    Max = 1,
+    Rounding = 1,
+    Compact = false,  
+})
+
+RightGroupBox:AddLabel('Weapon Color'):AddColorPicker('WeaponColorPicker', {
+    Default = Color3.new(1, 1, 1),  
+    Title = 'Some color',  
+})
+
+
+
+
+-- Options is a table added to getgenv() by the library
+-- You index Options with the specified index, in this case it is 'MySlider'
+-- To get t he value of the slider you do slider.Value
+
+
+
+
+Library:SetWatermarkVisibility(true)
+
+-- Sets the watermark text
+
+
+Library.KeybindFrame.Visible = true; -- todo: add a function for this
+
+Library:OnUnload(function()
+    print('GhostWare Unloaded!')
+    Library.Unloaded = true
+end)
+
+-- UI Settings
+local MenuGroup = Tabs['UI Settings']:AddLeftGroupbox('Menu')
+
+-- I set NoUI so it does not show up in the keybinds menu
+MenuGroup:AddButton('Unload', function() 
+    Library:Unload() 
+    espLib:Unload()
+    end)
+
+local ExtraMenuGroup = Tabs['UI Settings']:AddRightGroupbox('Extras')
+
+ExtraMenuGroup:AddToggle('WatermarkToggle', {
+    Text = 'Watermark',
+    Default = true, 
+    Tooltip = '', 
+})
+
+ExtraMenuGroup:AddToggle('KeybindToggle', {
+    Text = 'Keybind',
+    Default = true, 
+    Tooltip = '', 
+})
+
+MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { Default = 'RightShift', NoUI = true, Text = 'Menu keybind' }) 
+Library.ToggleKeybind = Options.MenuKeybind -- Allows you to have a custom keybind for the menu
+ThemeManager:SetLibrary(Library)
+SaveManager:SetLibrary(Library)
+SaveManager:IgnoreThemeSettings() 
+SaveManager:SetIgnoreIndexes({ 'MenuKeybind' }) 
+ThemeManager:SetFolder('GhostWare')
+SaveManager:SetFolder('GhostWare/Universal')
+SaveManager:BuildConfigSection(Tabs['UI Settings']) 
+ThemeManager:ApplyToTab(Tabs['UI Settings'])
+
+
+
+frames = 0
+local RunService = game:GetService("RunService")
+RunService.RenderStepped:Connect(function(step)
+frames = math.floor(1/step).." fps"
+end)
+
+spawn(function()
+while wait(0.01) do
+    if Toggles.WatermarkToggle.Value == true then
+    Library:SetWatermark(os.date("GhostWare | ".. frames .." | ".."%X".."%p | ".."%a | ".."%Y"))
+    else 
+    Library:SetWatermarkVisibility(false)
+end
+end
+end)
+
+spawn(function()
+while wait(0.01) do
+    if Toggles.KeybindToggle.Value == true then
+    Library.KeybindFrame.Visible = true
+    else 
+    Library.KeybindFrame.Visible = false
+end
+end
+end)
+
+local cam = workspace.CurrentCamera
+
+function DrawESP(part)
+   local pos, vis = cam:WorldToScreenPoint(part.Position)
+   
+   local text = Drawing.new("Text")
+   text.Text = part.Parent.Name.." ["..game:GetService("Workspace").MapFolder.GameStats.BombTime.Value.."]"
+   text.Color = part.Color
+   text.Position = Vector2.new(pos.x, pos.y)
+   text.Size = 18
+   text.Outline = true
+   text.Center = true
+   text.Visible = true
+   
+   game:GetService("RunService").Stepped:connect(function()
+       local descendant = part:IsDescendantOf(workspace)
+       if not descendant and text ~= nil  then
+           text:Remove()
+       end
+       
+       local pos, vis = cam:WorldToScreenPoint(part.Position)
+       
+       if part ~= nil then
+           text.Position = Vector2.new(pos.x, pos.y)
+       end
+
+       if vis then
+           text.Visible = true
+           text.Text = part.Parent.Name.." ["..game:GetService("Workspace").MapFolder.GameStats.BombTime.Value.."]"
+       else
+           text.Visible = false
+       end
+   end)
+end
+
+for i,v in pairs(game:GetService("Workspace").MapFolder.Bomb:GetChildren()) do
+       DrawESP(v.Main)
+end
+
+game:GetService("Workspace").MapFolder.Bomb.ChildAdded:connect(function(v)
+   wait(0.5)
+       DrawESP(v.Main)
+end)
+
+
+local idx; idx = hookmetamethod(game, "__newindex", function(self, i, v)
+    if i == "WalkSpeed" and Toggles.SpeedToggle.Value then
+        v = Options.SpeedSlider.Value
+    end
+
+    return idx(self, i, v)
+end)
+
+local function GetModule(Fake)
+    local __index = getrawmetatable(Fake).__index
+    return getupvalue(__index, 1)
+end
+
+local Modules = game:GetService("ReplicatedStorage"):WaitForChild("Modules")
+local Client = Modules:WaitForChild("Client")
+local Shared = Modules:WaitForChild("Shared")
+
+local Network = require(Shared.Network)
+Network = GetModule(Network)
+
+local Memory = require(Shared.SharedMemory)
+
+local Characters = workspace.MapFolder.Players
+
+local Players = game:GetService("Players")
+local plr = Players.LocalPlayer
+local PermanentTeam = plr.PermanentTeam
+local MyTeam = PermanentTeam.Value
+PermanentTeam:GetPropertyChangedSignal("Value"):Connect(function(v)
+    MyTeam = v
+end)
+
+local function IsOnTeam(Player)
+    return Players[Player.Name].PermanentTeam.Value == MyTeam 
+end
+
+local Camera = workspace.CurrentCamera
+
+
+
+
+
+local nc; nc = hookmetamethod(game, "__namecall", function(self, ...)
+    local args = {...}
+    if Toggles.SilentAimToggle.Value and args[1] == "FireBullet" and getnamecallmethod() == "FireServer" then
+        local MyHRP = Characters[plr.Name].HumanoidRootPart
+
+        local BulletData = args[2][1]
+        local Weapon = Memory.CurrentWeapon
+        local Muzzle = Weapon.Object.Muzzle
+        local MuzzlePos = Muzzle.Position
+
+        local ClosestHead
+        local Closest_Magnitude = 9e9
+        
+        local Raycastparams = RaycastParams.new()
+        Raycastparams.FilterType = Enum.RaycastFilterType.Blacklist
+        Raycastparams.FilterDescendantsInstances = {Characters[plr.Name]}
+        
+        local CameraPos = Camera.CFrame.Position
+        for _, v in next, Characters.GetChildren(Characters) do
+            local TheirHead = v.FindFirstChild(v, "Head")
+            if v.Name ~= plr.Name and TheirHead then
+                if Toggles.TeamCheckSilentAimToggle.Value and IsOnTeam(v) then
+                    continue
+                end
+
+                local raycastParams = RaycastParams.new()
+                raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+                raycastParams.FilterDescendantsInstances = {Characters[plr.Name], Camera}
+
+                local RaycastResult = workspace.Raycast(workspace, CameraPos, TheirHead.Position - CameraPos, raycastParams)
+                if RaycastResult and RaycastResult.Instance.Parent.Name == v.Name then
+                    local Distance = (TheirHead.Position - MyHRP.Position).Magnitude
+                    if Distance < Closest_Magnitude then
+                        Closest_Magnitude = Distance
+                        ClosestHead = TheirHead
+                    end
+                end
+            end
+        end
+        
+        if not ClosestHead then
+            return nc(self, ...)
+        end
+
+        local EnemyHeadPos = ClosestHead.Position
+        local NewBulletCFrame = CFrame.new(MuzzlePos, EnemyHeadPos)
+        local NewOriginCFrame = CFrame.new(CameraPos, EnemyHeadPos)
+        
+        BulletData.BulletCFrame = NewBulletCFrame
+        BulletData.OriginCFrame = NewOriginCFrame
+
+        return nc(self, unpack(args))
+    end
+
+    return nc(self, ...)
+end)
