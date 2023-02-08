@@ -10,7 +10,7 @@ local ThemeManager = {} do
 		['Comet.pub'] 		= { 3, httpService:JSONDecode('{"FontColor":"5E5E5E","MainColor":"0F0F0F","AccentColor":"5D589D","SelectedTabColor":"1a191d","BackgroundColor":"0F0F0F","OutlineColor":"191919"}') },
 		['Tokyohook.cc'] 	= { 4, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"191925","AccentColor":"6759b3","SelectedTabColor":"1a1a29","BackgroundColor":"16161f","OutlineColor":"433e58"}') },
 		['pandahook.cc'] 	= { 5, httpService:JSONDecode('{"FontColor":"AEAEAE","MainColor":"0F0F0F","AccentColor":"30406A","SelectedTabColor":"151515","BackgroundColor":"0F0F0F","OutlineColor":"171717"}') },
-               -- ['Black & White']
+                ['Black & White']     = { 6, httpService:JSONDecode('{"FontColor":"9b9b9b","MainColor":"0f0f0f","AccentColor":"ffffff","SelectedTabColor":"151515","BackgroundColor":"141313","OutlineColor":"2d2a2a"}') },
 	}
 
 	function ThemeManager:ApplyTheme(theme)
