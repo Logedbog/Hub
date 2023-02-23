@@ -79,7 +79,26 @@ local ThemeManager = {} do
 		groupbox:AddLabel('Accent color'):AddColorPicker('AccentColor', { Default = self.Library.AccentColor });
 		groupbox:AddLabel('Outline color'):AddColorPicker('OutlineColor', { Default = self.Library.OutlineColor });
 		groupbox:AddLabel('Font color')	:AddColorPicker('FontColor', { Default = self.Library.FontColor });
-
+		
+		groupbox:AddToggle('RGBAccent', {
+   		Text = 'Rainbow Accent',
+   		Default = false, 
+  		Tooltip = nil, 
+		})
+		
+		spawn(function()
+		while wait() do
+   		 if Toggles.RGBAccent.Value == true then
+        	     for i = 1, 360 do 
+                        wait()
+    		   Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
+	           Library:UpdateColorsUsingRegistry()
+			  end
+		       end
+		    end
+		end)
+		
+		
 		local ThemesArray = {}
 		for Name, Theme in next, self.BuiltInThemes do
 			table.insert(ThemesArray, Name)
