@@ -1,0 +1,260 @@
+local l = {}
+local b = game:GetService("RunService")
+local i = game:GetObjects("rbxassetid://9474737816")[1] i.Head.Face:Destroy()
+
+for j, k in pairs(i:GetChildren()) do
+      local highlight = Instance.new("Highlight")
+k.Transparency = 0.22
+    k.Material = "SmoothPlastic"
+    k.Color = Color3.fromRGB(255, 0, 0)
+    k.CanCollide = false
+    k.Anchored = false
+    highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+    highlight.Enabled = true
+    highlight.FillColor = Color3.fromRGB(255, 255, 255)
+    highlight.OutlineColor = Color3.fromRGB(87, 87, 87)
+    highlight.FillTransparency = 0.75
+    highlight.OutlineTransparency = 0.20
+    highlight.Parent = k
+    highlight.Adornee = k
+
+end
+
+local cZ = {set_1 = false, set_2 = false, set_3 = false, ["0cfr"] = CFrame.new()}
+
+local g = {
+    connections = {},
+    accents = {},
+    drawings = {},
+    hidden = {},
+    pointers = {},
+    flags = {},
+    preloaded_images = {},
+    game_name = "universal",
+    loaded = false
+}
+
+-- functions
+
+function isAlive(d3)
+    local d4 = false
+    if d3 ~= nil and d3.Parent == game.Players and d3.Character ~= nil then
+        if
+            d3.Character:FindFirstChild("HumanoidRootPart") and d3.Character:FindFirstChild("Humanoid") ~= nil and
+                d3.Character.Humanoid.Health > 0 and
+                d3.Character:FindFirstChild("Head")
+         then
+            d4 = true
+        end
+    end
+    return d4
+end
+
+function RandomNumberRange(cQ)
+    return math.random(-cQ * 100, cQ * 100) / 100
+end
+function RandomVectorRange(cQ, cR, d0)
+    return Vector3.new(RandomNumberRange(cQ), RandomNumberRange(cR), RandomNumberRange(d0))
+end
+
+function l:Connect(A, K)
+        local L = A:Connect(K)
+        table.insert(g.connections, L)
+        return L
+    end
+
+
+    function l:BindToRenderStep(M, N, K)
+        local O = {}
+        function O:Disconnect()
+            b:UnbindFromRenderStep(M)
+        end
+        b:BindToRenderStep(M, N, K)
+        return O
+    end
+
+-- desync settings - use these to configure the desync
+
+-------------------------------
+
+enabled = true -- self explanatory :troll:
+
+-------------------------------
+
+
+local modes = {
+    zero = nil,
+    random = nil,
+    strafe = nil,
+    offset = true
+}
+
+local settings = {
+    vis = true,
+    offsetx = 0,
+    offsety = 0,
+    offsetz = 3,
+    fling = nil,
+    hdesync = true,
+    randomx = nil,
+    randomy = nil,
+    randomz = nil,
+    strafetarget = nil,
+    strafeoff = nil,
+    strafespeed = nil,
+
+}
+
+local rot = {
+    manual = nil,
+    random = nil,
+    manx = nil,
+    many = nil,
+    manz = nil,
+
+}
+
+l:Connect(
+    b.Heartbeat,
+    function()
+        if isAlive(game.Players.LocalPlayer) then
+            if enabled == true and not cZ["set_1"] then
+                cZ[1] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                if settings.fling == true and not settings.hdesync == true then
+                    cZ[2] = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+                end
+                
+                if modes.offset == true then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *
+                        CFrame.new(
+                            Vector3.new(
+                                settings.offsetx,
+                                settings.offsety,
+                                settings.offsetz
+                            )
+                        )
+                elseif modes.random == true then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *
+                        CFrame.new(
+                            RandomVectorRange(
+                                settings.randomx,
+                                settings.randomy,
+                                settings.randomz
+                            )
+                        )
+                elseif modes.zero == true then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(tonumber("nan"), tonumber("nan"), tonumber("nan"))
+                elseif
+                    modes.strafe == true and
+                        game.Players:FindFirstChild(settings.strafetarget) and
+                        isAlive(game.Players[settings.strafetarget])
+                 then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[settings.strafetarget].Character.HumanoidRootPart.CFrame
+                    if not cZ[3] then
+                        cZ[3] = 0
+                    end
+                    if cZ[3] > 360 then
+                        cZ[3] = 0
+                    end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(cZ[3]), 0) *
+                        CFrame.new(0, 0, settings.strafeoff)
+                    cZ[3] = cZ[3] + settings.strafespeed
+                end
+                if rot.manual == true then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *
+                        CFrame.Angles(
+                            rot.manx,
+                            rot.many,
+                            rot.manz
+                        )
+                elseif rot.man == true then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *
+                        CFrame.Angles(
+                            math.rad(RandomNumberRange(180)),
+                            math.rad(RandomNumberRange(180)),
+                            math.rad(RandomNumberRange(180))
+                        )
+                end
+                if settings.vis == true then
+                    i.Parent = workspace
+                    i.HumanoidRootPart.Velocity = Vector3.new()
+                    i:SetPrimaryPartCFrame(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+                else
+                    i.Parent = nil
+                end
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                cZ["set_1"] = true
+                if settings.fling == true and not settings.hdesync == true and not cZ["set_2"] then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(1, 1, 1) * 2 ^ 16
+                    cZ["set_2"] = true
+                end
+            else
+                if i.Parent ~= nil then
+                    i.Parent = nil
+                end
+                cZ[1] = nil
+                cZ[2] = nil
+            end
+        else
+            if i.Parent ~= nil then
+                i.Parent = nil
+            end
+            cZ[1] = nil
+            cZ[2] = nil
+        end
+    end
+)
+l:Connect(
+    b.Heartbeat,
+    function()
+        if isAlive(game.Players.LocalPlayer) then
+            if settings.hdesync == true and not cZ["set_3"] then
+                cZ["vel"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+                cZ["cfr"] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude == 0 then
+                    cZ["0cfr"] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                end
+                local d0 = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+                game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(d0.X, math.random(-16384, 16384), d0.Z)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(math.random(-180, 180)), 0)
+                cZ["set_3"] = true
+            else
+                cZ["cfr"] = nil
+                cZ["vel"] = nil
+            end
+        else
+            cZ["cfr"] = nil
+            cZ["vel"] = nil
+        end
+    end
+)
+l:BindToRenderStep(
+    "desync_1",
+    1,
+    function()
+        if cZ[1] and cZ["set_1"] and isAlive(game.Players.LocalPlayer) then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = cZ[1]
+            cZ["set_1"] = false
+            if cZ[2] and settings.fling == true and not settings.hdesync == true and cZ["set_2"] then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = cZ[2]
+                cZ["set_2"] = false
+            end
+        end
+    end
+)
+l:BindToRenderStep(
+    "desync_2",
+    1,
+    function()
+        if isAlive(game.Players.LocalPlayer) and cZ["set_3"] then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = cZ["vel"]
+            cZ["set_3"] = false
+        end
+    end
+)
