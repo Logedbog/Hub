@@ -86,7 +86,7 @@ local modes = {
     zero = nil,
     random = nil,
     strafe = nil,
-    offset = true
+    offset = nil,
 }
 
 local settings = {
