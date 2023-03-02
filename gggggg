@@ -5,7 +5,7 @@ local i = game:GetObjects("rbxassetid://9474737816")[1] i.Head.Face:Destroy()
 for j, k in pairs(i:GetChildren()) do
       local highlight = Instance.new("Highlight")
 k.Transparency = 0.22
-    k.Material = "SmoothPlastic"
+    k.Material = "ForceField"
     k.Color = Color3.fromRGB(255, 0, 0)
     k.CanCollide = false
     k.Anchored = false
