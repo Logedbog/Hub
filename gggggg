@@ -258,3 +258,7 @@ l:BindToRenderStep(
         end
     end
 )
+getgenv().Rotations = rot
+getgenv().Settings = settings
+getgenv().Modes = modes
+
