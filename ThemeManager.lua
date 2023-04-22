@@ -82,7 +82,7 @@ local ThemeManager = {} do
 		
 		groupbox:AddToggle('RGBAccent', {
    		Text = 'Rainbow Accent',
-   		Default = true, 
+   		Default = false, 
   		Tooltip = nil, 
 		})
 		
