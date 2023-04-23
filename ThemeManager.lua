@@ -221,6 +221,12 @@ local ThemeManager = {} do
 		self.Library = lib
 	end
 
+	spawn(function()
+	for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
+	v:Disable()
+	end		
+	end)
+	
 	function ThemeManager:BuildFolderTree()
 		local paths = {}
 
