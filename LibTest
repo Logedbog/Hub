@@ -1720,4 +1720,4 @@ function library:deleteConfig()
         library:refreshConfigs()
     end
 end
-getgenv().Library = library
+
