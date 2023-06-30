@@ -92,14 +92,15 @@ spawn(function()
 	while true do
 		if Toggles.RGBAccent.Value == true then
 			for i = 1, 360 do
+			if Toggles.RGBAccent.Value == true then
 				wait()
 				Library.AccentColor = Color3.fromHSV(i / 360, 1, 1)
 				Library:UpdateColorsUsingRegistry()
 			end
-		else
-			break -- Exit the loop
+			else
 			Library.AccentColor = originalColor -- Reset the accent color to the original color
 			Library:UpdateColorsUsingRegistry()
+			end
 		end
 	end
 end)
