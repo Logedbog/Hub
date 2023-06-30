@@ -89,20 +89,35 @@ local ThemeManager = {} do
 local originalColor = Library.AccentColor
 
 spawn(function()
-while true do
-if Toggles.RGBAccent.Value == true then
-for i = 1, 360 do 
-wait()
-Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
-Library:UpdateColorsUsingRegistry()
-end
-else
-Library.AccentColor = originalColor -- reset the color to the original color
-Library:UpdateColorsUsingRegistry()
-break -- exit the loop
-end
-end
+    local running = false
+
+    Toggles.RGBAccent:OnChanged(function()
+        if Toggles.RGBAccent.Value == true then
+            if not running then
+                running = true
+                while Toggles.RGBAccent.Value == true do
+                    for i = 1, 360 do
+                        wait()
+                        Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
+                        Library:UpdateColorsUsingRegistry()
+                    end
+                end
+                running = false
+            end
+        else
+            Library.AccentColor = originalColor
+            Library:UpdateColorsUsingRegistry()
+        end
+    end)
 end)
+
+
+
+
+
+
+
+
 		
 		
 		local ThemesArray = {}
