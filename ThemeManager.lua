@@ -88,22 +88,20 @@ local ThemeManager = {} do
 		
 local originalColor = Library.AccentColor -- Store the original accent color
 
-spawn(function()
-	while true do
-		if Toggles.RGBAccent.Value == true then
-			for i = 1, 360 do
-			if Toggles.RGBAccent.Value == true then
-				wait()
-				Library.AccentColor = Color3.fromHSV(i / 360, 1, 1)
-				Library:UpdateColorsUsingRegistry()
-			end
-			else
-			Library.AccentColor = originalColor -- Reset the accent color to the original color
-			Library:UpdateColorsUsingRegistry()
-			end
-		end
-	end
-end)
+	spawn(function()
+		while wait() do
+				 for i = 1, 360 do 
+					if Toggles.RGBAccent.Value == true then
+						wait()
+			  			Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
+			   			Library:UpdateColorsUsingRegistry()
+					else 
+						Library.AccentColor = originalColor -- Reset the accent color to the original color
+						Library:UpdateColorsUsingRegistry()
+					end
+			  end
+			   end
+		end)
 
 
 
