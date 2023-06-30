@@ -93,9 +93,11 @@ local originalColor = Library.AccentColor -- Store the original accent color
 				 for i = 1, 360 do 
 					if Toggles.RGBAccent.Value == true then
 						wait()
+						local originalColor = Library.AccentColor
 			  			Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
 			   			Library:UpdateColorsUsingRegistry()
 					else 
+						wait()
 						Library.AccentColor = originalColor -- Reset the accent color to the original color
 						Library:UpdateColorsUsingRegistry()
 					end
