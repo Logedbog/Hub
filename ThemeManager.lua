@@ -93,6 +93,8 @@ local ThemeManager = {} do
                         wait()
     		   Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
 	           Library:UpdateColorsUsingRegistry()
+			else
+			break
 			  end
 		       end
 		    end
