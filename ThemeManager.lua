@@ -86,30 +86,25 @@ local ThemeManager = {} do
   		Tooltip = nil, 
 		})
 		
-local originalColor = Library.AccentColor
+local originalColor = Library.AccentColor -- Store the original accent color
 
 spawn(function()
-    local running = false
-
-    Toggles.RGBAccent:OnChanged(function()
-        if Toggles.RGBAccent.Value == true then
-            if not running then
-                running = true
-                while Toggles.RGBAccent.Value == true do
-                    for i = 1, 360 do
-                        wait()
-                        Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
-                        Library:UpdateColorsUsingRegistry()
-                    end
-                end
-                running = false
-            end
-        else
-            Library.AccentColor = originalColor
-            Library:UpdateColorsUsingRegistry()
-        end
-    end)
+	while true do
+		if Toggles.RGBAccent.Value == true then
+			for i = 1, 360 do
+				wait()
+				Library.AccentColor = Color3.fromHSV(i / 360, 1, 1)
+				Library:UpdateColorsUsingRegistry()
+			end
+		else
+			break -- Exit the loop
+			Library.AccentColor = originalColor -- Reset the accent color to the original color
+			Library:UpdateColorsUsingRegistry()
+		end
+	end
 end)
+
+
 
 
 
