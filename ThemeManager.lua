@@ -80,30 +80,7 @@ local ThemeManager = {} do
 		groupbox:AddLabel('Outline color'):AddColorPicker('OutlineColor', { Default = self.Library.OutlineColor });
 		groupbox:AddLabel('Font color')	:AddColorPicker('FontColor', { Default = self.Library.FontColor });
 		
-		groupbox:AddToggle('RGBAccent', {
-   		Text = 'Rainbow Accent',
-   		Default = false, 
-  		Tooltip = nil, 
-		})
 		
-local originalColor = Library.AccentColor -- Store the original accent color
-
-	spawn(function()
-		while wait() do
-				 for i = 1, 360 do 
-					if Toggles.RGBAccent.Value == true then
-						wait()
-						local originalColor = Library.AccentColor
-			  			Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
-			   			Library:UpdateColorsUsingRegistry()
-					else 
-						wait()
-						Library.AccentColor = originalColor -- Reset the accent color to the original color
-						Library:UpdateColorsUsingRegistry()
-					end
-			  end
-			   end
-		end)
 
 
 
