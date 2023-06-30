@@ -86,19 +86,23 @@ local ThemeManager = {} do
   		Tooltip = nil, 
 		})
 		
-		spawn(function()
-		while wait() do
-   		 if Toggles.RGBAccent.Value == true then
-        	     for i = 1, 360 do 
-                        wait()
-    		   Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
-	           Library:UpdateColorsUsingRegistry()
-			else
-			break
-			  end
-		       end
-		    end
-		end)
+local originalColor = Library.AccentColor
+
+spawn(function()
+while true do
+if Toggles.RGBAccent.Value == true then
+for i = 1, 360 do 
+wait()
+Library.AccentColor = Color3.fromHSV(i/360, 1, 1)
+Library:UpdateColorsUsingRegistry()
+end
+else
+Library.AccentColor = originalColor -- reset the color to the original color
+Library:UpdateColorsUsingRegistry()
+break -- exit the loop
+end
+end
+end)
 		
 		
 		local ThemesArray = {}
