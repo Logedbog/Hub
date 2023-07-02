@@ -2751,6 +2751,7 @@ do
         TextXAlignment = Enum.TextXAlignment.Left;
         ZIndex = 203;
         Parent = InnerFrame;
+        RichText = true
     });
 
     Library.Watermark = WatermarkOuter;
