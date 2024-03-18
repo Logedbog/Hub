@@ -2993,7 +2993,6 @@ function Library:CreateWindow(...)
         Size = UDim2.new(0, 0, 0, 25);
         RichText = true;
         Text = Config.Title or '';
-        getgenv().MenuText = Text
         TextXAlignment = Enum.TextXAlignment.Left;
         ZIndex = 1;
         Parent = Inner;
